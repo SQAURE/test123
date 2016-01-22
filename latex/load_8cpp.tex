@@ -1,0 +1,544 @@
+\hypertarget{load_8cpp}{\section{load.\-cpp 파일 참조}
+\label{load_8cpp}\index{load.\-cpp@{load.\-cpp}}
+}
+{\ttfamily \#include $<$third\-\_\-party/asn1/\-Poker\-T\-H\-Message.\-h$>$}\\*
+{\ttfamily \#include $<$boost/program\-\_\-options.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/asio.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread.\-hpp$>$}\\*
+{\ttfamily \#include $<$gsasl.\-h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+load.\-cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_net_session}{Net\-Session}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{load_8cpp_a5cf0d6cbdffe082b37d1b816690cc62c}{S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(\-\_\-a)~(string((const char $\ast$)(\-\_\-a).buf, (\-\_\-a).size))
+\item 
+\#define \hyperlink{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{B\-U\-F\-\_\-\-S\-I\-Z\-E}~1024
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{load_8cpp_a3648412ef7ef48b734fad6e3be1ff5c0}{net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string} (const void $\ast$buffer, size\-\_\-t size, void $\ast$packet\-Str)
+\item 
+Poker\-T\-H\-Message\-\_\-t $\ast$ \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receive\-Message} (\hyperlink{struct_net_session}{Net\-Session} $\ast$session)
+\item 
+bool \hyperlink{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{send\-Message} (\hyperlink{struct_net_session}{Net\-Session} $\ast$session, Poker\-T\-H\-Message\-\_\-t $\ast$msg)
+\item 
+int \hyperlink{load_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{\index{load.\-cpp@{load.\-cpp}!B\-U\-F\-\_\-\-S\-I\-Z\-E@{B\-U\-F\-\_\-\-S\-I\-Z\-E}}
+\index{B\-U\-F\-\_\-\-S\-I\-Z\-E@{B\-U\-F\-\_\-\-S\-I\-Z\-E}!load.cpp@{load.\-cpp}}
+\subsubsection[{B\-U\-F\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-F\-\_\-\-S\-I\-Z\-E~1024}}\label{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}
+\hypertarget{load_8cpp_a5cf0d6cbdffe082b37d1b816690cc62c}{\index{load.\-cpp@{load.\-cpp}!S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G@{S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G@{S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}!load.cpp@{load.\-cpp}}
+\subsubsection[{S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-L\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-F\-R\-O\-M\-\_\-\-O\-C\-T\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-a}
+\end{DoxyParamCaption}
+)~(string((const char $\ast$)(\-\_\-a).buf, (\-\_\-a).size))}}\label{load_8cpp_a5cf0d6cbdffe082b37d1b816690cc62c}
+
+
+\subsection{함수 문서화}
+\hypertarget{load_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{load.\-cpp@{load.\-cpp}!main@{main}}
+\index{main@{main}!load.cpp@{load.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{load_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+120 \{
+121     \textcolor{keywordflow}{try} \{
+122         \textcolor{comment}{// Check command line options.}
+123         po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});
+124         desc.add\_options()
+125         (\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"produce help message"})
+126         (\textcolor{stringliteral}{"server,s"}, po::value<string>(), \textcolor{stringliteral}{"PokerTH server name"})
+127         (\textcolor{stringliteral}{"port,P"}, po::value<string>(), \textcolor{stringliteral}{"PokerTH server port"})
+128         (\textcolor{stringliteral}{"numGames,n"}, po::value<unsigned>(), \textcolor{stringliteral}{"Number of games to open"})
+129         (\textcolor{stringliteral}{"firstId,f"}, po::value<int>(), \textcolor{stringliteral}{"First id of username testx"})
+130         ;
+131 
+132         po::variables\_map vm;
+133         po::store(po::parse\_command\_line(argc, argv, desc), vm);
+134         po::notify(vm);
+135 
+136         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"help"})) \{
+137             cout << desc << endl;
+138             \textcolor{keywordflow}{return} 1;
+139         \}
+140         \textcolor{keywordflow}{if} (!vm.count(\textcolor{stringliteral}{"server"}) || !vm.count(\textcolor{stringliteral}{"port"}) || !vm.count(\textcolor{stringliteral}{"numGames"}) || !vm.count(\textcolor{stringliteral}{"firstId"})) \{
+141             cout << \textcolor{stringliteral}{"Missing option!"} << endl << desc << endl;
+142             \textcolor{keywordflow}{return} 1;
+143         \}
+144 
+145         \textcolor{keywordtype}{string} server(vm[\textcolor{stringliteral}{"server"}].as<string>());
+146         \textcolor{keywordtype}{string} port = vm[\textcolor{stringliteral}{"port"}].as<\textcolor{keywordtype}{string}>();
+147         \textcolor{keywordtype}{unsigned} numGames = vm[\textcolor{stringliteral}{"numGames"}].as<\textcolor{keywordtype}{unsigned}>();
+148         \textcolor{keywordtype}{int} firstId = vm[\textcolor{stringliteral}{"firstId"}].as<\textcolor{keywordtype}{int}>();
+149 
+150         \textcolor{comment}{// Initialise gsasl.}
+151         Gsasl *authContext;
+152         \textcolor{keywordtype}{int} res = gsasl\_init(&authContext);
+153         \textcolor{keywordflow}{if} (res != GSASL\_OK) \{
+154             cout << \textcolor{stringliteral}{"gsasl init failed"} << endl;
+155             \textcolor{keywordflow}{return} 1;
+156         \}
+157 
+158         \textcolor{keywordflow}{if} (!gsasl\_client\_support\_p(authContext, \textcolor{stringliteral}{"SCRAM-SHA-1"})) \{
+159             gsasl\_done(authContext);
+160             cout << \textcolor{stringliteral}{"This version of gsasl does not support SCRAM-SHA-1"} << endl;
+161             \textcolor{keywordflow}{return} 1;
+162         \}
+163 
+164         \textcolor{comment}{// Connect to the PokerTH server.}
+165         boost::asio::io\_service ioService;
+166         tcp::resolver resolver(ioService);
+167         tcp::resolver::query query(server, port);
+168         tcp::resolver::iterator endpoint\_iterator = resolver.resolve(query);
+169         tcp::resolver::iterator end;
+170         boost::system::error\_code error = boost::asio::error::host\_not\_found;
+171         tcp::resolver::iterator curEndpoint;
+172         tcp::socket tmpSocket(ioService);
+173         \textcolor{keywordflow}{while} (error && endpoint\_iterator != end) \{
+174             curEndpoint = endpoint\_iterator++;
+175             tmpSocket.connect(*curEndpoint, error);
+176             tmpSocket.close();
+177         \}
+178 
+179         \textcolor{keywordflow}{if} (error) \{
+180             cout << \textcolor{stringliteral}{"Connect failed"} << endl;
+181             \textcolor{keywordflow}{return} 1;
+182         \}
+183 
+184         PokerTHMessage\_t *msg = NULL;
+185         \textcolor{keywordtype}{int} errorCode;
+186         \textcolor{keywordtype}{char} *tmpOut;
+187         \textcolor{keywordtype}{size\_t} tmpOutSize;
+188         \textcolor{keywordtype}{string} nextGsaslMsg;
+189         \hyperlink{struct_net_session}{NetSession} **sessionArray = \textcolor{keyword}{new} \hyperlink{struct_net_session}{NetSession} *[numGames * 10];
+190         \textcolor{keywordtype}{unsigned} *gameId = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned}[numGames];
+191         \textcolor{keyword}{const} \textcolor{keywordtype}{int} LoginsPerLoop = 50;
+192         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} t = 0; t < (numGames * 10) / LoginsPerLoop + 1; t++) \{
+193             \textcolor{keywordtype}{int} startNum = t * LoginsPerLoop;
+194             \textcolor{keywordtype}{int} endNum = (t + 1) * LoginsPerLoop;
+195             \textcolor{keywordflow}{if} (endNum > numGames * 10) \{
+196                 endNum = numGames * 10;
+197             \}
+198             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = startNum; i < endNum; i++) \{
+199                 sessionArray[i] = \textcolor{keyword}{new} \hyperlink{struct_net_session}{NetSession}(ioService);
+200                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+201 
+202                 session->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.connect(*curEndpoint, error);
+203 
+204                 \textcolor{comment}{// Receive server information}
+205                 msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+206                 \textcolor{keywordflow}{if} (!msg || msg->present != PokerTHMessage\_PR\_announceMessage) \{
+207                     cout << \textcolor{stringliteral}{"Announce failed"} << endl;
+208                     \textcolor{keywordflow}{return} 1;
+209                 \}
+210                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+211 
+212                 \textcolor{comment}{// Send init}
+213                 msg = (PokerTHMessage\_t *)calloc(1, \textcolor{keyword}{sizeof}(PokerTHMessage\_t));
+214                 msg->present = PokerTHMessage\_PR\_initMessage;
+215                 InitMessage\_t *netInit = &msg->choice.initMessage;
+216                 netInit->requestedVersion.major = 2;
+217                 netInit->requestedVersion.minor = 0;
+218                 errorCode = gsasl\_client\_start(authContext, \textcolor{stringliteral}{"SCRAM-SHA-1"}, &session->
+      \hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession});
+219                 \textcolor{keywordflow}{if} (errorCode != GSASL\_OK) \{
+220                     cout << \textcolor{stringliteral}{"Auth start error."} << endl;
+221                     \textcolor{keywordflow}{return} 1;
+222                 \}
+223                 ostringstream param;
+224                 param << \textcolor{stringliteral}{"test"} << i + firstId;
+225                 cout << \textcolor{stringliteral}{"User "} << param.str() << \textcolor{stringliteral}{" logging in."} << endl;
+226                 session->\hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name} = param.str();
+227                 gsasl\_property\_set(session->\hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession}, GSASL\_AUTHID, session->
+      \hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name}.c\_str());
+228                 gsasl\_property\_set(session->\hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession}, GSASL\_PASSWORD, session->
+      \hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name}.c\_str());
+229 
+230                 netInit->login.present = login\_PR\_authenticatedLogin;
+231                 AuthenticatedLogin\_t *authLogin = &netInit->login.choice.authenticatedLogin;
+232 
+233                 errorCode = gsasl\_step(session->\hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession}, NULL, 0, &tmpOut, &tmpOutSize);
+234                 \textcolor{keywordflow}{if} (errorCode == GSASL\_NEEDS\_MORE) \{
+235                     nextGsaslMsg = string(tmpOut, tmpOutSize);
+236                 \} \textcolor{keywordflow}{else} \{
+237                     cout << \textcolor{stringliteral}{"gsasl step 1 failed"} << endl;
+238                     \textcolor{keywordflow}{return} 1;
+239                 \}
+240                 gsasl\_free(tmpOut);
+241 
+242                 OCTET\_STRING\_fromBuf(&authLogin->clientUserData,
+243                                      nextGsaslMsg.c\_str(),
+244                                      nextGsaslMsg.length());
+245                 \textcolor{keywordflow}{if} (!\hyperlink{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{sendMessage}(session, msg)) \{
+246                     cout << \textcolor{stringliteral}{"Init auth request failed"} << endl;
+247                     \textcolor{keywordflow}{return} 1;
+248                 \}
+249             \}
+250 
+251             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = startNum; i < endNum; i++) \{
+252                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+253                 msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+254                 \textcolor{keywordflow}{if} (!msg || msg->present != PokerTHMessage\_PR\_authMessage) \{
+255                     cout << \textcolor{stringliteral}{"Auth request failed"} << endl;
+256                     \textcolor{keywordflow}{return} 1;
+257                 \}
+258 
+259                 AuthMessage\_t *netAuth = &msg->choice.authMessage;
+260                 AuthServerChallenge\_t *netChallenge = &netAuth->choice.authServerChallenge;
+261                 \textcolor{keywordtype}{string} challengeStr = \hyperlink{load_8cpp_a5cf0d6cbdffe082b37d1b816690cc62c}{STL\_STRING\_FROM\_OCTET\_STRING}(netChallenge
+      ->serverChallenge);
+262                 errorCode = gsasl\_step(session->\hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession}, challengeStr.c\_str(), challengeStr.
+      size(), &tmpOut, &tmpOutSize);
+263                 \textcolor{keywordflow}{if} (errorCode == GSASL\_NEEDS\_MORE) \{
+264                     nextGsaslMsg = string(tmpOut, tmpOutSize);
+265                 \} \textcolor{keywordflow}{else} \{
+266                     cout << \textcolor{stringliteral}{"gsasl step 2 failed"} << endl;
+267                     \textcolor{keywordflow}{return} 1;
+268                 \}
+269                 gsasl\_free(tmpOut);
+270                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+271                 msg = (PokerTHMessage\_t *)calloc(1, \textcolor{keyword}{sizeof}(PokerTHMessage\_t));
+272                 msg->present = PokerTHMessage\_PR\_authMessage;
+273                 AuthMessage\_t *outAuth = &msg->choice.authMessage;
+274                 outAuth->present = AuthMessage\_PR\_authClientResponse;
+275                 AuthClientResponse\_t *outResponse = &outAuth->choice.authClientResponse;
+276 
+277                 OCTET\_STRING\_fromBuf(&outResponse->clientResponse,
+278                                      nextGsaslMsg.c\_str(),
+279                                      nextGsaslMsg.length());
+280                 \textcolor{keywordflow}{if} (!\hyperlink{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{sendMessage}(session, msg)) \{
+281                     cout << \textcolor{stringliteral}{"Init auth response failed"} << endl;
+282                     \textcolor{keywordflow}{return} 1;
+283                 \}
+284             \}
+285 
+286             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = startNum; i < endNum; i++) \{
+287                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+288                 msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+289                 \textcolor{keywordflow}{if} (!msg || msg->present != PokerTHMessage\_PR\_authMessage) \{
+290                     cout << \textcolor{stringliteral}{"Auth response failed"} << endl;
+291                     \textcolor{keywordflow}{return} 1;
+292                 \}
+293                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+294 
+295                 \textcolor{comment}{// Receive init ack}
+296                 msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+297                 \textcolor{keywordflow}{if} (!msg || msg->present != PokerTHMessage\_PR\_initAckMessage) \{
+298                     cout << \textcolor{stringliteral}{"Init ack failed"} << endl;
+299                     \textcolor{keywordflow}{return} 1;
+300                 \}
+301                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+302 
+303                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = i; j >= 0; j--) \{
+304                     \textcolor{keywordtype}{size\_t} bytes\_readable = sessionArray[j]->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.available();
+305                     \textcolor{keywordflow}{while} (bytes\_readable > 0) \{
+306                         msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(sessionArray[j]);
+307                         ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+308                         bytes\_readable = sessionArray[j]->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.available();
+309                     \}
+310                 \}
+311             \}
+312         \}
+313 
+314         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} g = 0; g < numGames; g++) \{
+315             \hyperlink{struct_net_session}{NetSession} *session = sessionArray[g * 10];
+316             \textcolor{comment}{// Send create game}
+317             cout << \textcolor{stringliteral}{"Player "} << session->\hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name} << \textcolor{stringliteral}{" creating game "} << g+1 << endl;
+318             msg = (PokerTHMessage\_t *)calloc(1, \textcolor{keyword}{sizeof}(PokerTHMessage\_t));
+319             msg->present = PokerTHMessage\_PR\_joinGameRequestMessage;
+320             JoinGameRequestMessage\_t *netJoinGame = &msg->choice.joinGameRequestMessage;
+321             \textcolor{keywordtype}{string} tmpGamePassword(\textcolor{stringliteral}{"blah123"});
+322             netJoinGame->password = OCTET\_STRING\_new\_fromBuf(
+323                                         &asn\_DEF\_UTF8String,
+324                                         tmpGamePassword.c\_str(),
+325                                         tmpGamePassword.length());
+326             netJoinGame->joinGameAction.present = joinGameAction\_PR\_joinNewGame;
+327             JoinNewGame\_t *joinNew = &netJoinGame->joinGameAction.choice.joinNewGame;
+328             \textcolor{keywordtype}{string} tmpGameName(\textcolor{stringliteral}{"\_loadtest\_do\_not\_join\_"} + session->\hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name});
+329             joinNew->gameInfo.netGameType       = netGameType\_normalGame;
+330             joinNew->gameInfo.maxNumPlayers     = 10;
+331             joinNew->gameInfo.raiseIntervalMode.present = raiseIntervalMode\_PR\_raiseEveryHands;
+332             joinNew->gameInfo.raiseIntervalMode.choice.raiseEveryHands = 1;
+333             joinNew->gameInfo.endRaiseMode      = endRaiseMode\_keepLastBlind;
+334             joinNew->gameInfo.proposedGuiSpeed          = 5;
+335             joinNew->gameInfo.delayBetweenHands         = 5;
+336             joinNew->gameInfo.playerActionTimeout       = 5;
+337             joinNew->gameInfo.endRaiseSmallBlindValue   = 0;
+338             joinNew->gameInfo.firstSmallBlind           = 200;
+339             joinNew->gameInfo.startMoney                = 10000;
+340             OCTET\_STRING\_fromBuf(&joinNew->gameInfo.gameName,
+341                                  tmpGameName.c\_str(),
+342                                  tmpGameName.length());
+343             \textcolor{keywordflow}{if} (!\hyperlink{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{sendMessage}(session, msg)) \{
+344                 cout << \textcolor{stringliteral}{"Create game failed"} << endl;
+345                 \textcolor{keywordflow}{return} 1;
+346             \}
+347             msg = NULL;
+348             \textcolor{comment}{// Receive join game ack}
+349             \textcolor{keywordflow}{do} \{
+350                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+351                 msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+352                 \textcolor{keywordflow}{if} (!msg) \{
+353                     cout << \textcolor{stringliteral}{"Receive in lobby failed"} << endl;
+354                     \textcolor{keywordflow}{return} 1;
+355                 \}
+356                 \textcolor{keywordflow}{if} (msg->present == PokerTHMessage\_PR\_errorMessage) \{
+357                     cout << \textcolor{stringliteral}{"Received error"} << endl;
+358                     \textcolor{keywordflow}{return} 1;
+359                 \}
+360             \} \textcolor{keywordflow}{while} (msg->present != PokerTHMessage\_PR\_joinGameReplyMessage);
+361             \textcolor{keywordflow}{if} (msg->choice.joinGameReplyMessage.joinGameResult.present != joinGameResult\_PR\_joinGameAck) \{
+362                 cout << \textcolor{stringliteral}{"Join game ack failed"} << endl;
+363                 \textcolor{keywordflow}{return} 1;
+364             \}
+365             gameId[g] = msg->choice.joinGameReplyMessage.gameId;
+366             ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+367         \}
+368 
+369         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} t = 0; t < (numGames * 10) / LoginsPerLoop + 1; t++) \{
+370             \textcolor{keywordtype}{int} startNum = t * LoginsPerLoop;
+371             \textcolor{keywordtype}{int} endNum = (t + 1) * LoginsPerLoop;
+372             \textcolor{keywordflow}{if} (endNum > numGames * 10) \{
+373                 endNum = numGames * 10;
+374             \}
+375             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = startNum; i < endNum; i++) \{
+376                 \textcolor{keywordflow}{if} (i % 10 == 0) \{
+377                     \textcolor{keywordflow}{continue};
+378                 \}
+379                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+380 
+381                 cout << \textcolor{stringliteral}{"Player "} << session->\hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name} << \textcolor{stringliteral}{" joining game "} << (i / 10)+1 << endl;
+382                 msg = (PokerTHMessage\_t *)calloc(1, \textcolor{keyword}{sizeof}(PokerTHMessage\_t));
+383                 msg->present = PokerTHMessage\_PR\_joinGameRequestMessage;
+384                 JoinGameRequestMessage\_t *netJoinGame = &msg->choice.joinGameRequestMessage;
+385                 \textcolor{keywordtype}{string} tmpGamePassword(\textcolor{stringliteral}{"blah123"});
+386                 netJoinGame->password = OCTET\_STRING\_new\_fromBuf(
+387                                             &asn\_DEF\_UTF8String,
+388                                             tmpGamePassword.c\_str(),
+389                                             tmpGamePassword.length());
+390                 netJoinGame->joinGameAction.present = joinGameAction\_PR\_joinExistingGame;
+391                 JoinExistingGame\_t *joinExisting = &netJoinGame->joinGameAction.choice.joinExistingGame;
+392                 joinExisting->gameId = gameId[i / 10];
+393                 \textcolor{keywordflow}{if} (!\hyperlink{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{sendMessage}(session, msg)) \{
+394                     cout << \textcolor{stringliteral}{"Join game failed"} << endl;
+395                     \textcolor{keywordflow}{return} 1;
+396                 \}
+397                 msg = NULL;
+398             \}
+399             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = startNum; i < endNum; i++) \{
+400                 \textcolor{keywordflow}{if} (i % 10 == 0) \{
+401                     \textcolor{keywordflow}{continue};
+402                 \}
+403                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+404                 \textcolor{comment}{// Receive join game ack}
+405                 \textcolor{keywordflow}{do} \{
+406                     ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+407                     msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+408                     \textcolor{keywordflow}{if} (!msg) \{
+409                         cout << \textcolor{stringliteral}{"Receive in lobby failed"} << endl;
+410                         \textcolor{keywordflow}{return} 1;
+411                     \}
+412                     \textcolor{keywordflow}{if} (msg->present == PokerTHMessage\_PR\_errorMessage) \{
+413                         cout << \textcolor{stringliteral}{"Received error"} << endl;
+414                         \textcolor{keywordflow}{return} 1;
+415                     \}
+416                 \} \textcolor{keywordflow}{while} (msg->present != PokerTHMessage\_PR\_joinGameReplyMessage);
+417                 \textcolor{keywordflow}{if} (msg->choice.joinGameReplyMessage.joinGameResult.present != 
+      joinGameResult\_PR\_joinGameAck) \{
+418                     cout << \textcolor{stringliteral}{"Join game ack failed"} << endl;
+419                     \textcolor{keywordflow}{return} 1;
+420                 \}
+421                 ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+422                 msg = NULL;
+423             \}
+424         \}
+425         \textcolor{keywordtype}{bool} terminated = \textcolor{keyword}{false};
+426         \textcolor{keywordflow}{while} (!terminated) \{
+427             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numGames * 10; i++) \{
+428                 \hyperlink{struct_net_session}{NetSession} *session = sessionArray[i];
+429 
+430                 \textcolor{keywordtype}{size\_t} bytes\_readable = session->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.available();
+431                 \textcolor{keywordflow}{while} (bytes\_readable > 0) \{
+432                     msg = \hyperlink{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{receiveMessage}(session);
+433                     \textcolor{keywordflow}{if} (msg->present == PokerTHMessage\_PR\_endOfGameMessage) \{
+434                         cout << \textcolor{stringliteral}{"One game was ended."} << endl;
+435                         terminated = \textcolor{keyword}{true};
+436                     \}
+437                     ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+438                     bytes\_readable = session->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.available();
+439                 \}
+440             \}
+441             boost::this\_thread::sleep(boost::posix\_time::milliseconds(100));
+442         \}
+443         gsasl\_done(authContext);
+444 
+445     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} exception &e) \{
+446         cout << \textcolor{stringliteral}{"Exception caught "} << e.what() << endl;
+447         \textcolor{keywordflow}{return} 1;
+448     \}
+449 
+450     \textcolor{keywordflow}{return} 0;
+451 \}\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{load_8cpp_a3648412ef7ef48b734fad6e3be1ff5c0}{\index{load.\-cpp@{load.\-cpp}!net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string@{net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string}}
+\index{net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string@{net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string}!load.cpp@{load.\-cpp}}
+\subsubsection[{net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}static int net\-\_\-packet\-\_\-print\-\_\-to\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buffer, }
+\item[{size\-\_\-t}]{size, }
+\item[{void $\ast$}]{packet\-Str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{load_8cpp_a3648412ef7ef48b734fad6e3be1ff5c0}
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{keywordtype}{string} *tmpString = (\textcolor{keywordtype}{string} *)packetStr;
+66     *tmpString += string((\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)buffer, size);
+67     \textcolor{keywordflow}{return} 0;
+68 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load_8cpp_a3648412ef7ef48b734fad6e3be1ff5c0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}{\index{load.\-cpp@{load.\-cpp}!receive\-Message@{receive\-Message}}
+\index{receive\-Message@{receive\-Message}!load.cpp@{load.\-cpp}}
+\subsubsection[{receive\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Poker\-T\-H\-Message\-\_\-t$\ast$ receive\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\-Session} $\ast$}]{session}
+\end{DoxyParamCaption}
+)}}\label{load_8cpp_ab7e9bb8e3de485508865004717ac33cd}
+
+\begin{DoxyCode}
+76 \{
+77     PokerTHMessage\_t *msg = NULL;
+78     \textcolor{keywordflow}{do} \{
+79         asn\_dec\_rval\_t retVal = ber\_decode(0, &asn\_DEF\_PokerTHMessage, (\textcolor{keywordtype}{void} **)&msg, session->
+      \hyperlink{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{recBuf}.data(), session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos});
+80         \textcolor{keywordflow}{if}(retVal.code == RC\_OK && msg != NULL) \{
+81             \textcolor{keywordflow}{if} (retVal.consumed < session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos}) \{
+82                 session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos} -= retVal.consumed;
+83                 memmove(session->\hyperlink{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{recBuf}.c\_array(), session->\hyperlink{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{recBuf}.c\_array() + retVal.consumed,
+       session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos});
+84             \} \textcolor{keywordflow}{else} \{
+85                 session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos} = 0;
+86             \}
+87             \textcolor{keywordflow}{if} (asn\_check\_constraints(&asn\_DEF\_PokerTHMessage, msg, NULL, NULL) != 0) \{
+88                 cerr << \textcolor{stringliteral}{"Invalid packet received:"} << endl;
+89                 \textcolor{keywordtype}{string} packetString;
+90                 xer\_encode(&asn\_DEF\_PokerTHMessage, msg, XER\_F\_BASIC, &
+      \hyperlink{load_8cpp_a3648412ef7ef48b734fad6e3be1ff5c0}{net\_packet\_print\_to\_string}, &packetString);
+91                 cout << packetString << endl;
+92             \}
+93         \} \textcolor{keywordflow}{else} \{
+94             \textcolor{comment}{// Free the partially decoded message (if applicable).}
+95             ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+96             msg = NULL;
+97             session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos} += session->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.receive(boost::asio::buffer(session->
+      \hyperlink{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{recBuf}.c\_array() + session->\hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos}, \hyperlink{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{BUF\_SIZE} - session->
+      \hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos}));
+98         \}
+99     \} \textcolor{keywordflow}{while} (msg == NULL);
+100     \textcolor{keywordflow}{return} msg;
+101 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{load_8cpp_ab7e9bb8e3de485508865004717ac33cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{load_8cpp_ab7e9bb8e3de485508865004717ac33cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{load_8cpp_a147f7872930fe5e0da14572d9bf42100}{\index{load.\-cpp@{load.\-cpp}!send\-Message@{send\-Message}}
+\index{send\-Message@{send\-Message}!load.cpp@{load.\-cpp}}
+\subsubsection[{send\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool send\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\-Session} $\ast$}]{session, }
+\item[{Poker\-T\-H\-Message\-\_\-t $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{load_8cpp_a147f7872930fe5e0da14572d9bf42100}
+
+\begin{DoxyCode}
+105 \{
+106     \textcolor{keywordtype}{bool} retVal = \textcolor{keyword}{false};
+107     \textcolor{keywordflow}{if} (msg) \{
+108         asn\_enc\_rval\_t e = der\_encode\_to\_buffer(&asn\_DEF\_PokerTHMessage, msg, session->
+      \hyperlink{struct_net_session_a6e3c17623ebe78851968a210e95fcc38}{sendBuf}.data(), \hyperlink{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{BUF\_SIZE});
+109         \textcolor{keywordflow}{if} (e.encoded != -1) \{
+110             session->\hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}.send(boost::asio::buffer(session->\hyperlink{struct_net_session_a6e3c17623ebe78851968a210e95fcc38}{sendBuf}.data(), e.encoded));
+111             retVal = \textcolor{keyword}{true};
+112         \}
+113         ASN\_STRUCT\_FREE(asn\_DEF\_PokerTHMessage, msg);
+114     \}
+115     \textcolor{keywordflow}{return} retVal;
+116 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{load_8cpp_a147f7872930fe5e0da14572d9bf42100_icgraph}
+\end{center}
+\end{figure}
+
+

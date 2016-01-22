@@ -1,0 +1,66 @@
+\hypertarget{zlib__compress_8cpp}{\section{zlib\-\_\-compress.\-cpp 파일 참조}
+\label{zlib__compress_8cpp}\index{zlib\-\_\-compress.\-cpp@{zlib\-\_\-compress.\-cpp}}
+}
+{\ttfamily \#include $<$boost/filesystem.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/iostreams/filtering\-\_\-streambuf.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/iostreams/copy.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/iostreams/filter/zlib.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+zlib\-\_\-compress.\-cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{zlib__compress_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{zlib__compress_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\hypertarget{zlib__compress_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{zlib\-\_\-compress.\-cpp@{zlib\-\_\-compress.\-cpp}!main@{main}}
+\index{main@{main}!zlib_compress.cpp@{zlib\-\_\-compress.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{zlib__compress_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{keywordflow}{if} (argc != 2) \{
+49         cout << \textcolor{stringliteral}{"Usage: zlib\_compress <text input file>"} << endl;
+50         \textcolor{keywordflow}{return} 1;
+51     \}
+52     \textcolor{comment}{// Use input file name, and write to input file with additional ".z".}
+53     path inputFilePath(argv[1]);
+54     path outputFilePath(inputFilePath);
+55     outputFilePath = change\_extension(outputFilePath, extension(outputFilePath) + \textcolor{stringliteral}{".z"});
+56     \textcolor{comment}{// Check whether file exists.}
+57     \textcolor{keywordflow}{if} (!exists(inputFilePath)) \{
+58         cerr << \textcolor{stringliteral}{"Input file does not exist."} << endl;
+59         \textcolor{keywordflow}{return} 2;
+60     \}
+61     \textcolor{keywordflow}{try} \{
+62         std::ifstream inFile(inputFilePath.directory\_string().c\_str(), ios\_base::in);
+63         std::ofstream outFile(outputFilePath.directory\_string().c\_str(), ios\_base::out | ios\_base::binary);
+64         boost::iostreams::filtering\_streambuf<boost::iostreams::output> out;
+65         out.push(boost::iostreams::zlib\_compressor());
+66         out.push(outFile);
+67         boost::iostreams::copy(inFile, out);
+68         cout << \textcolor{stringliteral}{"Compression of \(\backslash\)""} << inputFilePath.directory\_string() << \textcolor{stringliteral}{"\(\backslash\)" to \(\backslash\)""} << outputFilePath.
+      directory\_string() << \textcolor{stringliteral}{"\(\backslash\)" was successful."} << endl;
+69     \} \textcolor{keywordflow}{catch} (...) \{
+70         cerr << \textcolor{stringliteral}{"Compression failed."} << endl;
+71         \textcolor{keywordflow}{return} 3;
+72     \}
+73 
+74     \textcolor{keywordflow}{return} 0;
+75 \}
+\end{DoxyCode}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['petition_5fend_5fenough_5fvotes',['PETITION_END_ENOUGH_VOTES',['../game__defs_8h.html#a3de2a8d2259e8d9ce708d9b373c4c03da9fc2fd066d4e51cb91f49e10d4d09032',1,'game_defs.h']]],
+  ['petition_5fend_5fnot_5fenough_5fplayers',['PETITION_END_NOT_ENOUGH_PLAYERS',['../game__defs_8h.html#a3de2a8d2259e8d9ce708d9b373c4c03da4956a92cefb617c758e96d413fb28634',1,'game_defs.h']]],
+  ['petition_5fend_5fplayer_5fleft',['PETITION_END_PLAYER_LEFT',['../game__defs_8h.html#a3de2a8d2259e8d9ce708d9b373c4c03dabe2798752c3434b42274bf98c9fc4acb',1,'game_defs.h']]],
+  ['petition_5fend_5ftimeout',['PETITION_END_TIMEOUT',['../game__defs_8h.html#a3de2a8d2259e8d9ce708d9b373c4c03da59ee51f66d45c71c0cb3d8ba1a75f35b',1,'game_defs.h']]],
+  ['player_5faction_5fallin',['PLAYER_ACTION_ALLIN',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaa6c83d49d1f664533a04b98cff1215a0d',1,'game_defs.h']]],
+  ['player_5faction_5fbet',['PLAYER_ACTION_BET',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaab2725fe3290652556263fc6df822d544',1,'game_defs.h']]],
+  ['player_5faction_5fcall',['PLAYER_ACTION_CALL',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaa4ea1a7e65b5f8e553dcbe3eafe385657',1,'game_defs.h']]],
+  ['player_5faction_5fcheck',['PLAYER_ACTION_CHECK',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaaf6180f72aa239c5290fd09a8500ac6b0',1,'game_defs.h']]],
+  ['player_5faction_5ffold',['PLAYER_ACTION_FOLD',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaae74248d5f8a69a6276d3058722c7317f',1,'game_defs.h']]],
+  ['player_5faction_5fnone',['PLAYER_ACTION_NONE',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaa53642bc4dae0658ebb57c1fa0e6e08d6',1,'game_defs.h']]],
+  ['player_5faction_5fraise',['PLAYER_ACTION_RAISE',['../game__defs_8h.html#aea132397c26cad8f8637a9422260decaa922b57a9457c2e9fa0bdd4d2540ef5bf',1,'game_defs.h']]],
+  ['player_5frights_5fadmin',['PLAYER_RIGHTS_ADMIN',['../playerdata_8h.html#ac0c72aca5c5ceabb2abbcd2d2c02aba6aad750e9e1dec0aa30d5ad3bcaa4bb9ad',1,'playerdata.h']]],
+  ['player_5frights_5fguest',['PLAYER_RIGHTS_GUEST',['../playerdata_8h.html#ac0c72aca5c5ceabb2abbcd2d2c02aba6a32d17691c0f17eb117f004b3fdd90685',1,'playerdata.h']]],
+  ['player_5frights_5fnormal',['PLAYER_RIGHTS_NORMAL',['../playerdata_8h.html#ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab',1,'playerdata.h']]],
+  ['player_5ftype_5fcomputer',['PLAYER_TYPE_COMPUTER',['../playerdata_8h.html#abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6',1,'playerdata.h']]],
+  ['player_5ftype_5fhuman',['PLAYER_TYPE_HUMAN',['../playerdata_8h.html#abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0',1,'playerdata.h']]]
+];

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['game_5fmode_5fclosed',['GAME_MODE_CLOSED',['../gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853',1,'gamedata.h']]],
+  ['game_5fmode_5fcreated',['GAME_MODE_CREATED',['../gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328',1,'gamedata.h']]],
+  ['game_5fmode_5fstarted',['GAME_MODE_STARTED',['../gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3',1,'gamedata.h']]],
+  ['game_5fstate_5fflop',['GAME_STATE_FLOP',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a8f3c19d7d097363f6d501224a97b1ee7',1,'game_defs.h']]],
+  ['game_5fstate_5fpost_5friver',['GAME_STATE_POST_RIVER',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ae33f9ffa4aa78ecefd293b4502fb4fd1',1,'game_defs.h']]],
+  ['game_5fstate_5fpreflop',['GAME_STATE_PREFLOP',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a94ed0f2402dd6cd903eeee97c2e3a922',1,'game_defs.h']]],
+  ['game_5fstate_5fpreflop_5fbig_5fblind',['GAME_STATE_PREFLOP_BIG_BLIND',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285ac162b15215b6b8e32724cc5f75af578c',1,'game_defs.h']]],
+  ['game_5fstate_5fpreflop_5fsmall_5fblind',['GAME_STATE_PREFLOP_SMALL_BLIND',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a8e7e655f181a88672dde7417192a851a',1,'game_defs.h']]],
+  ['game_5fstate_5friver',['GAME_STATE_RIVER',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a58da5207e0c04f117e7347b953eaa777',1,'game_defs.h']]],
+  ['game_5fstate_5fturn',['GAME_STATE_TURN',['../game__defs_8h.html#a7899b65f1ea0f655e4bbf8d2a5714285a2bb918721414681b7a3a8e42bcea419c',1,'game_defs.h']]],
+  ['game_5ftype_5finternet',['GAME_TYPE_INTERNET',['../class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2',1,'Session']]],
+  ['game_5ftype_5finvite_5fonly',['GAME_TYPE_INVITE_ONLY',['../gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7',1,'gamedata.h']]],
+  ['game_5ftype_5flocal',['GAME_TYPE_LOCAL',['../class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7',1,'Session']]],
+  ['game_5ftype_5fnetwork',['GAME_TYPE_NETWORK',['../class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80',1,'Session']]],
+  ['game_5ftype_5fnone',['GAME_TYPE_NONE',['../class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319',1,'Session']]],
+  ['game_5ftype_5fnormal',['GAME_TYPE_NORMAL',['../gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79',1,'gamedata.h']]],
+  ['game_5ftype_5franking',['GAME_TYPE_RANKING',['../gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc',1,'gamedata.h']]],
+  ['game_5ftype_5fregistered_5fonly',['GAME_TYPE_REGISTERED_ONLY',['../gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924',1,'gamedata.h']]]
+];

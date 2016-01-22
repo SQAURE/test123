@@ -1,0 +1,645 @@
+\hypertarget{class_player_data}{\section{Player\-Data 클래스 참조}
+\label{class_player_data}\index{Player\-Data@{Player\-Data}}
+}
+
+
+{\ttfamily \#include $<$playerdata.\-h$>$}
+
+
+
+Player\-Data에 대한 협력 다이어그램\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_player_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_data_afd58f88036497dea0cd37e01fe14de5b}{Player\-Data} (unsigned unique\-Id, int number, \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} type, \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{Player\-Rights} rights, bool is\-Game\-Admin)
+\item 
+\hyperlink{class_player_data_a7d58f6cfbdbdc4e9066772dc57e5c9dc}{Player\-Data} (const \hyperlink{class_player_data}{Player\-Data} \&other)
+\item 
+\hyperlink{class_player_data_a253ae40fb805d8ff0cf9d884ab504d8a}{$\sim$\-Player\-Data} ()
+\item 
+std\-::string \hyperlink{class_player_data_a9ccadf260a63a25c0a2644a9863dba45}{Get\-Name} () const 
+\item 
+void \hyperlink{class_player_data_a0ce3965e0a0baf505eca8e13d7580f19}{Set\-Name} (const std\-::string \&name)
+\item 
+std\-::string \hyperlink{class_player_data_a613727a01585bb57e61dfc88813b8e56}{Get\-Country} () const 
+\item 
+void \hyperlink{class_player_data_aeb99c2c6ed25af7cfd46849bef370f4f}{Set\-Country} (const std\-::string \&country)
+\item 
+std\-::string \hyperlink{class_player_data_a8a0cf1e986ececc7491e989e557a3383}{Get\-Avatar\-File} () const 
+\item 
+void \hyperlink{class_player_data_a8174f11d0740db3f312c6b13fb2fe737}{Set\-Avatar\-File} (const std\-::string \&avatar\-File)
+\item 
+M\-D5\-Buf \hyperlink{class_player_data_aa305d3aced0a792551cebf1ea6a3eafa}{Get\-Avatar\-M\-D5} () const 
+\item 
+void \hyperlink{class_player_data_a57ed0efa276e6a62add8cf6ae0f1e54f}{Set\-Avatar\-M\-D5} (const M\-D5\-Buf \&avatar\-M\-D5)
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{struct_avatar_file}{Avatar\-File} $>$ \hyperlink{class_player_data_acbe5b0799bf0eeb1ba462bf38f3a66a8}{Get\-Net\-Avatar\-File} () const 
+\item 
+void \hyperlink{class_player_data_ac3d0ad92de2c8e42f7df88b40e75003d}{Set\-Net\-Avatar\-File} (boost\-::shared\-\_\-ptr$<$ \hyperlink{struct_avatar_file}{Avatar\-File} $>$ \hyperlink{struct_avatar_file}{Avatar\-File})
+\item 
+\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} \hyperlink{class_player_data_abfb06f847beee982e86ad29d03edc3b5}{Get\-Type} () const 
+\item 
+void \hyperlink{class_player_data_a8a32bc6cc032cccbab4d761054f8578a}{Set\-Type} (\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} type)
+\item 
+\hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{Player\-Rights} \hyperlink{class_player_data_a6ec702f92553198aabca8a235dc2b995}{Get\-Rights} () const 
+\item 
+void \hyperlink{class_player_data_a6496cec308484ed8f3ef100721d6461d}{Set\-Rights} (\hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{Player\-Rights} rights)
+\item 
+bool \hyperlink{class_player_data_a0203b2a5c2042d46f0ca838c94db88fc}{Is\-Game\-Admin} () const 
+\item 
+void \hyperlink{class_player_data_a926cfc7ff5a727ae5c0e072f0a1e947e}{Set\-Game\-Admin} (bool is\-Admin)
+\item 
+unsigned \hyperlink{class_player_data_a9922629a2ab29426703454a3b1554e38}{Get\-Unique\-Id} () const 
+\item 
+int \hyperlink{class_player_data_a0597b5d7c731ad08862eff9f5fb48754}{Get\-Number} () const 
+\item 
+void \hyperlink{class_player_data_acc626969fae365d9a85134c1602620de}{Set\-Number} (int number)
+\item 
+std\-::string \hyperlink{class_player_data_a84d85d3024a526f9887bf50e20c504e4}{Get\-Guid} () const 
+\item 
+void \hyperlink{class_player_data_ae6df82d891bb33d3d6ebe7e42d9bff07}{Set\-Guid} (const std\-::string \&guid)
+\item 
+std\-::string \hyperlink{class_player_data_af3ec6bf093ef6ba0d2bc1497907d8c6c}{Get\-Old\-Guid} () const 
+\item 
+void \hyperlink{class_player_data_a575e319875bdd901034d54be2f88ea12}{Set\-Old\-Guid} (const std\-::string \&guid)
+\item 
+D\-B\-\_\-id \hyperlink{class_player_data_a574ecee71638104326860bfa4438dcf5}{Get\-D\-B\-Id} () const 
+\item 
+void \hyperlink{class_player_data_a0f20856a42691cc4f917763307f895e0}{Set\-D\-B\-Id} (D\-B\-\_\-id id)
+\item 
+int \hyperlink{class_player_data_a54eab50fb80ec7f18ce1777c3632a73d}{Get\-Start\-Cash} () const 
+\item 
+void \hyperlink{class_player_data_ab0b58b77fb2366c31ff902cd91117919}{Set\-Start\-Cash} (int cash)
+\item 
+bool \hyperlink{class_player_data_afa03422cfe10bf02083f65746e2fb723}{operator$<$} (const \hyperlink{class_player_data}{Player\-Data} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \hyperlink{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}{m\-\_\-unique\-Id}
+\item 
+D\-B\-\_\-id \hyperlink{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{m\-\_\-db\-Id}
+\item 
+int \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\-\_\-number}
+\item 
+int \hyperlink{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{m\-\_\-start\-Cash}
+\item 
+std\-::string \hyperlink{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}{m\-\_\-guid}
+\item 
+std\-::string \hyperlink{class_player_data_aac3ac77674157db291a3f49076bcb4bc}{m\-\_\-old\-Guid}
+\item 
+std\-::string \hyperlink{class_player_data_a0174f971f59af5008301ac6eb3d2304c}{m\-\_\-name}
+\item 
+std\-::string \hyperlink{class_player_data_a2cbffcef76225936b3860adcd0ab6e03}{m\-\_\-password}
+\item 
+std\-::string \hyperlink{class_player_data_af349fdb550aaac72ccaead9a156be844}{m\-\_\-country}
+\item 
+std\-::string \hyperlink{class_player_data_aa3342ab34d521ab87edd40ec7622be56}{m\-\_\-avatar\-File}
+\item 
+M\-D5\-Buf \hyperlink{class_player_data_a5a6b19ae010990245ed6214be517f2cf}{m\-\_\-avatar\-M\-D5}
+\item 
+\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} \hyperlink{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{m\-\_\-type}
+\item 
+\hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{Player\-Rights} \hyperlink{class_player_data_aa764ce6a7e503e938865f52463c48d63}{m\-\_\-rights}
+\item 
+bool \hyperlink{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{m\-\_\-is\-Game\-Admin}
+\item 
+boost\-::shared\-\_\-ptr$<$ \hyperlink{struct_avatar_file}{Avatar\-File} $>$ \hyperlink{class_player_data_afafb202de188ebee15e54b49aa96feac}{m\-\_\-net\-Avatar\-File}
+\item 
+boost\-::mutex \hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\-\_\-data\-Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_player_data_afd58f88036497dea0cd37e01fe14de5b}{\index{Player\-Data@{Player\-Data}!Player\-Data@{Player\-Data}}
+\index{Player\-Data@{Player\-Data}!PlayerData@{Player\-Data}}
+\subsubsection[{Player\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Player\-Data\-::\-Player\-Data (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{unique\-Id, }
+\item[{int}]{number, }
+\item[{{\bf Player\-Type}}]{type, }
+\item[{{\bf Player\-Rights}}]{rights, }
+\item[{bool}]{is\-Game\-Admin}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_afd58f88036497dea0cd37e01fe14de5b}
+
+\begin{DoxyCode}
+36     : \hyperlink{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}{m\_uniqueId}(uniqueId), \hyperlink{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{m\_dbId}(DB\_ID\_INVALID), \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\_number}(number), 
+      \hyperlink{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{m\_startCash}(-1), \hyperlink{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{m\_type}(type), \hyperlink{class_player_data_aa764ce6a7e503e938865f52463c48d63}{m\_rights}(rights), 
+      \hyperlink{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{m\_isGameAdmin}(isGameAdmin)
+37 \{
+38 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a7d58f6cfbdbdc4e9066772dc57e5c9dc}{\index{Player\-Data@{Player\-Data}!Player\-Data@{Player\-Data}}
+\index{Player\-Data@{Player\-Data}!PlayerData@{Player\-Data}}
+\subsubsection[{Player\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Player\-Data\-::\-Player\-Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Player\-Data} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a7d58f6cfbdbdc4e9066772dc57e5c9dc}
+
+\begin{DoxyCode}
+41     : \hyperlink{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}{m\_uniqueId}(other.\hyperlink{class_player_data_a9922629a2ab29426703454a3b1554e38}{GetUniqueId}()), \hyperlink{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{m\_dbId}(other.
+      \hyperlink{class_player_data_a574ecee71638104326860bfa4438dcf5}{GetDBId}()), \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\_number}(other.\hyperlink{class_player_data_a0597b5d7c731ad08862eff9f5fb48754}{GetNumber}()), \hyperlink{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{m\_startCash}(other.
+      \hyperlink{class_player_data_a54eab50fb80ec7f18ce1777c3632a73d}{GetStartCash}()),
+42       \hyperlink{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}{m\_guid}(other.\hyperlink{class_player_data_a84d85d3024a526f9887bf50e20c504e4}{GetGuid}()), \hyperlink{class_player_data_aac3ac77674157db291a3f49076bcb4bc}{m\_oldGuid}(other.\hyperlink{class_player_data_af3ec6bf093ef6ba0d2bc1497907d8c6c}{GetOldGuid}()), 
+      \hyperlink{class_player_data_a0174f971f59af5008301ac6eb3d2304c}{m\_name}(other.\hyperlink{class_player_data_a9ccadf260a63a25c0a2644a9863dba45}{GetName}()), \hyperlink{class_player_data_a2cbffcef76225936b3860adcd0ab6e03}{m\_password}(), \hyperlink{class_player_data_af349fdb550aaac72ccaead9a156be844}{m\_country}(other.
+      \hyperlink{class_player_data_a613727a01585bb57e61dfc88813b8e56}{GetCountry}()),
+43       \hyperlink{class_player_data_aa3342ab34d521ab87edd40ec7622be56}{m\_avatarFile}(other.\hyperlink{class_player_data_a8a0cf1e986ececc7491e989e557a3383}{GetAvatarFile}()), \hyperlink{class_player_data_a5a6b19ae010990245ed6214be517f2cf}{m\_avatarMD5}(other.
+      \hyperlink{class_player_data_aa305d3aced0a792551cebf1ea6a3eafa}{GetAvatarMD5}()), \hyperlink{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{m\_type}(other.\hyperlink{class_player_data_abfb06f847beee982e86ad29d03edc3b5}{GetType}()), \hyperlink{class_player_data_aa764ce6a7e503e938865f52463c48d63}{m\_rights}(other.
+      \hyperlink{class_player_data_a6ec702f92553198aabca8a235dc2b995}{GetRights}()),
+44       \hyperlink{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{m\_isGameAdmin}(other.\hyperlink{class_player_data_a0203b2a5c2042d46f0ca838c94db88fc}{IsGameAdmin}()), 
+      \hyperlink{class_player_data_afafb202de188ebee15e54b49aa96feac}{m\_netAvatarFile}(), \hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex}()
+45 \{
+46 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a253ae40fb805d8ff0cf9d884ab504d8a}{\index{Player\-Data@{Player\-Data}!$\sim$\-Player\-Data@{$\sim$\-Player\-Data}}
+\index{$\sim$\-Player\-Data@{$\sim$\-Player\-Data}!PlayerData@{Player\-Data}}
+\subsubsection[{$\sim$\-Player\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Player\-Data\-::$\sim$\-Player\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a253ae40fb805d8ff0cf9d884ab504d8a}
+
+\begin{DoxyCode}
+49 \{
+50 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_player_data_a8a0cf1e986ececc7491e989e557a3383}{\index{Player\-Data@{Player\-Data}!Get\-Avatar\-File@{Get\-Avatar\-File}}
+\index{Get\-Avatar\-File@{Get\-Avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}string Player\-Data\-::\-Get\-Avatar\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a8a0cf1e986ececc7491e989e557a3383}
+
+\begin{DoxyCode}
+82 \{
+83     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+84     \textcolor{keywordflow}{return} \hyperlink{class_player_data_aa3342ab34d521ab87edd40ec7622be56}{m\_avatarFile};
+85 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_aa305d3aced0a792551cebf1ea6a3eafa}{\index{Player\-Data@{Player\-Data}!Get\-Avatar\-M\-D5@{Get\-Avatar\-M\-D5}}
+\index{Get\-Avatar\-M\-D5@{Get\-Avatar\-M\-D5}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Avatar\-M\-D5}]{\setlength{\rightskip}{0pt plus 5cm}M\-D5\-Buf Player\-Data\-::\-Get\-Avatar\-M\-D5 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_aa305d3aced0a792551cebf1ea6a3eafa}
+
+\begin{DoxyCode}
+96 \{
+97     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+98     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a5a6b19ae010990245ed6214be517f2cf}{m\_avatarMD5};
+99 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a613727a01585bb57e61dfc88813b8e56}{\index{Player\-Data@{Player\-Data}!Get\-Country@{Get\-Country}}
+\index{Get\-Country@{Get\-Country}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Country}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::\-Get\-Country (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a613727a01585bb57e61dfc88813b8e56}
+
+\begin{DoxyCode}
+68 \{
+69     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+70     \textcolor{keywordflow}{return} \hyperlink{class_player_data_af349fdb550aaac72ccaead9a156be844}{m\_country};
+71 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a574ecee71638104326860bfa4438dcf5}{\index{Player\-Data@{Player\-Data}!Get\-D\-B\-Id@{Get\-D\-B\-Id}}
+\index{Get\-D\-B\-Id@{Get\-D\-B\-Id}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-D\-B\-Id}]{\setlength{\rightskip}{0pt plus 5cm}D\-B\-\_\-id Player\-Data\-::\-Get\-D\-B\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a574ecee71638104326860bfa4438dcf5}
+
+\begin{DoxyCode}
+212 \{
+213     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+214     \textcolor{keywordflow}{return} \hyperlink{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{m\_dbId};
+215 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a84d85d3024a526f9887bf50e20c504e4}{\index{Player\-Data@{Player\-Data}!Get\-Guid@{Get\-Guid}}
+\index{Get\-Guid@{Get\-Guid}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Guid}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::\-Get\-Guid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a84d85d3024a526f9887bf50e20c504e4}
+
+\begin{DoxyCode}
+184 \{
+185     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+186     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}{m\_guid};
+187 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a9ccadf260a63a25c0a2644a9863dba45}{\index{Player\-Data@{Player\-Data}!Get\-Name@{Get\-Name}}
+\index{Get\-Name@{Get\-Name}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Player\-Data\-::\-Get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a9ccadf260a63a25c0a2644a9863dba45}
+
+\begin{DoxyCode}
+54 \{
+55     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+56     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a0174f971f59af5008301ac6eb3d2304c}{m\_name};
+57 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_acbe5b0799bf0eeb1ba462bf38f3a66a8}{\index{Player\-Data@{Player\-Data}!Get\-Net\-Avatar\-File@{Get\-Net\-Avatar\-File}}
+\index{Get\-Net\-Avatar\-File@{Get\-Net\-Avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Net\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ {\bf Avatar\-File} $>$ Player\-Data\-::\-Get\-Net\-Avatar\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_acbe5b0799bf0eeb1ba462bf38f3a66a8}
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{keywordflow}{return} \hyperlink{class_player_data_afafb202de188ebee15e54b49aa96feac}{m\_netAvatarFile};
+111 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a0597b5d7c731ad08862eff9f5fb48754}{\index{Player\-Data@{Player\-Data}!Get\-Number@{Get\-Number}}
+\index{Get\-Number@{Get\-Number}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-Data\-::\-Get\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a0597b5d7c731ad08862eff9f5fb48754}
+
+\begin{DoxyCode}
+170 \{
+171     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+172     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\_number};
+173 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_data_a0597b5d7c731ad08862eff9f5fb48754_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_player_data_af3ec6bf093ef6ba0d2bc1497907d8c6c}{\index{Player\-Data@{Player\-Data}!Get\-Old\-Guid@{Get\-Old\-Guid}}
+\index{Get\-Old\-Guid@{Get\-Old\-Guid}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Old\-Guid}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::\-Get\-Old\-Guid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_af3ec6bf093ef6ba0d2bc1497907d8c6c}
+
+\begin{DoxyCode}
+198 \{
+199     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+200     \textcolor{keywordflow}{return} \hyperlink{class_player_data_aac3ac77674157db291a3f49076bcb4bc}{m\_oldGuid};
+201 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a6ec702f92553198aabca8a235dc2b995}{\index{Player\-Data@{Player\-Data}!Get\-Rights@{Get\-Rights}}
+\index{Get\-Rights@{Get\-Rights}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Rights}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Rights} Player\-Data\-::\-Get\-Rights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a6ec702f92553198aabca8a235dc2b995}
+
+\begin{DoxyCode}
+135 \{
+136     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+137     \textcolor{keywordflow}{return} \hyperlink{class_player_data_aa764ce6a7e503e938865f52463c48d63}{m\_rights};
+138 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a54eab50fb80ec7f18ce1777c3632a73d}{\index{Player\-Data@{Player\-Data}!Get\-Start\-Cash@{Get\-Start\-Cash}}
+\index{Get\-Start\-Cash@{Get\-Start\-Cash}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Start\-Cash}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-Data\-::\-Get\-Start\-Cash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a54eab50fb80ec7f18ce1777c3632a73d}
+
+\begin{DoxyCode}
+226 \{
+227     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+228     \textcolor{keywordflow}{return} \hyperlink{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{m\_startCash};
+229 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_abfb06f847beee982e86ad29d03edc3b5}{\index{Player\-Data@{Player\-Data}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Type} Player\-Data\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_abfb06f847beee982e86ad29d03edc3b5}
+
+\begin{DoxyCode}
+121 \{
+122     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+123     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{m\_type};
+124 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a9922629a2ab29426703454a3b1554e38}{\index{Player\-Data@{Player\-Data}!Get\-Unique\-Id@{Get\-Unique\-Id}}
+\index{Get\-Unique\-Id@{Get\-Unique\-Id}!PlayerData@{Player\-Data}}
+\subsubsection[{Get\-Unique\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Player\-Data\-::\-Get\-Unique\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a9922629a2ab29426703454a3b1554e38}
+
+\begin{DoxyCode}
+163 \{
+164     \textcolor{comment}{// const value - no mutex needed.}
+165     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}{m\_uniqueId};
+166 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a0203b2a5c2042d46f0ca838c94db88fc}{\index{Player\-Data@{Player\-Data}!Is\-Game\-Admin@{Is\-Game\-Admin}}
+\index{Is\-Game\-Admin@{Is\-Game\-Admin}!PlayerData@{Player\-Data}}
+\subsubsection[{Is\-Game\-Admin}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Data\-::\-Is\-Game\-Admin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_a0203b2a5c2042d46f0ca838c94db88fc}
+
+\begin{DoxyCode}
+149 \{
+150     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+151     \textcolor{keywordflow}{return} \hyperlink{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{m\_isGameAdmin};
+152 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_afa03422cfe10bf02083f65746e2fb723}{\index{Player\-Data@{Player\-Data}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!PlayerData@{Player\-Data}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Data\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Player\-Data} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{class_player_data_afa03422cfe10bf02083f65746e2fb723}
+
+\begin{DoxyCode}
+240 \{
+241     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+242     \textcolor{keywordflow}{return} \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\_number} < other.\hyperlink{class_player_data_a0597b5d7c731ad08862eff9f5fb48754}{GetNumber}();
+243 \}\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_data_afa03422cfe10bf02083f65746e2fb723_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_player_data_a8174f11d0740db3f312c6b13fb2fe737}{\index{Player\-Data@{Player\-Data}!Set\-Avatar\-File@{Set\-Avatar\-File}}
+\index{Set\-Avatar\-File@{Set\-Avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Avatar\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{avatar\-File}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a8174f11d0740db3f312c6b13fb2fe737}
+
+\begin{DoxyCode}
+89 \{
+90     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+91     \hyperlink{class_player_data_aa3342ab34d521ab87edd40ec7622be56}{m\_avatarFile} = avatarFile;
+92 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a57ed0efa276e6a62add8cf6ae0f1e54f}{\index{Player\-Data@{Player\-Data}!Set\-Avatar\-M\-D5@{Set\-Avatar\-M\-D5}}
+\index{Set\-Avatar\-M\-D5@{Set\-Avatar\-M\-D5}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Avatar\-M\-D5}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Avatar\-M\-D5 (
+\begin{DoxyParamCaption}
+\item[{const M\-D5\-Buf \&}]{avatar\-M\-D5}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a57ed0efa276e6a62add8cf6ae0f1e54f}
+
+\begin{DoxyCode}
+102 \{
+103     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+104     \hyperlink{class_player_data_a5a6b19ae010990245ed6214be517f2cf}{m\_avatarMD5} = avatarMD5;
+105 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_aeb99c2c6ed25af7cfd46849bef370f4f}{\index{Player\-Data@{Player\-Data}!Set\-Country@{Set\-Country}}
+\index{Set\-Country@{Set\-Country}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Country}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Country (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{country}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_aeb99c2c6ed25af7cfd46849bef370f4f}
+
+\begin{DoxyCode}
+75 \{
+76     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+77     \hyperlink{class_player_data_af349fdb550aaac72ccaead9a156be844}{m\_country} = country;
+78 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a0f20856a42691cc4f917763307f895e0}{\index{Player\-Data@{Player\-Data}!Set\-D\-B\-Id@{Set\-D\-B\-Id}}
+\index{Set\-D\-B\-Id@{Set\-D\-B\-Id}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-D\-B\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-D\-B\-Id (
+\begin{DoxyParamCaption}
+\item[{D\-B\-\_\-id}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a0f20856a42691cc4f917763307f895e0}
+
+\begin{DoxyCode}
+219 \{
+220     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+221     \hyperlink{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{m\_dbId} = id;
+222 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a926cfc7ff5a727ae5c0e072f0a1e947e}{\index{Player\-Data@{Player\-Data}!Set\-Game\-Admin@{Set\-Game\-Admin}}
+\index{Set\-Game\-Admin@{Set\-Game\-Admin}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Game\-Admin}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Game\-Admin (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Admin}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a926cfc7ff5a727ae5c0e072f0a1e947e}
+
+\begin{DoxyCode}
+156 \{
+157     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+158     \hyperlink{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{m\_isGameAdmin} = isAdmin;
+159 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_ae6df82d891bb33d3d6ebe7e42d9bff07}{\index{Player\-Data@{Player\-Data}!Set\-Guid@{Set\-Guid}}
+\index{Set\-Guid@{Set\-Guid}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Guid}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Guid (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{guid}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_ae6df82d891bb33d3d6ebe7e42d9bff07}
+
+\begin{DoxyCode}
+191 \{
+192     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+193     \hyperlink{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}{m\_guid} = guid;
+194 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a0ce3965e0a0baf505eca8e13d7580f19}{\index{Player\-Data@{Player\-Data}!Set\-Name@{Set\-Name}}
+\index{Set\-Name@{Set\-Name}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a0ce3965e0a0baf505eca8e13d7580f19}
+
+\begin{DoxyCode}
+61 \{
+62     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+63     \hyperlink{class_player_data_a0174f971f59af5008301ac6eb3d2304c}{m\_name} = name;
+64 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_ac3d0ad92de2c8e42f7df88b40e75003d}{\index{Player\-Data@{Player\-Data}!Set\-Net\-Avatar\-File@{Set\-Net\-Avatar\-File}}
+\index{Set\-Net\-Avatar\-File@{Set\-Net\-Avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Net\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Net\-Avatar\-File (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf Avatar\-File} $>$}]{Avatar\-File}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_ac3d0ad92de2c8e42f7df88b40e75003d}
+
+\begin{DoxyCode}
+115 \{
+116     \hyperlink{class_player_data_afafb202de188ebee15e54b49aa96feac}{m\_netAvatarFile} = \hyperlink{struct_avatar_file}{AvatarFile};
+117 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_acc626969fae365d9a85134c1602620de}{\index{Player\-Data@{Player\-Data}!Set\-Number@{Set\-Number}}
+\index{Set\-Number@{Set\-Number}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_acc626969fae365d9a85134c1602620de}
+
+\begin{DoxyCode}
+177 \{
+178     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+179     \hyperlink{class_player_data_a00807837606a10faee2849b979181402}{m\_number} = number;
+180 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a575e319875bdd901034d54be2f88ea12}{\index{Player\-Data@{Player\-Data}!Set\-Old\-Guid@{Set\-Old\-Guid}}
+\index{Set\-Old\-Guid@{Set\-Old\-Guid}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Old\-Guid}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Old\-Guid (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{guid}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a575e319875bdd901034d54be2f88ea12}
+
+\begin{DoxyCode}
+205 \{
+206     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+207     \hyperlink{class_player_data_aac3ac77674157db291a3f49076bcb4bc}{m\_oldGuid} = guid;
+208 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a6496cec308484ed8f3ef100721d6461d}{\index{Player\-Data@{Player\-Data}!Set\-Rights@{Set\-Rights}}
+\index{Set\-Rights@{Set\-Rights}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Rights}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Rights (
+\begin{DoxyParamCaption}
+\item[{{\bf Player\-Rights}}]{rights}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a6496cec308484ed8f3ef100721d6461d}
+
+\begin{DoxyCode}
+142 \{
+143     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+144     \hyperlink{class_player_data_aa764ce6a7e503e938865f52463c48d63}{m\_rights} = rights;
+145 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_ab0b58b77fb2366c31ff902cd91117919}{\index{Player\-Data@{Player\-Data}!Set\-Start\-Cash@{Set\-Start\-Cash}}
+\index{Set\-Start\-Cash@{Set\-Start\-Cash}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Start\-Cash}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Start\-Cash (
+\begin{DoxyParamCaption}
+\item[{int}]{cash}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_ab0b58b77fb2366c31ff902cd91117919}
+
+\begin{DoxyCode}
+233 \{
+234     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+235     \hyperlink{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{m\_startCash} = cash;
+236 \}
+\end{DoxyCode}
+\hypertarget{class_player_data_a8a32bc6cc032cccbab4d761054f8578a}{\index{Player\-Data@{Player\-Data}!Set\-Type@{Set\-Type}}
+\index{Set\-Type@{Set\-Type}!PlayerData@{Player\-Data}}
+\subsubsection[{Set\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Player\-Data\-::\-Set\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Player\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_player_data_a8a32bc6cc032cccbab4d761054f8578a}
+
+\begin{DoxyCode}
+128 \{
+129     boost::mutex::scoped\_lock lock(\hyperlink{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{m\_dataMutex});
+130     \hyperlink{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{m\_type} = type;
+131 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_player_data_aa3342ab34d521ab87edd40ec7622be56}{\index{Player\-Data@{Player\-Data}!m\-\_\-avatar\-File@{m\-\_\-avatar\-File}}
+\index{m\-\_\-avatar\-File@{m\-\_\-avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-avatar\-File\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_aa3342ab34d521ab87edd40ec7622be56}
+\hypertarget{class_player_data_a5a6b19ae010990245ed6214be517f2cf}{\index{Player\-Data@{Player\-Data}!m\-\_\-avatar\-M\-D5@{m\-\_\-avatar\-M\-D5}}
+\index{m\-\_\-avatar\-M\-D5@{m\-\_\-avatar\-M\-D5}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-avatar\-M\-D5}]{\setlength{\rightskip}{0pt plus 5cm}M\-D5\-Buf Player\-Data\-::m\-\_\-avatar\-M\-D5\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a5a6b19ae010990245ed6214be517f2cf}
+\hypertarget{class_player_data_af349fdb550aaac72ccaead9a156be844}{\index{Player\-Data@{Player\-Data}!m\-\_\-country@{m\-\_\-country}}
+\index{m\-\_\-country@{m\-\_\-country}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-country}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-country\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_af349fdb550aaac72ccaead9a156be844}
+\hypertarget{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}{\index{Player\-Data@{Player\-Data}!m\-\_\-data\-Mutex@{m\-\_\-data\-Mutex}}
+\index{m\-\_\-data\-Mutex@{m\-\_\-data\-Mutex}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-data\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex Player\-Data\-::m\-\_\-data\-Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{class_player_data_a8e1276aab88bec3fa48e3c59f193827e}
+\hypertarget{class_player_data_af4a330231d9309b6e703f4c4fda251a8}{\index{Player\-Data@{Player\-Data}!m\-\_\-db\-Id@{m\-\_\-db\-Id}}
+\index{m\-\_\-db\-Id@{m\-\_\-db\-Id}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-db\-Id}]{\setlength{\rightskip}{0pt plus 5cm}D\-B\-\_\-id Player\-Data\-::m\-\_\-db\-Id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_af4a330231d9309b6e703f4c4fda251a8}
+\hypertarget{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}{\index{Player\-Data@{Player\-Data}!m\-\_\-guid@{m\-\_\-guid}}
+\index{m\-\_\-guid@{m\-\_\-guid}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-guid}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-guid\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a3d3abd9ce7a8421596ce2ec2bf16bd64}
+\hypertarget{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}{\index{Player\-Data@{Player\-Data}!m\-\_\-is\-Game\-Admin@{m\-\_\-is\-Game\-Admin}}
+\index{m\-\_\-is\-Game\-Admin@{m\-\_\-is\-Game\-Admin}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-is\-Game\-Admin}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Data\-::m\-\_\-is\-Game\-Admin\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_ad7c207bf8ecc38e2f86bdd8d83c935df}
+\hypertarget{class_player_data_a0174f971f59af5008301ac6eb3d2304c}{\index{Player\-Data@{Player\-Data}!m\-\_\-name@{m\-\_\-name}}
+\index{m\-\_\-name@{m\-\_\-name}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-name\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a0174f971f59af5008301ac6eb3d2304c}
+\hypertarget{class_player_data_afafb202de188ebee15e54b49aa96feac}{\index{Player\-Data@{Player\-Data}!m\-\_\-net\-Avatar\-File@{m\-\_\-net\-Avatar\-File}}
+\index{m\-\_\-net\-Avatar\-File@{m\-\_\-net\-Avatar\-File}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-net\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<${\bf Avatar\-File}$>$ Player\-Data\-::m\-\_\-net\-Avatar\-File\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_afafb202de188ebee15e54b49aa96feac}
+\hypertarget{class_player_data_a00807837606a10faee2849b979181402}{\index{Player\-Data@{Player\-Data}!m\-\_\-number@{m\-\_\-number}}
+\index{m\-\_\-number@{m\-\_\-number}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-Data\-::m\-\_\-number\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a00807837606a10faee2849b979181402}
+\hypertarget{class_player_data_aac3ac77674157db291a3f49076bcb4bc}{\index{Player\-Data@{Player\-Data}!m\-\_\-old\-Guid@{m\-\_\-old\-Guid}}
+\index{m\-\_\-old\-Guid@{m\-\_\-old\-Guid}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-old\-Guid}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-old\-Guid\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_aac3ac77674157db291a3f49076bcb4bc}
+\hypertarget{class_player_data_a2cbffcef76225936b3860adcd0ab6e03}{\index{Player\-Data@{Player\-Data}!m\-\_\-password@{m\-\_\-password}}
+\index{m\-\_\-password@{m\-\_\-password}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Data\-::m\-\_\-password\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a2cbffcef76225936b3860adcd0ab6e03}
+\hypertarget{class_player_data_aa764ce6a7e503e938865f52463c48d63}{\index{Player\-Data@{Player\-Data}!m\-\_\-rights@{m\-\_\-rights}}
+\index{m\-\_\-rights@{m\-\_\-rights}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-rights}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Rights} Player\-Data\-::m\-\_\-rights\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_aa764ce6a7e503e938865f52463c48d63}
+\hypertarget{class_player_data_afb53d1b4126139cdc74b8322dab0094a}{\index{Player\-Data@{Player\-Data}!m\-\_\-start\-Cash@{m\-\_\-start\-Cash}}
+\index{m\-\_\-start\-Cash@{m\-\_\-start\-Cash}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-start\-Cash}]{\setlength{\rightskip}{0pt plus 5cm}int Player\-Data\-::m\-\_\-start\-Cash\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_afb53d1b4126139cdc74b8322dab0094a}
+\hypertarget{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}{\index{Player\-Data@{Player\-Data}!m\-\_\-type@{m\-\_\-type}}
+\index{m\-\_\-type@{m\-\_\-type}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Type} Player\-Data\-::m\-\_\-type\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a3e4b8d9fcda3d2def5f0a79468a87903}
+\hypertarget{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}{\index{Player\-Data@{Player\-Data}!m\-\_\-unique\-Id@{m\-\_\-unique\-Id}}
+\index{m\-\_\-unique\-Id@{m\-\_\-unique\-Id}!PlayerData@{Player\-Data}}
+\subsubsection[{m\-\_\-unique\-Id}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned Player\-Data\-::m\-\_\-unique\-Id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_player_data_a2b6ed5c114b242c39eab3ec7c6622a5f}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{playerdata_8h}{playerdata.\-h}\item 
+\hyperlink{playerdata_8cpp}{playerdata.\-cpp}\end{DoxyCompactItemize}

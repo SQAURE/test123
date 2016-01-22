@@ -1,0 +1,79 @@
+\hypertarget{struct_server_stats}{\section{Server\-Stats 구조체 참조}
+\label{struct_server_stats}\index{Server\-Stats@{Server\-Stats}}
+}
+
+
+{\ttfamily \#include $<$serverdata.\-h$>$}
+
+
+
+Server\-Stats에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{struct_server_stats__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_server_stats_a1ed311eaeb034e47dd26f531114b9ad1}{Server\-Stats} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{struct_server_stats_ae5c627e4a9c50bf2ff6c037ec0bc81d0}{number\-Of\-Players\-On\-Server}
+\item 
+unsigned \hyperlink{struct_server_stats_a6718463c122b2cf94a315fd796084838}{number\-Of\-Games\-Open}
+\item 
+unsigned \hyperlink{struct_server_stats_a18a286038d220b5de804f50e30c66f22}{total\-Players\-Ever\-Logged\-In}
+\item 
+unsigned \hyperlink{struct_server_stats_a66a158077e23174434110fb8fc26b9ff}{total\-Games\-Ever\-Created}
+\item 
+unsigned \hyperlink{struct_server_stats_a25778c7b4a7ac21c22bcc67dda3ff54d}{max\-Games\-Open}
+\item 
+unsigned \hyperlink{struct_server_stats_ab6da76ba04d76821233d4ed4bbf4a2ae}{max\-Players\-Logged\-In}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_server_stats_a1ed311eaeb034e47dd26f531114b9ad1}{\index{Server\-Stats@{Server\-Stats}!Server\-Stats@{Server\-Stats}}
+\index{Server\-Stats@{Server\-Stats}!ServerStats@{Server\-Stats}}
+\subsubsection[{Server\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}Server\-Stats\-::\-Server\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_server_stats_a1ed311eaeb034e47dd26f531114b9ad1}
+
+\begin{DoxyCode}
+53         : \hyperlink{struct_server_stats_ae5c627e4a9c50bf2ff6c037ec0bc81d0}{numberOfPlayersOnServer}(0), \hyperlink{struct_server_stats_a6718463c122b2cf94a315fd796084838}{numberOfGamesOpen}(0), 
+      \hyperlink{struct_server_stats_a18a286038d220b5de804f50e30c66f22}{totalPlayersEverLoggedIn}(0),
+54           \hyperlink{struct_server_stats_a66a158077e23174434110fb8fc26b9ff}{totalGamesEverCreated}(0), \hyperlink{struct_server_stats_a25778c7b4a7ac21c22bcc67dda3ff54d}{maxGamesOpen}(0), 
+      \hyperlink{struct_server_stats_ab6da76ba04d76821233d4ed4bbf4a2ae}{maxPlayersLoggedIn}(0) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_server_stats_a25778c7b4a7ac21c22bcc67dda3ff54d}{\index{Server\-Stats@{Server\-Stats}!max\-Games\-Open@{max\-Games\-Open}}
+\index{max\-Games\-Open@{max\-Games\-Open}!ServerStats@{Server\-Stats}}
+\subsubsection[{max\-Games\-Open}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::max\-Games\-Open}}\label{struct_server_stats_a25778c7b4a7ac21c22bcc67dda3ff54d}
+\hypertarget{struct_server_stats_ab6da76ba04d76821233d4ed4bbf4a2ae}{\index{Server\-Stats@{Server\-Stats}!max\-Players\-Logged\-In@{max\-Players\-Logged\-In}}
+\index{max\-Players\-Logged\-In@{max\-Players\-Logged\-In}!ServerStats@{Server\-Stats}}
+\subsubsection[{max\-Players\-Logged\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::max\-Players\-Logged\-In}}\label{struct_server_stats_ab6da76ba04d76821233d4ed4bbf4a2ae}
+\hypertarget{struct_server_stats_a6718463c122b2cf94a315fd796084838}{\index{Server\-Stats@{Server\-Stats}!number\-Of\-Games\-Open@{number\-Of\-Games\-Open}}
+\index{number\-Of\-Games\-Open@{number\-Of\-Games\-Open}!ServerStats@{Server\-Stats}}
+\subsubsection[{number\-Of\-Games\-Open}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::number\-Of\-Games\-Open}}\label{struct_server_stats_a6718463c122b2cf94a315fd796084838}
+\hypertarget{struct_server_stats_ae5c627e4a9c50bf2ff6c037ec0bc81d0}{\index{Server\-Stats@{Server\-Stats}!number\-Of\-Players\-On\-Server@{number\-Of\-Players\-On\-Server}}
+\index{number\-Of\-Players\-On\-Server@{number\-Of\-Players\-On\-Server}!ServerStats@{Server\-Stats}}
+\subsubsection[{number\-Of\-Players\-On\-Server}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::number\-Of\-Players\-On\-Server}}\label{struct_server_stats_ae5c627e4a9c50bf2ff6c037ec0bc81d0}
+\hypertarget{struct_server_stats_a66a158077e23174434110fb8fc26b9ff}{\index{Server\-Stats@{Server\-Stats}!total\-Games\-Ever\-Created@{total\-Games\-Ever\-Created}}
+\index{total\-Games\-Ever\-Created@{total\-Games\-Ever\-Created}!ServerStats@{Server\-Stats}}
+\subsubsection[{total\-Games\-Ever\-Created}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::total\-Games\-Ever\-Created}}\label{struct_server_stats_a66a158077e23174434110fb8fc26b9ff}
+\hypertarget{struct_server_stats_a18a286038d220b5de804f50e30c66f22}{\index{Server\-Stats@{Server\-Stats}!total\-Players\-Ever\-Logged\-In@{total\-Players\-Ever\-Logged\-In}}
+\index{total\-Players\-Ever\-Logged\-In@{total\-Players\-Ever\-Logged\-In}!ServerStats@{Server\-Stats}}
+\subsubsection[{total\-Players\-Ever\-Logged\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Stats\-::total\-Players\-Ever\-Logged\-In}}\label{struct_server_stats_a18a286038d220b5de804f50e30c66f22}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{serverdata_8h}{serverdata.\-h}\end{DoxyCompactItemize}

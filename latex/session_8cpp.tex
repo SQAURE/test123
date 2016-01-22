@@ -1,0 +1,45 @@
+\hypertarget{session_8cpp}{\section{session.\-cpp 파일 참조}
+\label{session_8cpp}\index{session.\-cpp@{session.\-cpp}}
+}
+{\ttfamily \#include $<$boost/asio.\-hpp$>$}\\*
+{\ttfamily \#include $<$net/socket\-\_\-helper.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}session.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}guiinterface.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}configfile.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$qttoolsinterface.\-h$>$}\\*
+{\ttfamily \#include $<$localenginefactory.\-h$>$}\\*
+{\ttfamily \#include $<$clientenginefactory.\-h$>$}\\*
+{\ttfamily \#include $<$net/clientthread.\-h$>$}\\*
+{\ttfamily \#include $<$core/avatarmanager.\-h$>$}\\*
+{\ttfamily \#include $<$net/servermanagerfactory.\-h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+session.\-cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{session_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{session_8cpp_ac4cfb210528149df9891fb4c5529a366}{N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}~2000
+\item 
+\#define \hyperlink{session_8cpp_a09aa3eef2094a49576365bb7715715c3}{N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}~2000
+\item 
+\#define \hyperlink{session_8cpp_ae40f8ea78cc800300b894fc55d38c146}{N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E}~\char`\"{}default\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{session_8cpp_ac4cfb210528149df9891fb4c5529a366}{\index{session.\-cpp@{session.\-cpp}!N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C@{N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}}
+\index{N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C@{N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}!session.cpp@{session.\-cpp}}
+\subsubsection[{N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C~2000}}\label{session_8cpp_ac4cfb210528149df9891fb4c5529a366}
+\hypertarget{session_8cpp_ae40f8ea78cc800300b894fc55d38c146}{\index{session.\-cpp@{session.\-cpp}!N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E@{N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E}}
+\index{N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E@{N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E}!session.cpp@{session.\-cpp}}
+\subsubsection[{N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-T\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-A\-M\-E~\char`\"{}default\char`\"{}}}\label{session_8cpp_ae40f8ea78cc800300b894fc55d38c146}
+\hypertarget{session_8cpp_a09aa3eef2094a49576365bb7715715c3}{\index{session.\-cpp@{session.\-cpp}!N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C@{N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}}
+\index{N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C@{N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}!session.cpp@{session.\-cpp}}
+\subsubsection[{N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-T\-\_\-\-I\-R\-C\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-\_\-\-T\-I\-M\-E\-O\-U\-T\-\_\-\-M\-S\-E\-C~2000}}\label{session_8cpp_a09aa3eef2094a49576365bb7715715c3}

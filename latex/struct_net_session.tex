@@ -1,0 +1,72 @@
+\hypertarget{struct_net_session}{\section{Net\-Session 구조체 참조}
+\label{struct_net_session}\index{Net\-Session@{Net\-Session}}
+}
+
+
+Net\-Session에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{struct_net_session__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_net_session_a636704de0a367698b2ec93e65b21a300}{Net\-Session} (boost\-::asio\-::io\-\_\-service \&io\-Service)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+boost\-::array$<$ char, \hyperlink{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{B\-U\-F\-\_\-\-S\-I\-Z\-E} $>$ \hyperlink{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{rec\-Buf}
+\item 
+size\-\_\-t \hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{rec\-Buf\-Pos}
+\item 
+boost\-::array$<$ char, \hyperlink{load_8cpp_a6821bafc3c88dfb2e433a095df9940c6}{B\-U\-F\-\_\-\-S\-I\-Z\-E} $>$ \hyperlink{struct_net_session_a6e3c17623ebe78851968a210e95fcc38}{send\-Buf}
+\item 
+Gsasl\-\_\-session $\ast$ \hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{auth\-Session}
+\item 
+tcp\-::socket \hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}
+\item 
+string \hyperlink{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_net_session_a636704de0a367698b2ec93e65b21a300}{\index{Net\-Session@{Net\-Session}!Net\-Session@{Net\-Session}}
+\index{Net\-Session@{Net\-Session}!NetSession@{Net\-Session}}
+\subsubsection[{Net\-Session}]{\setlength{\rightskip}{0pt plus 5cm}Net\-Session\-::\-Net\-Session (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-Service}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_net_session_a636704de0a367698b2ec93e65b21a300}
+
+\begin{DoxyCode}
+53 : \hyperlink{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{recBufPos}(0), \hyperlink{struct_net_session_a633af90850d032509cfa243abb6898a8}{authSession}(NULL), \hyperlink{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{socket}(ioService) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_net_session_a633af90850d032509cfa243abb6898a8}{\index{Net\-Session@{Net\-Session}!auth\-Session@{auth\-Session}}
+\index{auth\-Session@{auth\-Session}!NetSession@{Net\-Session}}
+\subsubsection[{auth\-Session}]{\setlength{\rightskip}{0pt plus 5cm}Gsasl\-\_\-session$\ast$ Net\-Session\-::auth\-Session}}\label{struct_net_session_a633af90850d032509cfa243abb6898a8}
+\hypertarget{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}{\index{Net\-Session@{Net\-Session}!name@{name}}
+\index{name@{name}!NetSession@{Net\-Session}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}string Net\-Session\-::name}}\label{struct_net_session_aec0bfb7bd042d9f19df3fc91dd8accae}
+\hypertarget{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}{\index{Net\-Session@{Net\-Session}!rec\-Buf@{rec\-Buf}}
+\index{rec\-Buf@{rec\-Buf}!NetSession@{Net\-Session}}
+\subsubsection[{rec\-Buf}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::array$<$char, {\bf B\-U\-F\-\_\-\-S\-I\-Z\-E}$>$ Net\-Session\-::rec\-Buf}}\label{struct_net_session_ae53e0baac8f14adba2d5b7d71c715ce7}
+\hypertarget{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}{\index{Net\-Session@{Net\-Session}!rec\-Buf\-Pos@{rec\-Buf\-Pos}}
+\index{rec\-Buf\-Pos@{rec\-Buf\-Pos}!NetSession@{Net\-Session}}
+\subsubsection[{rec\-Buf\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Net\-Session\-::rec\-Buf\-Pos}}\label{struct_net_session_abf9c78874e44c3aa6176e288e77f5aae}
+\hypertarget{struct_net_session_a6e3c17623ebe78851968a210e95fcc38}{\index{Net\-Session@{Net\-Session}!send\-Buf@{send\-Buf}}
+\index{send\-Buf@{send\-Buf}!NetSession@{Net\-Session}}
+\subsubsection[{send\-Buf}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::array$<$char, {\bf B\-U\-F\-\_\-\-S\-I\-Z\-E}$>$ Net\-Session\-::send\-Buf}}\label{struct_net_session_a6e3c17623ebe78851968a210e95fcc38}
+\hypertarget{struct_net_session_a93ead5e6efef575fd61ed0514100310b}{\index{Net\-Session@{Net\-Session}!socket@{socket}}
+\index{socket@{socket}!NetSession@{Net\-Session}}
+\subsubsection[{socket}]{\setlength{\rightskip}{0pt plus 5cm}tcp\-::socket Net\-Session\-::socket}}\label{struct_net_session_a93ead5e6efef575fd61ed0514100310b}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{load_8cpp}{load.\-cpp}\end{DoxyCompactItemize}

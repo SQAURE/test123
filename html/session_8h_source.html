@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>my project1: session.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">my project1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">session.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="session_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * PokerTH - The open source texas holdem engine                             *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2006-2012 Felix Hammer, Florian Thauer, Lothar May          *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify      *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * it under the terms of the GNU Affero General Public License as            *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * published by the Free Software Foundation, either version 3 of the        *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License, or (at your option) any later version.                           *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,           *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of            *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * GNU Affero General Public License for more details.                       *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * You should have received a copy of the GNU Affero General Public License  *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.     *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * Additional permission under GNU AGPL version 3 section 7                  *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * If you modify this program, or any covered work, by linking or            *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * combining it with the OpenSSL project&#39;s OpenSSL library (or a             *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * modified version of that library), containing parts covered by the        *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * terms of the OpenSSL or SSLeay licenses, the authors of PokerTH           *</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * (Felix Hammer, Florian Thauer, Lothar May) grant you additional           *</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * permission to convey the resulting work.                                  *</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Corresponding Source for a non-source form of such a combination          *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * shall include the source code for the parts of OpenSSL used as well       *</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * as that of the covered work.                                              *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef STDSESSION_H</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STDSESSION_H</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="serverdata_8h.html">serverdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gamedata_8h.html">gamedata.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="playerdata_8h.html">playerdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__defs_8h.html">game_defs.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;core/crypthelper.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span>GuiInterface;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">class </span>Game;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">class </span>ConfigFile;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">class </span>Log;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">class </span>ClientThread;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">class </span>ServerManager;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">class </span>IrcThread;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">class </span>AvatarManager;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">class </span>QtToolsInterface;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_session.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_session.html">Session</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_session.html#a7bc6792892226050a8cf19d5e9c17541">Session</a>(GuiInterface*, ConfigFile*, Log*);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_session.html#a8753bb9dee966b7d39abc9b7237cd665">~Session</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1">   62</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1">GameType</a> { <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319">GAME_TYPE_NONE</a>, <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7">GAME_TYPE_LOCAL</a>, <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80">GAME_TYPE_NETWORK</a>, <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2">GAME_TYPE_INTERNET</a> };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Only one of the two inits should be called.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_session.html#a94dcf560238662a4e2626a654df008f3">init</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a94dcf560238662a4e2626a654df008f3">init</a>(boost::shared_ptr&lt;AvatarManager&gt; manager);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#acc80127497f991a082269c2e6b6cddb9">addOwnAvatar</a>(<span class="keyword">const</span> std::string &amp;avatarFile);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#af2e661d4bcda30cfda7c90547ce2260a">startLocalGame</a>(<span class="keyword">const</span> <a class="code" href="struct_game_data.html">GameData</a> &amp;gameData, <span class="keyword">const</span> <a class="code" href="struct_start_data.html">StartData</a> &amp;startData);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ae7f595ddf3e73d0d923e9ccd3b77cb56">startClientGame</a>(boost::shared_ptr&lt;Game&gt; game);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    boost::shared_ptr&lt;Game&gt; <a class="code" href="class_session.html#a4105c943da66294d2296e31bc34d5ff9">getCurrentGame</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    GuiInterface *<a class="code" href="class_session.html#ab1f394edd6080e4303bd292b0f842ce1">getGui</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_session.html#a8b3eeaaa1732a6a403bf799b8feab70d">   76</a></span>&#160;    Log* <a class="code" href="class_session.html#a8b3eeaaa1732a6a403bf799b8feab70d">getMyLog</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_session.html#a1d2dd8533f3c551a5c18211f22d380f8">myLog</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">GameType</a> <a class="code" href="class_session.html#a5e07b844e121855419719abcbd8aa61a">getGameType</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    boost::shared_ptr&lt;AvatarManager&gt; <a class="code" href="class_session.html#a96a5366d8d4455494ca27ed412cb37a5">getAvatarManager</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a2e89781eb6911f3d7a40b475bc83c8c8">startInternetClient</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#aab2276257cc5c64e11a05784daf414e5">startNetworkClient</a>(<span class="keyword">const</span> std::string &amp;serverAddress, <span class="keywordtype">unsigned</span> serverPort, <span class="keywordtype">bool</span> ipv6, <span class="keywordtype">bool</span> sctp);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a738cd5d6baccc583228e5bc57d57d80f">startNetworkClientForLocalServer</a>(<span class="keyword">const</span> <a class="code" href="struct_game_data.html">GameData</a> &amp;gameData);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ad74cf272a2adfaa0a2abcaf31dde167d">terminateNetworkClient</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ae3a49af65eee53bfdb44896ab564458e">clientCreateGame</a>(<span class="keyword">const</span> <a class="code" href="struct_game_data.html">GameData</a> &amp;gameData, <span class="keyword">const</span> std::string &amp;name, <span class="keyword">const</span> std::string &amp;password);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a4499bc9b022b6af7856ab23ab80d7f99">clientJoinGame</a>(<span class="keywordtype">unsigned</span> gameId, <span class="keyword">const</span> std::string &amp;password);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a8084d3c69f25fb50c1b42efe07ccbeb7">clientRejoinGame</a>(<span class="keywordtype">unsigned</span> gameId);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#abf1156cfe81e2786adf7bb369836ca0b">startNetworkServer</a>(<span class="keywordtype">bool</span> dedicated, <span class="keywordtype">bool</span> lan_local = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#afe114af0a76eb150e0aad183eed5b8f1">sendLeaveCurrentGame</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a0b43294e739dab7e8a70c1ed2e852e3d">sendStartEvent</a>(<span class="keywordtype">bool</span> fillUpWithCpuPlayers);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ab3c9282517142617d9daf5ea08768083">terminateNetworkServer</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_session.html#a2277e79b82a29b4ec96aa78e1cb67e7c">pollNetworkServerTerminated</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#aac851088914580be19d0f9c84698cdb6">sendClientPlayerAction</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a9e297d28e45b056a09c62ef389308052">sendGameChatMessage</a>(<span class="keyword">const</span> std::string &amp;message);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ae309f290cfefc4c2c145209b7a5a48ff">sendLobbyChatMessage</a>(<span class="keyword">const</span> std::string &amp;message);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a756684d3fb7bc878f39250f5ddd3cc55">sendPrivateChatMessage</a>(<span class="keywordtype">unsigned</span> targetPlayerId, <span class="keyword">const</span> std::string &amp;message);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a383cac1e0db6fcbce4d3fa94b3efe9d4">kickPlayer</a>(<span class="keywordtype">unsigned</span> playerId);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a383cac1e0db6fcbce4d3fa94b3efe9d4">kickPlayer</a>(<span class="keyword">const</span> std::string &amp;playerName);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#aa834f9615a493ae739509e56abab5059">startVoteKickPlayer</a>(<span class="keywordtype">unsigned</span> playerId);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a346c8fa2d61d205f825c2af8a12d2071">voteKick</a>(<span class="keywordtype">bool</span> doKick);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a4e99119356023629431163b20e307020">showMyCards</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ae23ad66200d0c7ab81f5baddc40ad7ee">selectServer</a>(<span class="keywordtype">unsigned</span> serverId);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a111d37566070922bebb97f1c52e811f5">setLogin</a>(<span class="keyword">const</span> std::string &amp;userName, <span class="keyword">const</span> std::string &amp;password, <span class="keywordtype">bool</span> isGuest);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a2dad06d98159702d5723e895d93cda01">invitePlayerToCurrentGame</a>(<span class="keywordtype">unsigned</span> playerId);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#aa0083e4f35f82def3c9f05af75449caf">acceptGameInvitation</a>(<span class="keywordtype">unsigned</span> gameId);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a56768c317805f6fb7f0acded7a703db3">rejectGameInvitation</a>(<span class="keywordtype">unsigned</span> gameId, <a class="code" href="game__defs_8h.html#aa91c16d80068f7d379ed63946b9d9a53">DenyGameInvitationReason</a> reason);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#af1a1915a925b1bc73e5984524d365787">reportBadAvatar</a>(<span class="keywordtype">unsigned</span> reportedPlayerId, <span class="keyword">const</span> std::string &amp;avatarHash);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#ab8c30dee4b7dd9d56045caa308bb14d6">reportBadGameName</a>(<span class="keywordtype">unsigned</span> gameId);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#a1343f531ff9b53c77c873f5034a00a0f">adminActionBanPlayer</a>(<span class="keywordtype">unsigned</span> playerId);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#aa772e588d7f1aa1a78ff9633a6cf0e8b">resetNetworkTimeout</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_session.html#acb24746ea4c50d24d26386e7afb4befa">adminActionCloseGame</a>(<span class="keywordtype">unsigned</span> gameId);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_session.html#a7e4c9b0b3bf8f745c22c4f17c365d9ec">isNetworkClientRunning</a>() <span class="keyword">const</span>; <span class="comment">// TODO hack</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_session.html#a7ac2f5a1bf47626a9b37c739701f84bf">isNetworkServerRunning</a>() <span class="keyword">const</span>; <span class="comment">// TODO hack</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="struct_server_info.html">ServerInfo</a> <a class="code" href="class_session.html#a103970a0117442b4db09adaef04847d7">getClientServerInfo</a>(<span class="keywordtype">unsigned</span> serverId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="struct_game_info.html">GameInfo</a> <a class="code" href="class_session.html#a8f16216769638acec9ce003aca038e67">getClientGameInfo</a>(<span class="keywordtype">unsigned</span> gameId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="struct_player_info.html">PlayerInfo</a> <a class="code" href="class_session.html#af0c26f5815db03ddcb83491a080383e3">getClientPlayerInfo</a>(<span class="keywordtype">unsigned</span> playerId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_session.html#a4cd156a99a379a966424cfefd93cd31b">getGameIdOfPlayer</a>(<span class="keywordtype">unsigned</span> playerId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="struct_server_stats.html">ServerStats</a> <a class="code" href="class_session.html#aa69deeb42f29e39020a85a7396992925">getClientStats</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_session.html#aab5ba527a87413cdeab6a5ea00f4c30d">getClientCurrentGameId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_session.html#a82aff275cb035b0440f5139d54338b99">getClientUniquePlayerId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_session.html#aae0e047300fee326aaf11fb060df135e">getAvatarFile</a>(<span class="keyword">const</span> MD5Buf &amp;avatarMD5, std::string &amp;fileName);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_session.html#a89974964b38a285de9ec954b99b0ee3f">  137</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_session.html#a89974964b38a285de9ec954b99b0ee3f">currentGameNum</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_session.html#a95063949539c8584d569d777284784ba">  139</a></span>&#160;    std::string <a class="code" href="class_session.html#a95063949539c8584d569d777284784ba">myIrcNick</a>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="class_session.html#a767e3250d6a14be4c2b86d1e2dfa7b3c">  141</a></span>&#160;    boost::shared_ptr&lt;ClientThread&gt; <a class="code" href="class_session.html#a767e3250d6a14be4c2b86d1e2dfa7b3c">myNetClient</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_session.html#a0f513f8d52d5026a3c449738da984c29">  142</a></span>&#160;    boost::shared_ptr&lt;ServerManager&gt; <a class="code" href="class_session.html#a0f513f8d52d5026a3c449738da984c29">myNetServer</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_session.html#a53231528d2b4c4babd97c7d1194a5f7e">  144</a></span>&#160;    boost::shared_ptr&lt;AvatarManager&gt; <a class="code" href="class_session.html#a53231528d2b4c4babd97c7d1194a5f7e">myAvatarManager</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="class_session.html#a5c15d5f1be74a30fa167a0af5822113c">  146</a></span>&#160;    boost::shared_ptr&lt;Game&gt; <a class="code" href="class_session.html#a5c15d5f1be74a30fa167a0af5822113c">currentGame</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="class_session.html#a2725f4b56b109b2e7d75ed780d24fa6d">  147</a></span>&#160;    GuiInterface *<a class="code" href="class_session.html#a2725f4b56b109b2e7d75ed780d24fa6d">myGui</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_session.html#a5bfbe43c623b688e7def57e02704033f">  148</a></span>&#160;    ConfigFile *<a class="code" href="class_session.html#a5bfbe43c623b688e7def57e02704033f">myConfig</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_session.html#a1d2dd8533f3c551a5c18211f22d380f8">  149</a></span>&#160;    Log *<a class="code" href="class_session.html#a1d2dd8533f3c551a5c18211f22d380f8">myLog</a>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_session.html#acf11b7b3982bc3e4c5bbf635d5e98496">  150</a></span>&#160;    <a class="code" href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1">GameType</a> <a class="code" href="class_session.html#acf11b7b3982bc3e4c5bbf635d5e98496">myGameType</a>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="class_session.html#a1827a0341223eafa3859f249e73ebd38">  151</a></span>&#160;    QtToolsInterface *<a class="code" href="class_session.html#a1827a0341223eafa3859f249e73ebd38">myQtToolsInterface</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;};</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_session_html_a95063949539c8584d569d777284784ba"><div class="ttname"><a href="class_session.html#a95063949539c8584d569d777284784ba">Session::myIrcNick</a></div><div class="ttdeci">std::string myIrcNick</div><div class="ttdef"><b>Definition:</b> session.h:139</div></div>
+<div class="ttc" id="class_session_html_a1827a0341223eafa3859f249e73ebd38"><div class="ttname"><a href="class_session.html#a1827a0341223eafa3859f249e73ebd38">Session::myQtToolsInterface</a></div><div class="ttdeci">QtToolsInterface * myQtToolsInterface</div><div class="ttdef"><b>Definition:</b> session.h:151</div></div>
+<div class="ttc" id="class_session_html_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80"><div class="ttname"><a href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80">Session::GAME_TYPE_NETWORK</a></div><div class="ttdef"><b>Definition:</b> session.h:62</div></div>
+<div class="ttc" id="class_session_html_a9e297d28e45b056a09c62ef389308052"><div class="ttname"><a href="class_session.html#a9e297d28e45b056a09c62ef389308052">Session::sendGameChatMessage</a></div><div class="ttdeci">void sendGameChatMessage(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> session.cpp:398</div></div>
+<div class="ttc" id="class_session_html_af2e661d4bcda30cfda7c90547ce2260a"><div class="ttname"><a href="class_session.html#af2e661d4bcda30cfda7c90547ce2260a">Session::startLocalGame</a></div><div class="ttdeci">void startLocalGame(const GameData &amp;gameData, const StartData &amp;startData)</div><div class="ttdef"><b>Definition:</b> session.cpp:100</div></div>
+<div class="ttc" id="class_session_html_aa834f9615a493ae739509e56abab5059"><div class="ttname"><a href="class_session.html#aa834f9615a493ae739509e56abab5059">Session::startVoteKickPlayer</a></div><div class="ttdeci">void startVoteKickPlayer(unsigned playerId)</div><div class="ttdef"><b>Definition:</b> session.cpp:457</div></div>
+<div class="ttc" id="class_session_html_af0c26f5815db03ddcb83491a080383e3"><div class="ttname"><a href="class_session.html#af0c26f5815db03ddcb83491a080383e3">Session::getClientPlayerInfo</a></div><div class="ttdeci">PlayerInfo getClientPlayerInfo(unsigned playerId) const </div><div class="ttdef"><b>Definition:</b> session.cpp:563</div></div>
+<div class="ttc" id="class_session_html_a4e99119356023629431163b20e307020"><div class="ttname"><a href="class_session.html#a4e99119356023629431163b20e307020">Session::showMyCards</a></div><div class="ttdeci">void showMyCards()</div><div class="ttdef"><b>Definition:</b> session.cpp:528</div></div>
+<div class="ttc" id="class_session_html_ab1f394edd6080e4303bd292b0f842ce1"><div class="ttname"><a href="class_session.html#ab1f394edd6080e4303bd292b0f842ce1">Session::getGui</a></div><div class="ttdeci">GuiInterface * getGui()</div><div class="ttdef"><b>Definition:</b> session.cpp:164</div></div>
+<div class="ttc" id="class_session_html_a5c15d5f1be74a30fa167a0af5822113c"><div class="ttname"><a href="class_session.html#a5c15d5f1be74a30fa167a0af5822113c">Session::currentGame</a></div><div class="ttdeci">boost::shared_ptr&lt; Game &gt; currentGame</div><div class="ttdef"><b>Definition:</b> session.h:146</div></div>
+<div class="ttc" id="class_session_html_a96a5366d8d4455494ca27ed412cb37a5"><div class="ttname"><a href="class_session.html#a96a5366d8d4455494ca27ed412cb37a5">Session::getAvatarManager</a></div><div class="ttdeci">boost::shared_ptr&lt; AvatarManager &gt; getAvatarManager()</div><div class="ttdef"><b>Definition:</b> session.cpp:174</div></div>
+<div class="ttc" id="class_session_html_a56768c317805f6fb7f0acded7a703db3"><div class="ttname"><a href="class_session.html#a56768c317805f6fb7f0acded7a703db3">Session::rejectGameInvitation</a></div><div class="ttdeci">void rejectGameInvitation(unsigned gameId, DenyGameInvitationReason reason)</div><div class="ttdef"><b>Definition:</b> session.cpp:500</div></div>
+<div class="ttc" id="class_session_html_ab8c30dee4b7dd9d56045caa308bb14d6"><div class="ttname"><a href="class_session.html#ab8c30dee4b7dd9d56045caa308bb14d6">Session::reportBadGameName</a></div><div class="ttdeci">void reportBadGameName(unsigned gameId)</div><div class="ttdef"><b>Definition:</b> session.cpp:514</div></div>
+<div class="ttc" id="class_session_html_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7"><div class="ttname"><a href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7">Session::GAME_TYPE_LOCAL</a></div><div class="ttdef"><b>Definition:</b> session.h:62</div></div>
+<div class="ttc" id="class_session_html_aa69deeb42f29e39020a85a7396992925"><div class="ttname"><a href="class_session.html#aa69deeb42f29e39020a85a7396992925">Session::getClientStats</a></div><div class="ttdeci">ServerStats getClientStats() const </div><div class="ttdef"><b>Definition:</b> session.cpp:579</div></div>
+<div class="ttc" id="struct_game_data_html"><div class="ttname"><a href="struct_game_data.html">GameData</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:74</div></div>
+<div class="ttc" id="class_session_html_a767e3250d6a14be4c2b86d1e2dfa7b3c"><div class="ttname"><a href="class_session.html#a767e3250d6a14be4c2b86d1e2dfa7b3c">Session::myNetClient</a></div><div class="ttdeci">boost::shared_ptr&lt; ClientThread &gt; myNetClient</div><div class="ttdef"><b>Definition:</b> session.h:141</div></div>
+<div class="ttc" id="class_session_html_a8b3eeaaa1732a6a403bf799b8feab70d"><div class="ttname"><a href="class_session.html#a8b3eeaaa1732a6a403bf799b8feab70d">Session::getMyLog</a></div><div class="ttdeci">Log * getMyLog()</div><div class="ttdef"><b>Definition:</b> session.h:76</div></div>
+<div class="ttc" id="class_session_html_aab2276257cc5c64e11a05784daf414e5"><div class="ttname"><a href="class_session.html#aab2276257cc5c64e11a05784daf414e5">Session::startNetworkClient</a></div><div class="ttdeci">void startNetworkClient(const std::string &amp;serverAddress, unsigned serverPort, bool ipv6, bool sctp)</div><div class="ttdef"><b>Definition:</b> session.cpp:207</div></div>
+<div class="ttc" id="class_session_html_a2725f4b56b109b2e7d75ed780d24fa6d"><div class="ttname"><a href="class_session.html#a2725f4b56b109b2e7d75ed780d24fa6d">Session::myGui</a></div><div class="ttdeci">GuiInterface * myGui</div><div class="ttdef"><b>Definition:</b> session.h:147</div></div>
+<div class="ttc" id="class_session_html_aa0083e4f35f82def3c9f05af75449caf"><div class="ttname"><a href="class_session.html#aa0083e4f35f82def3c9f05af75449caf">Session::acceptGameInvitation</a></div><div class="ttdeci">void acceptGameInvitation(unsigned gameId)</div><div class="ttdef"><b>Definition:</b> session.cpp:488</div></div>
+<div class="ttc" id="class_session_html_ae7f595ddf3e73d0d923e9ccd3b77cb56"><div class="ttname"><a href="class_session.html#ae7f595ddf3e73d0d923e9ccd3b77cb56">Session::startClientGame</a></div><div class="ttdeci">void startClientGame(boost::shared_ptr&lt; Game &gt; game)</div><div class="ttdef"><b>Definition:</b> session.cpp:152</div></div>
+<div class="ttc" id="class_session_html_a346c8fa2d61d205f825c2af8a12d2071"><div class="ttname"><a href="class_session.html#a346c8fa2d61d205f825c2af8a12d2071">Session::voteKick</a></div><div class="ttdeci">void voteKick(bool doKick)</div><div class="ttdef"><b>Definition:</b> session.cpp:521</div></div>
+<div class="ttc" id="class_session_html_a738cd5d6baccc583228e5bc57d57d80f"><div class="ttname"><a href="class_session.html#a738cd5d6baccc583228e5bc57d57d80f">Session::startNetworkClientForLocalServer</a></div><div class="ttdeci">void startNetworkClientForLocalServer(const GameData &amp;gameData)</div><div class="ttdef"><b>Definition:</b> session.cpp:235</div></div>
+<div class="ttc" id="class_session_html_ae23ad66200d0c7ab81f5baddc40ad7ee"><div class="ttname"><a href="class_session.html#ae23ad66200d0c7ab81f5baddc40ad7ee">Session::selectServer</a></div><div class="ttdeci">void selectServer(unsigned serverId)</div><div class="ttdef"><b>Definition:</b> session.cpp:464</div></div>
+<div class="ttc" id="struct_start_data_html"><div class="ttname"><a href="struct_start_data.html">StartData</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:110</div></div>
+<div class="ttc" id="class_session_html_ab3c9282517142617d9daf5ea08768083"><div class="ttname"><a href="class_session.html#ab3c9282517142617d9daf5ea08768083">Session::terminateNetworkServer</a></div><div class="ttdeci">void terminateNetworkServer()</div><div class="ttdef"><b>Definition:</b> session.cpp:354</div></div>
+<div class="ttc" id="class_session_html_a53231528d2b4c4babd97c7d1194a5f7e"><div class="ttname"><a href="class_session.html#a53231528d2b4c4babd97c7d1194a5f7e">Session::myAvatarManager</a></div><div class="ttdeci">boost::shared_ptr&lt; AvatarManager &gt; myAvatarManager</div><div class="ttdef"><b>Definition:</b> session.h:144</div></div>
+<div class="ttc" id="class_session_html_a82aff275cb035b0440f5139d54338b99"><div class="ttname"><a href="class_session.html#a82aff275cb035b0440f5139d54338b99">Session::getClientUniquePlayerId</a></div><div class="ttdeci">unsigned getClientUniquePlayerId() const </div><div class="ttdef"><b>Definition:</b> session.cpp:595</div></div>
+<div class="ttc" id="class_session_html_a94dcf560238662a4e2626a654df008f3"><div class="ttname"><a href="class_session.html#a94dcf560238662a4e2626a654df008f3">Session::init</a></div><div class="ttdeci">bool init()</div><div class="ttdef"><b>Definition:</b> session.cpp:72</div></div>
+<div class="ttc" id="class_session_html_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319"><div class="ttname"><a href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319">Session::GAME_TYPE_NONE</a></div><div class="ttdef"><b>Definition:</b> session.h:62</div></div>
+<div class="ttc" id="class_session_html_a4105c943da66294d2296e31bc34d5ff9"><div class="ttname"><a href="class_session.html#a4105c943da66294d2296e31bc34d5ff9">Session::getCurrentGame</a></div><div class="ttdeci">boost::shared_ptr&lt; Game &gt; getCurrentGame()</div><div class="ttdef"><b>Definition:</b> session.cpp:159</div></div>
+<div class="ttc" id="class_session_html_a103970a0117442b4db09adaef04847d7"><div class="ttname"><a href="class_session.html#a103970a0117442b4db09adaef04847d7">Session::getClientServerInfo</a></div><div class="ttdeci">ServerInfo getClientServerInfo(unsigned serverId) const </div><div class="ttdef"><b>Definition:</b> session.cpp:547</div></div>
+<div class="ttc" id="class_session_html_a4cd156a99a379a966424cfefd93cd31b"><div class="ttname"><a href="class_session.html#a4cd156a99a379a966424cfefd93cd31b">Session::getGameIdOfPlayer</a></div><div class="ttdeci">unsigned getGameIdOfPlayer(unsigned playerId) const </div><div class="ttdef"><b>Definition:</b> session.cpp:571</div></div>
+<div class="ttc" id="class_session_html_a0b43294e739dab7e8a70c1ed2e852e3d"><div class="ttname"><a href="class_session.html#a0b43294e739dab7e8a70c1ed2e852e3d">Session::sendStartEvent</a></div><div class="ttdeci">void sendStartEvent(bool fillUpWithCpuPlayers)</div><div class="ttdef"><b>Definition:</b> session.cpp:384</div></div>
+<div class="ttc" id="class_session_html_a89974964b38a285de9ec954b99b0ee3f"><div class="ttname"><a href="class_session.html#a89974964b38a285de9ec954b99b0ee3f">Session::currentGameNum</a></div><div class="ttdeci">int currentGameNum</div><div class="ttdef"><b>Definition:</b> session.h:137</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">GameType</a></div><div class="ttdeci">GameType</div><div class="ttdef"><b>Definition:</b> gamedata.h:50</div></div>
+<div class="ttc" id="class_session_html_aa772e588d7f1aa1a78ff9633a6cf0e8b"><div class="ttname"><a href="class_session.html#aa772e588d7f1aa1a78ff9633a6cf0e8b">Session::resetNetworkTimeout</a></div><div class="ttdeci">void resetNetworkTimeout()</div><div class="ttdef"><b>Definition:</b> session.cpp:427</div></div>
+<div class="ttc" id="gamedata_8h_html"><div class="ttname"><a href="gamedata_8h.html">gamedata.h</a></div></div>
+<div class="ttc" id="class_session_html_acc80127497f991a082269c2e6b6cddb9"><div class="ttname"><a href="class_session.html#acc80127497f991a082269c2e6b6cddb9">Session::addOwnAvatar</a></div><div class="ttdeci">void addOwnAvatar(const std::string &amp;avatarFile)</div><div class="ttdef"><b>Definition:</b> session.cpp:95</div></div>
+<div class="ttc" id="class_session_html_a1d2dd8533f3c551a5c18211f22d380f8"><div class="ttname"><a href="class_session.html#a1d2dd8533f3c551a5c18211f22d380f8">Session::myLog</a></div><div class="ttdeci">Log * myLog</div><div class="ttdef"><b>Definition:</b> session.h:149</div></div>
+<div class="ttc" id="class_session_html_a7bc6792892226050a8cf19d5e9c17541"><div class="ttname"><a href="class_session.html#a7bc6792892226050a8cf19d5e9c17541">Session::Session</a></div><div class="ttdeci">Session(GuiInterface *, ConfigFile *, Log *)</div><div class="ttdef"><b>Definition:</b> session.cpp:55</div></div>
+<div class="ttc" id="game__defs_8h_html_aa91c16d80068f7d379ed63946b9d9a53"><div class="ttname"><a href="game__defs_8h.html#aa91c16d80068f7d379ed63946b9d9a53">DenyGameInvitationReason</a></div><div class="ttdeci">DenyGameInvitationReason</div><div class="ttdef"><b>Definition:</b> game_defs.h:161</div></div>
+<div class="ttc" id="class_session_html_a756684d3fb7bc878f39250f5ddd3cc55"><div class="ttname"><a href="class_session.html#a756684d3fb7bc878f39250f5ddd3cc55">Session::sendPrivateChatMessage</a></div><div class="ttdeci">void sendPrivateChatMessage(unsigned targetPlayerId, const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> session.cpp:412</div></div>
+<div class="ttc" id="class_session_html_a7ac2f5a1bf47626a9b37c739701f84bf"><div class="ttname"><a href="class_session.html#a7ac2f5a1bf47626a9b37c739701f84bf">Session::isNetworkServerRunning</a></div><div class="ttdeci">bool isNetworkServerRunning() const </div><div class="ttdef"><b>Definition:</b> session.cpp:541</div></div>
+<div class="ttc" id="class_session_html_a8f16216769638acec9ce003aca038e67"><div class="ttname"><a href="class_session.html#a8f16216769638acec9ce003aca038e67">Session::getClientGameInfo</a></div><div class="ttdeci">GameInfo getClientGameInfo(unsigned gameId) const </div><div class="ttdef"><b>Definition:</b> session.cpp:555</div></div>
+<div class="ttc" id="struct_server_info_html"><div class="ttname"><a href="struct_server_info.html">ServerInfo</a></div><div class="ttdef"><b>Definition:</b> serverdata.h:38</div></div>
+<div class="ttc" id="class_session_html_acf11b7b3982bc3e4c5bbf635d5e98496"><div class="ttname"><a href="class_session.html#acf11b7b3982bc3e4c5bbf635d5e98496">Session::myGameType</a></div><div class="ttdeci">GameType myGameType</div><div class="ttdef"><b>Definition:</b> session.h:150</div></div>
+<div class="ttc" id="class_session_html_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2"><div class="ttname"><a href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2">Session::GAME_TYPE_INTERNET</a></div><div class="ttdef"><b>Definition:</b> session.h:62</div></div>
+<div class="ttc" id="class_session_html_aab5ba527a87413cdeab6a5ea00f4c30d"><div class="ttname"><a href="class_session.html#aab5ba527a87413cdeab6a5ea00f4c30d">Session::getClientCurrentGameId</a></div><div class="ttdeci">unsigned getClientCurrentGameId() const </div><div class="ttdef"><b>Definition:</b> session.cpp:587</div></div>
+<div class="ttc" id="class_session_html_a8084d3c69f25fb50c1b42efe07ccbeb7"><div class="ttname"><a href="class_session.html#a8084d3c69f25fb50c1b42efe07ccbeb7">Session::clientRejoinGame</a></div><div class="ttdeci">void clientRejoinGame(unsigned gameId)</div><div class="ttdef"><b>Definition:</b> session.cpp:303</div></div>
+<div class="ttc" id="class_session_html_a5bfbe43c623b688e7def57e02704033f"><div class="ttname"><a href="class_session.html#a5bfbe43c623b688e7def57e02704033f">Session::myConfig</a></div><div class="ttdeci">ConfigFile * myConfig</div><div class="ttdef"><b>Definition:</b> session.h:148</div></div>
+<div class="ttc" id="class_session_html_a5e07b844e121855419719abcbd8aa61a"><div class="ttname"><a href="class_session.html#a5e07b844e121855419719abcbd8aa61a">Session::getGameType</a></div><div class="ttdeci">GameType getGameType()</div><div class="ttdef"><b>Definition:</b> session.cpp:169</div></div>
+<div class="ttc" id="class_session_html_af1a1915a925b1bc73e5984524d365787"><div class="ttname"><a href="class_session.html#af1a1915a925b1bc73e5984524d365787">Session::reportBadAvatar</a></div><div class="ttdeci">void reportBadAvatar(unsigned reportedPlayerId, const std::string &amp;avatarHash)</div><div class="ttdef"><b>Definition:</b> session.cpp:507</div></div>
+<div class="ttc" id="class_session_html_afe114af0a76eb150e0aad183eed5b8f1"><div class="ttname"><a href="class_session.html#afe114af0a76eb150e0aad183eed5b8f1">Session::sendLeaveCurrentGame</a></div><div class="ttdeci">void sendLeaveCurrentGame()</div><div class="ttdef"><b>Definition:</b> session.cpp:377</div></div>
+<div class="ttc" id="class_session_html_a111d37566070922bebb97f1c52e811f5"><div class="ttname"><a href="class_session.html#a111d37566070922bebb97f1c52e811f5">Session::setLogin</a></div><div class="ttdeci">void setLogin(const std::string &amp;userName, const std::string &amp;password, bool isGuest)</div><div class="ttdef"><b>Definition:</b> session.cpp:472</div></div>
+<div class="ttc" id="class_session_html"><div class="ttname"><a href="class_session.html">Session</a></div><div class="ttdef"><b>Definition:</b> session.h:54</div></div>
+<div class="ttc" id="class_session_html_a2277e79b82a29b4ec96aa78e1cb67e7c"><div class="ttname"><a href="class_session.html#a2277e79b82a29b4ec96aa78e1cb67e7c">Session::pollNetworkServerTerminated</a></div><div class="ttdeci">bool pollNetworkServerTerminated()</div><div class="ttdef"><b>Definition:</b> session.cpp:365</div></div>
+<div class="ttc" id="class_session_html_a6989c72d21ad19fd7abbd1c8d95d78c1"><div class="ttname"><a href="class_session.html#a6989c72d21ad19fd7abbd1c8d95d78c1">Session::GameType</a></div><div class="ttdeci">GameType</div><div class="ttdef"><b>Definition:</b> session.h:62</div></div>
+<div class="ttc" id="class_session_html_aac851088914580be19d0f9c84698cdb6"><div class="ttname"><a href="class_session.html#aac851088914580be19d0f9c84698cdb6">Session::sendClientPlayerAction</a></div><div class="ttdeci">void sendClientPlayerAction()</div><div class="ttdef"><b>Definition:</b> session.cpp:391</div></div>
+<div class="ttc" id="struct_player_info_html"><div class="ttname"><a href="struct_player_info.html">PlayerInfo</a></div><div class="ttdef"><b>Definition:</b> playerdata.h:72</div></div>
+<div class="ttc" id="class_session_html_a383cac1e0db6fcbce4d3fa94b3efe9d4"><div class="ttname"><a href="class_session.html#a383cac1e0db6fcbce4d3fa94b3efe9d4">Session::kickPlayer</a></div><div class="ttdeci">void kickPlayer(unsigned playerId)</div><div class="ttdef"><b>Definition:</b> session.cpp:420</div></div>
+<div class="ttc" id="class_session_html_abf1156cfe81e2786adf7bb369836ca0b"><div class="ttname"><a href="class_session.html#abf1156cfe81e2786adf7bb369836ca0b">Session::startNetworkServer</a></div><div class="ttdeci">void startNetworkServer(bool dedicated, bool lan_local=false)</div><div class="ttdef"><b>Definition:</b> session.cpp:313</div></div>
+<div class="ttc" id="class_session_html_acb24746ea4c50d24d26386e7afb4befa"><div class="ttname"><a href="class_session.html#acb24746ea4c50d24d26386e7afb4befa">Session::adminActionCloseGame</a></div><div class="ttdeci">void adminActionCloseGame(unsigned gameId)</div><div class="ttdef"><b>Definition:</b> session.cpp:434</div></div>
+<div class="ttc" id="class_session_html_ae309f290cfefc4c2c145209b7a5a48ff"><div class="ttname"><a href="class_session.html#ae309f290cfefc4c2c145209b7a5a48ff">Session::sendLobbyChatMessage</a></div><div class="ttdeci">void sendLobbyChatMessage(const std::string &amp;message)</div><div class="ttdef"><b>Definition:</b> session.cpp:405</div></div>
+<div class="ttc" id="game__defs_8h_html"><div class="ttname"><a href="game__defs_8h.html">game_defs.h</a></div></div>
+<div class="ttc" id="serverdata_8h_html"><div class="ttname"><a href="serverdata_8h.html">serverdata.h</a></div></div>
+<div class="ttc" id="class_session_html_a2dad06d98159702d5723e895d93cda01"><div class="ttname"><a href="class_session.html#a2dad06d98159702d5723e895d93cda01">Session::invitePlayerToCurrentGame</a></div><div class="ttdeci">void invitePlayerToCurrentGame(unsigned playerId)</div><div class="ttdef"><b>Definition:</b> session.cpp:480</div></div>
+<div class="ttc" id="class_session_html_a0f513f8d52d5026a3c449738da984c29"><div class="ttname"><a href="class_session.html#a0f513f8d52d5026a3c449738da984c29">Session::myNetServer</a></div><div class="ttdeci">boost::shared_ptr&lt; ServerManager &gt; myNetServer</div><div class="ttdef"><b>Definition:</b> session.h:142</div></div>
+<div class="ttc" id="class_session_html_ad74cf272a2adfaa0a2abcaf31dde167d"><div class="ttname"><a href="class_session.html#ad74cf272a2adfaa0a2abcaf31dde167d">Session::terminateNetworkClient</a></div><div class="ttdeci">void terminateNetworkClient()</div><div class="ttdef"><b>Definition:</b> session.cpp:267</div></div>
+<div class="ttc" id="class_session_html_ae3a49af65eee53bfdb44896ab564458e"><div class="ttname"><a href="class_session.html#ae3a49af65eee53bfdb44896ab564458e">Session::clientCreateGame</a></div><div class="ttdeci">void clientCreateGame(const GameData &amp;gameData, const std::string &amp;name, const std::string &amp;password)</div><div class="ttdef"><b>Definition:</b> session.cpp:280</div></div>
+<div class="ttc" id="class_session_html_a2e89781eb6911f3d7a40b475bc83c8c8"><div class="ttname"><a href="class_session.html#a2e89781eb6911f3d7a40b475bc83c8c8">Session::startInternetClient</a></div><div class="ttdeci">void startInternetClient()</div><div class="ttdef"><b>Definition:</b> session.cpp:179</div></div>
+<div class="ttc" id="class_session_html_a7e4c9b0b3bf8f745c22c4f17c365d9ec"><div class="ttname"><a href="class_session.html#a7e4c9b0b3bf8f745c22c4f17c365d9ec">Session::isNetworkClientRunning</a></div><div class="ttdeci">bool isNetworkClientRunning() const </div><div class="ttdef"><b>Definition:</b> session.cpp:535</div></div>
+<div class="ttc" id="class_session_html_aae0e047300fee326aaf11fb060df135e"><div class="ttname"><a href="class_session.html#aae0e047300fee326aaf11fb060df135e">Session::getAvatarFile</a></div><div class="ttdeci">bool getAvatarFile(const MD5Buf &amp;avatarMD5, std::string &amp;fileName)</div><div class="ttdef"><b>Definition:</b> session.cpp:603</div></div>
+<div class="ttc" id="class_session_html_a4499bc9b022b6af7856ab23ab80d7f99"><div class="ttname"><a href="class_session.html#a4499bc9b022b6af7856ab23ab80d7f99">Session::clientJoinGame</a></div><div class="ttdeci">void clientJoinGame(unsigned gameId, const std::string &amp;password)</div><div class="ttdef"><b>Definition:</b> session.cpp:292</div></div>
+<div class="ttc" id="class_session_html_a1343f531ff9b53c77c873f5034a00a0f"><div class="ttname"><a href="class_session.html#a1343f531ff9b53c77c873f5034a00a0f">Session::adminActionBanPlayer</a></div><div class="ttdeci">void adminActionBanPlayer(unsigned playerId)</div><div class="ttdef"><b>Definition:</b> session.cpp:441</div></div>
+<div class="ttc" id="playerdata_8h_html"><div class="ttname"><a href="playerdata_8h.html">playerdata.h</a></div></div>
+<div class="ttc" id="struct_game_info_html"><div class="ttname"><a href="struct_game_info.html">GameInfo</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:98</div></div>
+<div class="ttc" id="struct_server_stats_html"><div class="ttname"><a href="struct_server_stats.html">ServerStats</a></div><div class="ttdef"><b>Definition:</b> serverdata.h:51</div></div>
+<div class="ttc" id="class_session_html_a8753bb9dee966b7d39abc9b7237cd665"><div class="ttname"><a href="class_session.html#a8753bb9dee966b7d39abc9b7237cd665">Session::~Session</a></div><div class="ttdeci">~Session()</div><div class="ttdef"><b>Definition:</b> session.cpp:62</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+생성시간 : 목 1월 21 2016 17:39:33, 프로젝트명 : my project1, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

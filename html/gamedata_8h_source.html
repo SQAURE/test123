@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>my project1: gamedata.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">my project1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">gamedata.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gamedata_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * PokerTH - The open source texas holdem engine                             *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2006-2012 Felix Hammer, Florian Thauer, Lothar May          *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify      *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * it under the terms of the GNU Affero General Public License as            *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * published by the Free Software Foundation, either version 3 of the        *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License, or (at your option) any later version.                           *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,           *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of            *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * GNU Affero General Public License for more details.                       *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * You should have received a copy of the GNU Affero General Public License  *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.     *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * Additional permission under GNU AGPL version 3 section 7                  *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * If you modify this program, or any covered work, by linking or            *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * combining it with the OpenSSL project&#39;s OpenSSL library (or a             *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * modified version of that library), containing parts covered by the        *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * terms of the OpenSSL or SSLeay licenses, the authors of PokerTH           *</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * (Felix Hammer, Florian Thauer, Lothar May) grant you additional           *</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * permission to convey the resulting work.                                  *</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Corresponding Source for a non-source form of such a combination          *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * shall include the source code for the parts of OpenSSL used as well       *</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * as that of the covered work.                                              *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* Game data. */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef _GAMEDATA_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GAMEDATA_H_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef Q_MOC_RUN</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;third_party/boost/timers.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">   42</a></span>&#160;<span class="keyword">typedef</span> std::list&lt;unsigned&gt; <a class="code" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589de">   44</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589de">GameMode</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328">   45</a></span>&#160;    <a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328">GAME_MODE_CREATED</a> = 1,</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3">   46</a></span>&#160;    <a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3">GAME_MODE_STARTED</a>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853">   47</a></span>&#160;    <a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853">GAME_MODE_CLOSED</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">   50</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">GameType</a> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79">   51</a></span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79">GAME_TYPE_NORMAL</a> = 1,</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924">   52</a></span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924">GAME_TYPE_REGISTERED_ONLY</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7">   53</a></span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7">GAME_TYPE_INVITE_ONLY</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc">   54</a></span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc">GAME_TYPE_RANKING</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6">   57</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6">RaiseIntervalMode</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4">   58</a></span>&#160;    <a class="code" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4">RAISE_ON_HANDNUMBER</a> = 1,</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488">   59</a></span>&#160;    <a class="code" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488">RAISE_ON_MINUTES</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02">   62</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02">RaiseMode</a> {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56">   63</a></span>&#160;    <a class="code" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56">DOUBLE_BLINDS</a> = 1,</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3">   64</a></span>&#160;    <a class="code" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3">MANUAL_BLINDS_ORDER</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6">   67</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6">AfterManualBlindsMode</a> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb">   68</a></span>&#160;    <a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb">AFTERMB_DOUBLE_BLINDS</a> = 1,</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e">   69</a></span>&#160;    <a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e">AFTERMB_RAISE_ABOUT</a>,</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a">   70</a></span>&#160;    <a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a">AFTERMB_STAY_AT_LAST_BLIND</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// For the sake of simplicity, this is a struct.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="struct_game_data.html">   74</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_game_data.html">GameData</a> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="struct_game_data.html#a67ab18c5a35df618e99983275c7552ab">   75</a></span>&#160;    <a class="code" href="struct_game_data.html#a67ab18c5a35df618e99983275c7552ab">GameData</a>() : <a class="code" href="struct_game_data.html#a44ded208d33fed8dbf1edd827faa847b">gameType</a>(<a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79">GAME_TYPE_NORMAL</a>), <a class="code" href="struct_game_data.html#aa254390c51645ce5b18fd55e27e04f79">allowSpectators</a>(true),</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="struct_game_data.html#aba8c8d38c50dab71ad1530bbc2003b46">maxNumberOfPlayers</a>(0), <a class="code" href="struct_game_data.html#a1b697f477ae03d3bd3323c4c099d6d58">startMoney</a>(0), <a class="code" href="struct_game_data.html#a0c9e8a63d5c02de30463c0b6beacebe3">firstSmallBlind</a>(0),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="struct_game_data.html#a298a24818a2bf81d8c7565812ff2eb26">raiseIntervalMode</a>(<a class="code" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4">RAISE_ON_HANDNUMBER</a>), <a class="code" href="struct_game_data.html#a943a5365d2a5ac840bb3479c6fe1c23b">raiseSmallBlindEveryHandsValue</a>(8),</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="struct_game_data.html#a6601463dbb7b1db927525b24d79e63b8">raiseSmallBlindEveryMinutesValue</a>(1), <a class="code" href="struct_game_data.html#a592278fc8c3d824ddbdc3f8a401320bc">raiseMode</a>(<a class="code" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56">DOUBLE_BLINDS</a>),</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="struct_game_data.html#a7e8255dd232821d0419b31893b3acbb4">afterManualBlindsMode</a>(<a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb">AFTERMB_DOUBLE_BLINDS</a>), <a class="code" href="struct_game_data.html#a68e6f78103983935a5f6b20abb595355">afterMBAlwaysRaiseValue</a>(0),</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="struct_game_data.html#a19b38d37fbd225504166856f187f38f3">guiSpeed</a>(4), <a class="code" href="struct_game_data.html#aa37d21f5ccbeca258400c07d7fbbf6da">delayBetweenHandsSec</a>(6), <a class="code" href="struct_game_data.html#a7379c03ecb75bda8cf95d215b41ae83b">playerActionTimeoutSec</a>(20) {}</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="struct_game_data.html#a44ded208d33fed8dbf1edd827faa847b">   81</a></span>&#160;    <a class="code" href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">GameType</a> <a class="code" href="struct_game_data.html#a44ded208d33fed8dbf1edd827faa847b">gameType</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="struct_game_data.html#aa254390c51645ce5b18fd55e27e04f79">   82</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_game_data.html#aa254390c51645ce5b18fd55e27e04f79">allowSpectators</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_game_data.html#aba8c8d38c50dab71ad1530bbc2003b46">   83</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#aba8c8d38c50dab71ad1530bbc2003b46">maxNumberOfPlayers</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_game_data.html#a1b697f477ae03d3bd3323c4c099d6d58">   84</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a1b697f477ae03d3bd3323c4c099d6d58">startMoney</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="struct_game_data.html#a0c9e8a63d5c02de30463c0b6beacebe3">   85</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a0c9e8a63d5c02de30463c0b6beacebe3">firstSmallBlind</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="struct_game_data.html#a298a24818a2bf81d8c7565812ff2eb26">   86</a></span>&#160;    <a class="code" href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6">RaiseIntervalMode</a> <a class="code" href="struct_game_data.html#a298a24818a2bf81d8c7565812ff2eb26">raiseIntervalMode</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="struct_game_data.html#a943a5365d2a5ac840bb3479c6fe1c23b">   87</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a943a5365d2a5ac840bb3479c6fe1c23b">raiseSmallBlindEveryHandsValue</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="struct_game_data.html#a6601463dbb7b1db927525b24d79e63b8">   88</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a6601463dbb7b1db927525b24d79e63b8">raiseSmallBlindEveryMinutesValue</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="struct_game_data.html#a592278fc8c3d824ddbdc3f8a401320bc">   89</a></span>&#160;    <a class="code" href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02">RaiseMode</a> <a class="code" href="struct_game_data.html#a592278fc8c3d824ddbdc3f8a401320bc">raiseMode</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="struct_game_data.html#aff746a781ec8317d890f860ad450ab8e">   90</a></span>&#160;    std::list&lt;int&gt; <a class="code" href="struct_game_data.html#aff746a781ec8317d890f860ad450ab8e">manualBlindsList</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="struct_game_data.html#a7e8255dd232821d0419b31893b3acbb4">   91</a></span>&#160;    <a class="code" href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6">AfterManualBlindsMode</a> <a class="code" href="struct_game_data.html#a7e8255dd232821d0419b31893b3acbb4">afterManualBlindsMode</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="struct_game_data.html#a68e6f78103983935a5f6b20abb595355">   92</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a68e6f78103983935a5f6b20abb595355">afterMBAlwaysRaiseValue</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="struct_game_data.html#a19b38d37fbd225504166856f187f38f3">   93</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a19b38d37fbd225504166856f187f38f3">guiSpeed</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="struct_game_data.html#aa37d21f5ccbeca258400c07d7fbbf6da">   94</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#aa37d21f5ccbeca258400c07d7fbbf6da">delayBetweenHandsSec</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="struct_game_data.html#a7379c03ecb75bda8cf95d215b41ae83b">   95</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_game_data.html#a7379c03ecb75bda8cf95d215b41ae83b">playerActionTimeoutSec</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="struct_game_info.html">   98</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_game_info.html">GameInfo</a> {</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="struct_game_info.html#ae7ded63bd69b007847bd66debaeebc23">   99</a></span>&#160;    <a class="code" href="struct_game_info.html#ae7ded63bd69b007847bd66debaeebc23">GameInfo</a>() : <a class="code" href="struct_game_info.html#a22140503539e3356bf8b19b041ccf934">mode</a>(<a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328">GAME_MODE_CREATED</a>), <a class="code" href="struct_game_info.html#a5ecc1639834e9a6f8055f38c1f18c2d9">adminPlayerId</a>(0), <a class="code" href="struct_game_info.html#a0d282d0891f202cffd9f2b4d55721123">isPasswordProtected</a>(false) {}</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="struct_game_info.html#a2636537f5709e2f0a492e21f46d63902">  100</a></span>&#160;    std::string <a class="code" href="struct_game_info.html#a2636537f5709e2f0a492e21f46d63902">name</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="struct_game_info.html#adda7dce486bafa025f007cc38fb5ff4c">  101</a></span>&#160;    <a class="code" href="struct_game_data.html">GameData</a> <a class="code" href="struct_game_info.html#adda7dce486bafa025f007cc38fb5ff4c">data</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="struct_game_info.html#a22140503539e3356bf8b19b041ccf934">  102</a></span>&#160;    <a class="code" href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589de">GameMode</a> <a class="code" href="struct_game_info.html#a22140503539e3356bf8b19b041ccf934">mode</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="struct_game_info.html#a5ecc1639834e9a6f8055f38c1f18c2d9">  103</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_game_info.html#a5ecc1639834e9a6f8055f38c1f18c2d9">adminPlayerId</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="struct_game_info.html#abae703a83db0cab47682304c2f5175bf">  104</a></span>&#160;    <a class="code" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a> <a class="code" href="struct_game_info.html#abae703a83db0cab47682304c2f5175bf">players</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="struct_game_info.html#a512e7504e87265d990be1fc6d6a3b07e">  105</a></span>&#160;    <a class="code" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a> <a class="code" href="struct_game_info.html#a512e7504e87265d990be1fc6d6a3b07e">spectators</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="struct_game_info.html#a24be82c5206c45ff9f08fa9896783332">  106</a></span>&#160;    <a class="code" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a> <a class="code" href="struct_game_info.html#a24be82c5206c45ff9f08fa9896783332">spectatorsDuringGame</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="struct_game_info.html#a0d282d0891f202cffd9f2b4d55721123">  107</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_game_info.html#a0d282d0891f202cffd9f2b4d55721123">isPasswordProtected</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="struct_start_data.html">  110</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_start_data.html">StartData</a> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="struct_start_data.html#a5595be90248afdc5a1f9e3b0aee5ce92">  111</a></span>&#160;    <a class="code" href="struct_start_data.html#a5595be90248afdc5a1f9e3b0aee5ce92">StartData</a>() : <a class="code" href="struct_start_data.html#a3857fbb0e5191f2352fcee6c891c704f">startDealerPlayerId</a>(0), <a class="code" href="struct_start_data.html#a962ea391fe81cc9d28ac7ec7ea511afc">numberOfPlayers</a>(0) {}</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="struct_start_data.html#a3857fbb0e5191f2352fcee6c891c704f">  112</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_start_data.html#a3857fbb0e5191f2352fcee6c891c704f">startDealerPlayerId</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="struct_start_data.html#a962ea391fe81cc9d28ac7ec7ea511afc">  113</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_start_data.html#a962ea391fe81cc9d28ac7ec7ea511afc">numberOfPlayers</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html">  116</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vote_kick_data.html">VoteKickData</a> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a4c0969c2c429557a27eaeff81f6ff58a">  117</a></span>&#160;    <a class="code" href="struct_vote_kick_data.html#a4c0969c2c429557a27eaeff81f6ff58a">VoteKickData</a>()</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        : <a class="code" href="struct_vote_kick_data.html#a8deeb29aef91634e9082ca4f79780aa9">petitionId</a>(0), <a class="code" href="struct_vote_kick_data.html#a6086ee81bbafdd51a66dfcbc33e74ea2">kickPlayerId</a>(0), <a class="code" href="struct_vote_kick_data.html#aa0004f4d5672181658012cd3a92d4a8f">numVotesToKick</a>(0),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;          <a class="code" href="struct_vote_kick_data.html#ab5832617a09a60929e6eff903f15d981">numVotesInFavourOfKicking</a>(0), <a class="code" href="struct_vote_kick_data.html#aec0801b812692d84c9abce891e8fefcd">numVotesAgainstKicking</a>(0), <a class="code" href="struct_vote_kick_data.html#a79e16bf0cf655c6de32eb21beecaf3bf">timeLimitSec</a>(0),</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;          <a class="code" href="struct_vote_kick_data.html#a0a4074bb3ceb4760b27403e1fd67c45d">voteTimer</a>(boost::posix_time::time_duration(0, 0, 0), boost::timers::portable::microsec_timer::auto_start) {}</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a8deeb29aef91634e9082ca4f79780aa9">  121</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_vote_kick_data.html#a8deeb29aef91634e9082ca4f79780aa9">petitionId</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a6086ee81bbafdd51a66dfcbc33e74ea2">  122</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_vote_kick_data.html#a6086ee81bbafdd51a66dfcbc33e74ea2">kickPlayerId</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#aa0004f4d5672181658012cd3a92d4a8f">  123</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_vote_kick_data.html#aa0004f4d5672181658012cd3a92d4a8f">numVotesToKick</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#ab5832617a09a60929e6eff903f15d981">  124</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_vote_kick_data.html#ab5832617a09a60929e6eff903f15d981">numVotesInFavourOfKicking</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#aec0801b812692d84c9abce891e8fefcd">  125</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_vote_kick_data.html#aec0801b812692d84c9abce891e8fefcd">numVotesAgainstKicking</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a79e16bf0cf655c6de32eb21beecaf3bf">  126</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_vote_kick_data.html#a79e16bf0cf655c6de32eb21beecaf3bf">timeLimitSec</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a0a4074bb3ceb4760b27403e1fd67c45d">  127</a></span>&#160;    boost::timers::portable::microsec_timer <a class="code" href="struct_vote_kick_data.html#a0a4074bb3ceb4760b27403e1fd67c45d">voteTimer</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="struct_vote_kick_data.html#a68bb6a654755d931a50e4bc8ec27a67b">  128</a></span>&#160;    <a class="code" href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a> <a class="code" href="struct_vote_kick_data.html#a68bb6a654755d931a50e4bc8ec27a67b">votedPlayerIds</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_game_data_html_a6601463dbb7b1db927525b24d79e63b8"><div class="ttname"><a href="struct_game_data.html#a6601463dbb7b1db927525b24d79e63b8">GameData::raiseSmallBlindEveryMinutesValue</a></div><div class="ttdeci">int raiseSmallBlindEveryMinutesValue</div><div class="ttdef"><b>Definition:</b> gamedata.h:88</div></div>
+<div class="ttc" id="struct_game_data_html_a7379c03ecb75bda8cf95d215b41ae83b"><div class="ttname"><a href="struct_game_data.html#a7379c03ecb75bda8cf95d215b41ae83b">GameData::playerActionTimeoutSec</a></div><div class="ttdeci">int playerActionTimeoutSec</div><div class="ttdef"><b>Definition:</b> gamedata.h:95</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79">GAME_TYPE_NORMAL</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:51</div></div>
+<div class="ttc" id="gamedata_8h_html_a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a"><div class="ttname"><a href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a">AFTERMB_STAY_AT_LAST_BLIND</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:70</div></div>
+<div class="ttc" id="struct_game_data_html_a592278fc8c3d824ddbdc3f8a401320bc"><div class="ttname"><a href="struct_game_data.html#a592278fc8c3d824ddbdc3f8a401320bc">GameData::raiseMode</a></div><div class="ttdeci">RaiseMode raiseMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:89</div></div>
+<div class="ttc" id="struct_game_data_html_a0c9e8a63d5c02de30463c0b6beacebe3"><div class="ttname"><a href="struct_game_data.html#a0c9e8a63d5c02de30463c0b6beacebe3">GameData::firstSmallBlind</a></div><div class="ttdeci">int firstSmallBlind</div><div class="ttdef"><b>Definition:</b> gamedata.h:85</div></div>
+<div class="ttc" id="gamedata_8h_html_a250ebe9cdf4567798600e292202a66e6"><div class="ttname"><a href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6">AfterManualBlindsMode</a></div><div class="ttdeci">AfterManualBlindsMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:67</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc">GAME_TYPE_RANKING</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:54</div></div>
+<div class="ttc" id="struct_game_info_html_a5ecc1639834e9a6f8055f38c1f18c2d9"><div class="ttname"><a href="struct_game_info.html#a5ecc1639834e9a6f8055f38c1f18c2d9">GameInfo::adminPlayerId</a></div><div class="ttdeci">unsigned adminPlayerId</div><div class="ttdef"><b>Definition:</b> gamedata.h:103</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a8deeb29aef91634e9082ca4f79780aa9"><div class="ttname"><a href="struct_vote_kick_data.html#a8deeb29aef91634e9082ca4f79780aa9">VoteKickData::petitionId</a></div><div class="ttdeci">unsigned petitionId</div><div class="ttdef"><b>Definition:</b> gamedata.h:121</div></div>
+<div class="ttc" id="struct_game_data_html_aa254390c51645ce5b18fd55e27e04f79"><div class="ttname"><a href="struct_game_data.html#aa254390c51645ce5b18fd55e27e04f79">GameData::allowSpectators</a></div><div class="ttdeci">bool allowSpectators</div><div class="ttdef"><b>Definition:</b> gamedata.h:82</div></div>
+<div class="ttc" id="struct_game_data_html_a19b38d37fbd225504166856f187f38f3"><div class="ttname"><a href="struct_game_data.html#a19b38d37fbd225504166856f187f38f3">GameData::guiSpeed</a></div><div class="ttdeci">int guiSpeed</div><div class="ttdef"><b>Definition:</b> gamedata.h:93</div></div>
+<div class="ttc" id="struct_game_data_html"><div class="ttname"><a href="struct_game_data.html">GameData</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:74</div></div>
+<div class="ttc" id="struct_game_data_html_aa37d21f5ccbeca258400c07d7fbbf6da"><div class="ttname"><a href="struct_game_data.html#aa37d21f5ccbeca258400c07d7fbbf6da">GameData::delayBetweenHandsSec</a></div><div class="ttdeci">int delayBetweenHandsSec</div><div class="ttdef"><b>Definition:</b> gamedata.h:94</div></div>
+<div class="ttc" id="struct_start_data_html"><div class="ttname"><a href="struct_start_data.html">StartData</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:110</div></div>
+<div class="ttc" id="struct_game_data_html_aff746a781ec8317d890f860ad450ab8e"><div class="ttname"><a href="struct_game_data.html#aff746a781ec8317d890f860ad450ab8e">GameData::manualBlindsList</a></div><div class="ttdeci">std::list&lt; int &gt; manualBlindsList</div><div class="ttdef"><b>Definition:</b> gamedata.h:90</div></div>
+<div class="ttc" id="struct_start_data_html_a3857fbb0e5191f2352fcee6c891c704f"><div class="ttname"><a href="struct_start_data.html#a3857fbb0e5191f2352fcee6c891c704f">StartData::startDealerPlayerId</a></div><div class="ttdeci">unsigned startDealerPlayerId</div><div class="ttdef"><b>Definition:</b> gamedata.h:112</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a68bb6a654755d931a50e4bc8ec27a67b"><div class="ttname"><a href="struct_vote_kick_data.html#a68bb6a654755d931a50e4bc8ec27a67b">VoteKickData::votedPlayerIds</a></div><div class="ttdeci">PlayerIdList votedPlayerIds</div><div class="ttdef"><b>Definition:</b> gamedata.h:128</div></div>
+<div class="ttc" id="struct_start_data_html_a962ea391fe81cc9d28ac7ec7ea511afc"><div class="ttname"><a href="struct_start_data.html#a962ea391fe81cc9d28ac7ec7ea511afc">StartData::numberOfPlayers</a></div><div class="ttdeci">int numberOfPlayers</div><div class="ttdef"><b>Definition:</b> gamedata.h:113</div></div>
+<div class="ttc" id="struct_vote_kick_data_html"><div class="ttname"><a href="struct_vote_kick_data.html">VoteKickData</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:116</div></div>
+<div class="ttc" id="struct_game_data_html_a1b697f477ae03d3bd3323c4c099d6d58"><div class="ttname"><a href="struct_game_data.html#a1b697f477ae03d3bd3323c4c099d6d58">GameData::startMoney</a></div><div class="ttdeci">int startMoney</div><div class="ttdef"><b>Definition:</b> gamedata.h:84</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_aa0004f4d5672181658012cd3a92d4a8f"><div class="ttname"><a href="struct_vote_kick_data.html#aa0004f4d5672181658012cd3a92d4a8f">VoteKickData::numVotesToKick</a></div><div class="ttdeci">int numVotesToKick</div><div class="ttdef"><b>Definition:</b> gamedata.h:123</div></div>
+<div class="ttc" id="gamedata_8h_html_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4"><div class="ttname"><a href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4">RAISE_ON_HANDNUMBER</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:58</div></div>
+<div class="ttc" id="struct_game_info_html_a512e7504e87265d990be1fc6d6a3b07e"><div class="ttname"><a href="struct_game_info.html#a512e7504e87265d990be1fc6d6a3b07e">GameInfo::spectators</a></div><div class="ttdeci">PlayerIdList spectators</div><div class="ttdef"><b>Definition:</b> gamedata.h:105</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a6086ee81bbafdd51a66dfcbc33e74ea2"><div class="ttname"><a href="struct_vote_kick_data.html#a6086ee81bbafdd51a66dfcbc33e74ea2">VoteKickData::kickPlayerId</a></div><div class="ttdeci">unsigned kickPlayerId</div><div class="ttdef"><b>Definition:</b> gamedata.h:122</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924">GAME_TYPE_REGISTERED_ONLY</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:52</div></div>
+<div class="ttc" id="struct_game_info_html_a24be82c5206c45ff9f08fa9896783332"><div class="ttname"><a href="struct_game_info.html#a24be82c5206c45ff9f08fa9896783332">GameInfo::spectatorsDuringGame</a></div><div class="ttdeci">PlayerIdList spectatorsDuringGame</div><div class="ttdef"><b>Definition:</b> gamedata.h:106</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57">GameType</a></div><div class="ttdeci">GameType</div><div class="ttdef"><b>Definition:</b> gamedata.h:50</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_aec0801b812692d84c9abce891e8fefcd"><div class="ttname"><a href="struct_vote_kick_data.html#aec0801b812692d84c9abce891e8fefcd">VoteKickData::numVotesAgainstKicking</a></div><div class="ttdeci">int numVotesAgainstKicking</div><div class="ttdef"><b>Definition:</b> gamedata.h:125</div></div>
+<div class="ttc" id="gamedata_8h_html_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56"><div class="ttname"><a href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56">DOUBLE_BLINDS</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:63</div></div>
+<div class="ttc" id="struct_game_info_html_abae703a83db0cab47682304c2f5175bf"><div class="ttname"><a href="struct_game_info.html#abae703a83db0cab47682304c2f5175bf">GameInfo::players</a></div><div class="ttdeci">PlayerIdList players</div><div class="ttdef"><b>Definition:</b> gamedata.h:104</div></div>
+<div class="ttc" id="struct_start_data_html_a5595be90248afdc5a1f9e3b0aee5ce92"><div class="ttname"><a href="struct_start_data.html#a5595be90248afdc5a1f9e3b0aee5ce92">StartData::StartData</a></div><div class="ttdeci">StartData()</div><div class="ttdef"><b>Definition:</b> gamedata.h:111</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a79e16bf0cf655c6de32eb21beecaf3bf"><div class="ttname"><a href="struct_vote_kick_data.html#a79e16bf0cf655c6de32eb21beecaf3bf">VoteKickData::timeLimitSec</a></div><div class="ttdeci">int timeLimitSec</div><div class="ttdef"><b>Definition:</b> gamedata.h:126</div></div>
+<div class="ttc" id="gamedata_8h_html_aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853"><div class="ttname"><a href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853">GAME_MODE_CLOSED</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:47</div></div>
+<div class="ttc" id="gamedata_8h_html_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328"><div class="ttname"><a href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328">GAME_MODE_CREATED</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:45</div></div>
+<div class="ttc" id="struct_game_data_html_a67ab18c5a35df618e99983275c7552ab"><div class="ttname"><a href="struct_game_data.html#a67ab18c5a35df618e99983275c7552ab">GameData::GameData</a></div><div class="ttdeci">GameData()</div><div class="ttdef"><b>Definition:</b> gamedata.h:75</div></div>
+<div class="ttc" id="gamedata_8h_html_a39f8de2f47cb4adf9038f5c6d6a8b8e6"><div class="ttname"><a href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6">RaiseIntervalMode</a></div><div class="ttdeci">RaiseIntervalMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:57</div></div>
+<div class="ttc" id="struct_game_data_html_a943a5365d2a5ac840bb3479c6fe1c23b"><div class="ttname"><a href="struct_game_data.html#a943a5365d2a5ac840bb3479c6fe1c23b">GameData::raiseSmallBlindEveryHandsValue</a></div><div class="ttdeci">int raiseSmallBlindEveryHandsValue</div><div class="ttdef"><b>Definition:</b> gamedata.h:87</div></div>
+<div class="ttc" id="gamedata_8h_html_a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488"><div class="ttname"><a href="gamedata_8h.html#a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488">RAISE_ON_MINUTES</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:59</div></div>
+<div class="ttc" id="gamedata_8h_html_aaf5ef5a17b53e9997c837b07015589de"><div class="ttname"><a href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589de">GameMode</a></div><div class="ttdeci">GameMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:44</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a4c0969c2c429557a27eaeff81f6ff58a"><div class="ttname"><a href="struct_vote_kick_data.html#a4c0969c2c429557a27eaeff81f6ff58a">VoteKickData::VoteKickData</a></div><div class="ttdeci">VoteKickData()</div><div class="ttdef"><b>Definition:</b> gamedata.h:117</div></div>
+<div class="ttc" id="struct_game_data_html_a68e6f78103983935a5f6b20abb595355"><div class="ttname"><a href="struct_game_data.html#a68e6f78103983935a5f6b20abb595355">GameData::afterMBAlwaysRaiseValue</a></div><div class="ttdeci">int afterMBAlwaysRaiseValue</div><div class="ttdef"><b>Definition:</b> gamedata.h:92</div></div>
+<div class="ttc" id="struct_game_data_html_a44ded208d33fed8dbf1edd827faa847b"><div class="ttname"><a href="struct_game_data.html#a44ded208d33fed8dbf1edd827faa847b">GameData::gameType</a></div><div class="ttdeci">GameType gameType</div><div class="ttdef"><b>Definition:</b> gamedata.h:81</div></div>
+<div class="ttc" id="struct_game_data_html_a7e8255dd232821d0419b31893b3acbb4"><div class="ttname"><a href="struct_game_data.html#a7e8255dd232821d0419b31893b3acbb4">GameData::afterManualBlindsMode</a></div><div class="ttdeci">AfterManualBlindsMode afterManualBlindsMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:91</div></div>
+<div class="ttc" id="struct_game_info_html_ae7ded63bd69b007847bd66debaeebc23"><div class="ttname"><a href="struct_game_info.html#ae7ded63bd69b007847bd66debaeebc23">GameInfo::GameInfo</a></div><div class="ttdeci">GameInfo()</div><div class="ttdef"><b>Definition:</b> gamedata.h:99</div></div>
+<div class="ttc" id="gamedata_8h_html_a02ee63ca030dfa9d119c9f2df584e383"><div class="ttname"><a href="gamedata_8h.html#a02ee63ca030dfa9d119c9f2df584e383">PlayerIdList</a></div><div class="ttdeci">std::list&lt; unsigned &gt; PlayerIdList</div><div class="ttdef"><b>Definition:</b> gamedata.h:42</div></div>
+<div class="ttc" id="struct_game_info_html_a2636537f5709e2f0a492e21f46d63902"><div class="ttname"><a href="struct_game_info.html#a2636537f5709e2f0a492e21f46d63902">GameInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> gamedata.h:100</div></div>
+<div class="ttc" id="struct_game_data_html_aba8c8d38c50dab71ad1530bbc2003b46"><div class="ttname"><a href="struct_game_data.html#aba8c8d38c50dab71ad1530bbc2003b46">GameData::maxNumberOfPlayers</a></div><div class="ttdeci">int maxNumberOfPlayers</div><div class="ttdef"><b>Definition:</b> gamedata.h:83</div></div>
+<div class="ttc" id="gamedata_8h_html_a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3"><div class="ttname"><a href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3">MANUAL_BLINDS_ORDER</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:64</div></div>
+<div class="ttc" id="struct_game_info_html_a0d282d0891f202cffd9f2b4d55721123"><div class="ttname"><a href="struct_game_info.html#a0d282d0891f202cffd9f2b4d55721123">GameInfo::isPasswordProtected</a></div><div class="ttdeci">bool isPasswordProtected</div><div class="ttdef"><b>Definition:</b> gamedata.h:107</div></div>
+<div class="ttc" id="struct_game_data_html_a298a24818a2bf81d8c7565812ff2eb26"><div class="ttname"><a href="struct_game_data.html#a298a24818a2bf81d8c7565812ff2eb26">GameData::raiseIntervalMode</a></div><div class="ttdeci">RaiseIntervalMode raiseIntervalMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:86</div></div>
+<div class="ttc" id="gamedata_8h_html_a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7"><div class="ttname"><a href="gamedata_8h.html#a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7">GAME_TYPE_INVITE_ONLY</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:53</div></div>
+<div class="ttc" id="gamedata_8h_html_aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3"><div class="ttname"><a href="gamedata_8h.html#aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3">GAME_MODE_STARTED</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:46</div></div>
+<div class="ttc" id="gamedata_8h_html_a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e"><div class="ttname"><a href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e">AFTERMB_RAISE_ABOUT</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:69</div></div>
+<div class="ttc" id="struct_game_info_html"><div class="ttname"><a href="struct_game_info.html">GameInfo</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:98</div></div>
+<div class="ttc" id="struct_game_info_html_a22140503539e3356bf8b19b041ccf934"><div class="ttname"><a href="struct_game_info.html#a22140503539e3356bf8b19b041ccf934">GameInfo::mode</a></div><div class="ttdeci">GameMode mode</div><div class="ttdef"><b>Definition:</b> gamedata.h:102</div></div>
+<div class="ttc" id="struct_game_info_html_adda7dce486bafa025f007cc38fb5ff4c"><div class="ttname"><a href="struct_game_info.html#adda7dce486bafa025f007cc38fb5ff4c">GameInfo::data</a></div><div class="ttdeci">GameData data</div><div class="ttdef"><b>Definition:</b> gamedata.h:101</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_ab5832617a09a60929e6eff903f15d981"><div class="ttname"><a href="struct_vote_kick_data.html#ab5832617a09a60929e6eff903f15d981">VoteKickData::numVotesInFavourOfKicking</a></div><div class="ttdeci">int numVotesInFavourOfKicking</div><div class="ttdef"><b>Definition:</b> gamedata.h:124</div></div>
+<div class="ttc" id="gamedata_8h_html_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb"><div class="ttname"><a href="gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb">AFTERMB_DOUBLE_BLINDS</a></div><div class="ttdef"><b>Definition:</b> gamedata.h:68</div></div>
+<div class="ttc" id="gamedata_8h_html_a5532f34d7415bdfab60d67400cd5fc02"><div class="ttname"><a href="gamedata_8h.html#a5532f34d7415bdfab60d67400cd5fc02">RaiseMode</a></div><div class="ttdeci">RaiseMode</div><div class="ttdef"><b>Definition:</b> gamedata.h:62</div></div>
+<div class="ttc" id="struct_vote_kick_data_html_a0a4074bb3ceb4760b27403e1fd67c45d"><div class="ttname"><a href="struct_vote_kick_data.html#a0a4074bb3ceb4760b27403e1fd67c45d">VoteKickData::voteTimer</a></div><div class="ttdeci">boost::timers::portable::microsec_timer voteTimer</div><div class="ttdef"><b>Definition:</b> gamedata.h:127</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+생성시간 : 목 1월 21 2016 17:39:32, 프로젝트명 : my project1, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

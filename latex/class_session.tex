@@ -1,0 +1,1290 @@
+\hypertarget{class_session}{\section{Session 클래스 참조}
+\label{class_session}\index{Session@{Session}}
+}
+
+
+{\ttfamily \#include $<$session.\-h$>$}
+
+
+
+Session에 대한 협력 다이어그램\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_session__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1}{Game\-Type} \{ \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L}, 
+\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}, 
+\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_session_a7bc6792892226050a8cf19d5e9c17541}{Session} (Gui\-Interface $\ast$, Config\-File $\ast$, Log $\ast$)
+\item 
+\hyperlink{class_session_a8753bb9dee966b7d39abc9b7237cd665}{$\sim$\-Session} ()
+\item 
+bool \hyperlink{class_session_a94dcf560238662a4e2626a654df008f3}{init} ()
+\item 
+void \hyperlink{class_session_acb341298736898e0c913aa2e17c819e8}{init} (boost\-::shared\-\_\-ptr$<$ Avatar\-Manager $>$ manager)
+\item 
+void \hyperlink{class_session_acc80127497f991a082269c2e6b6cddb9}{add\-Own\-Avatar} (const std\-::string \&avatar\-File)
+\item 
+void \hyperlink{class_session_af2e661d4bcda30cfda7c90547ce2260a}{start\-Local\-Game} (const \hyperlink{struct_game_data}{Game\-Data} \&game\-Data, const \hyperlink{struct_start_data}{Start\-Data} \&start\-Data)
+\item 
+void \hyperlink{class_session_ae7f595ddf3e73d0d923e9ccd3b77cb56}{start\-Client\-Game} (boost\-::shared\-\_\-ptr$<$ Game $>$ game)
+\item 
+boost\-::shared\-\_\-ptr$<$ Game $>$ \hyperlink{class_session_a4105c943da66294d2296e31bc34d5ff9}{get\-Current\-Game} ()
+\item 
+Gui\-Interface $\ast$ \hyperlink{class_session_ab1f394edd6080e4303bd292b0f842ce1}{get\-Gui} ()
+\item 
+Log $\ast$ \hyperlink{class_session_a8b3eeaaa1732a6a403bf799b8feab70d}{get\-My\-Log} ()
+\item 
+\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1}{Game\-Type} \hyperlink{class_session_a5e07b844e121855419719abcbd8aa61a}{get\-Game\-Type} ()
+\item 
+boost\-::shared\-\_\-ptr$<$ Avatar\-Manager $>$ \hyperlink{class_session_a96a5366d8d4455494ca27ed412cb37a5}{get\-Avatar\-Manager} ()
+\item 
+void \hyperlink{class_session_a2e89781eb6911f3d7a40b475bc83c8c8}{start\-Internet\-Client} ()
+\item 
+void \hyperlink{class_session_aab2276257cc5c64e11a05784daf414e5}{start\-Network\-Client} (const std\-::string \&server\-Address, unsigned server\-Port, bool ipv6, bool sctp)
+\item 
+void \hyperlink{class_session_a738cd5d6baccc583228e5bc57d57d80f}{start\-Network\-Client\-For\-Local\-Server} (const \hyperlink{struct_game_data}{Game\-Data} \&game\-Data)
+\item 
+void \hyperlink{class_session_ad74cf272a2adfaa0a2abcaf31dde167d}{terminate\-Network\-Client} ()
+\item 
+void \hyperlink{class_session_ae3a49af65eee53bfdb44896ab564458e}{client\-Create\-Game} (const \hyperlink{struct_game_data}{Game\-Data} \&game\-Data, const std\-::string \&name, const std\-::string \&password)
+\item 
+void \hyperlink{class_session_a4499bc9b022b6af7856ab23ab80d7f99}{client\-Join\-Game} (unsigned game\-Id, const std\-::string \&password)
+\item 
+void \hyperlink{class_session_a8084d3c69f25fb50c1b42efe07ccbeb7}{client\-Rejoin\-Game} (unsigned game\-Id)
+\item 
+void \hyperlink{class_session_abf1156cfe81e2786adf7bb369836ca0b}{start\-Network\-Server} (bool dedicated, bool lan\-\_\-local=false)
+\item 
+void \hyperlink{class_session_afe114af0a76eb150e0aad183eed5b8f1}{send\-Leave\-Current\-Game} ()
+\item 
+void \hyperlink{class_session_a0b43294e739dab7e8a70c1ed2e852e3d}{send\-Start\-Event} (bool fill\-Up\-With\-Cpu\-Players)
+\item 
+void \hyperlink{class_session_ab3c9282517142617d9daf5ea08768083}{terminate\-Network\-Server} ()
+\item 
+bool \hyperlink{class_session_a2277e79b82a29b4ec96aa78e1cb67e7c}{poll\-Network\-Server\-Terminated} ()
+\item 
+void \hyperlink{class_session_aac851088914580be19d0f9c84698cdb6}{send\-Client\-Player\-Action} ()
+\item 
+void \hyperlink{class_session_a9e297d28e45b056a09c62ef389308052}{send\-Game\-Chat\-Message} (const std\-::string \&message)
+\item 
+void \hyperlink{class_session_ae309f290cfefc4c2c145209b7a5a48ff}{send\-Lobby\-Chat\-Message} (const std\-::string \&message)
+\item 
+void \hyperlink{class_session_a756684d3fb7bc878f39250f5ddd3cc55}{send\-Private\-Chat\-Message} (unsigned target\-Player\-Id, const std\-::string \&message)
+\item 
+void \hyperlink{class_session_a383cac1e0db6fcbce4d3fa94b3efe9d4}{kick\-Player} (unsigned player\-Id)
+\item 
+void \hyperlink{class_session_a1a682edf6225afaa72df5f3d17663a35}{kick\-Player} (const std\-::string \&player\-Name)
+\item 
+void \hyperlink{class_session_aa834f9615a493ae739509e56abab5059}{start\-Vote\-Kick\-Player} (unsigned player\-Id)
+\item 
+void \hyperlink{class_session_a346c8fa2d61d205f825c2af8a12d2071}{vote\-Kick} (bool do\-Kick)
+\item 
+void \hyperlink{class_session_a4e99119356023629431163b20e307020}{show\-My\-Cards} ()
+\item 
+void \hyperlink{class_session_ae23ad66200d0c7ab81f5baddc40ad7ee}{select\-Server} (unsigned server\-Id)
+\item 
+void \hyperlink{class_session_a111d37566070922bebb97f1c52e811f5}{set\-Login} (const std\-::string \&user\-Name, const std\-::string \&password, bool is\-Guest)
+\item 
+void \hyperlink{class_session_a2dad06d98159702d5723e895d93cda01}{invite\-Player\-To\-Current\-Game} (unsigned player\-Id)
+\item 
+void \hyperlink{class_session_aa0083e4f35f82def3c9f05af75449caf}{accept\-Game\-Invitation} (unsigned game\-Id)
+\item 
+void \hyperlink{class_session_a56768c317805f6fb7f0acded7a703db3}{reject\-Game\-Invitation} (unsigned game\-Id, \hyperlink{game__defs_8h_aa91c16d80068f7d379ed63946b9d9a53}{Deny\-Game\-Invitation\-Reason} reason)
+\item 
+void \hyperlink{class_session_af1a1915a925b1bc73e5984524d365787}{report\-Bad\-Avatar} (unsigned reported\-Player\-Id, const std\-::string \&avatar\-Hash)
+\item 
+void \hyperlink{class_session_ab8c30dee4b7dd9d56045caa308bb14d6}{report\-Bad\-Game\-Name} (unsigned game\-Id)
+\item 
+void \hyperlink{class_session_a1343f531ff9b53c77c873f5034a00a0f}{admin\-Action\-Ban\-Player} (unsigned player\-Id)
+\item 
+void \hyperlink{class_session_aa772e588d7f1aa1a78ff9633a6cf0e8b}{reset\-Network\-Timeout} ()
+\item 
+void \hyperlink{class_session_acb24746ea4c50d24d26386e7afb4befa}{admin\-Action\-Close\-Game} (unsigned game\-Id)
+\item 
+bool \hyperlink{class_session_a7e4c9b0b3bf8f745c22c4f17c365d9ec}{is\-Network\-Client\-Running} () const 
+\item 
+bool \hyperlink{class_session_a7ac2f5a1bf47626a9b37c739701f84bf}{is\-Network\-Server\-Running} () const 
+\item 
+\hyperlink{struct_server_info}{Server\-Info} \hyperlink{class_session_a103970a0117442b4db09adaef04847d7}{get\-Client\-Server\-Info} (unsigned server\-Id) const 
+\item 
+\hyperlink{struct_game_info}{Game\-Info} \hyperlink{class_session_a8f16216769638acec9ce003aca038e67}{get\-Client\-Game\-Info} (unsigned game\-Id) const 
+\item 
+\hyperlink{struct_player_info}{Player\-Info} \hyperlink{class_session_af0c26f5815db03ddcb83491a080383e3}{get\-Client\-Player\-Info} (unsigned player\-Id) const 
+\item 
+unsigned \hyperlink{class_session_a4cd156a99a379a966424cfefd93cd31b}{get\-Game\-Id\-Of\-Player} (unsigned player\-Id) const 
+\item 
+\hyperlink{struct_server_stats}{Server\-Stats} \hyperlink{class_session_aa69deeb42f29e39020a85a7396992925}{get\-Client\-Stats} () const 
+\item 
+unsigned \hyperlink{class_session_aab5ba527a87413cdeab6a5ea00f4c30d}{get\-Client\-Current\-Game\-Id} () const 
+\item 
+unsigned \hyperlink{class_session_a82aff275cb035b0440f5139d54338b99}{get\-Client\-Unique\-Player\-Id} () const 
+\item 
+bool \hyperlink{class_session_aae0e047300fee326aaf11fb060df135e}{get\-Avatar\-File} (const M\-D5\-Buf \&avatar\-M\-D5, std\-::string \&file\-Name)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_session_a89974964b38a285de9ec954b99b0ee3f}{current\-Game\-Num}
+\item 
+std\-::string \hyperlink{class_session_a95063949539c8584d569d777284784ba}{my\-Irc\-Nick}
+\item 
+boost\-::shared\-\_\-ptr$<$ Client\-Thread $>$ \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{my\-Net\-Client}
+\item 
+boost\-::shared\-\_\-ptr$<$ Server\-Manager $>$ \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{my\-Net\-Server}
+\item 
+boost\-::shared\-\_\-ptr$<$ Avatar\-Manager $>$ \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{my\-Avatar\-Manager}
+\item 
+boost\-::shared\-\_\-ptr$<$ Game $>$ \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{current\-Game}
+\item 
+Gui\-Interface $\ast$ \hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{my\-Gui}
+\item 
+Config\-File $\ast$ \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{my\-Config}
+\item 
+Log $\ast$ \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{my\-Log}
+\item 
+\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1}{Game\-Type} \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{my\-Game\-Type}
+\item 
+Qt\-Tools\-Interface $\ast$ \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{my\-Qt\-Tools\-Interface}
+\end{DoxyCompactItemize}
+
+
+\subsection{멤버 열거형 문서화}
+\hypertarget{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1}{\index{Session@{Session}!Game\-Type@{Game\-Type}}
+\index{Game\-Type@{Game\-Type}!Session@{Session}}
+\subsubsection[{Game\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Session\-::\-Game\-Type}}}\label{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}!Session@{Session}}\index{Session@{Session}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}\label{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L}!Session@{Session}}\index{Session@{Session}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L}}\item[{\em 
+\hypertarget{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-C\-A\-L}\label{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}!Session@{Session}}\index{Session@{Session}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}}\item[{\em 
+\hypertarget{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-E\-T\-W\-O\-R\-K}\label{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T}!Session@{Session}}\index{Session@{Session}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T}}\item[{\em 
+\hypertarget{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T\-E\-R\-N\-E\-T}\label{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+62 \{ \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}{GAME\_TYPE\_NONE}, \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7}{GAME\_TYPE\_LOCAL}, 
+      \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}{GAME\_TYPE\_NETWORK}, \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2}{GAME\_TYPE\_INTERNET} \};
+\end{DoxyCode}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_session_a7bc6792892226050a8cf19d5e9c17541}{\index{Session@{Session}!Session@{Session}}
+\index{Session@{Session}!Session@{Session}}
+\subsubsection[{Session}]{\setlength{\rightskip}{0pt plus 5cm}Session\-::\-Session (
+\begin{DoxyParamCaption}
+\item[{Gui\-Interface $\ast$}]{g, }
+\item[{Config\-File $\ast$}]{c, }
+\item[{Log $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{class_session_a7bc6792892226050a8cf19d5e9c17541}
+
+\begin{DoxyCode}
+56     : \hyperlink{class_session_a89974964b38a285de9ec954b99b0ee3f}{currentGameNum}(0), \hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}(g), \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}(c), \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog}(l), 
+      \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType}(\hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}{GAME\_TYPE\_NONE})
+57 \{
+58     \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface} = CreateQtToolsWrapper();
+59 \}
+\end{DoxyCode}
+\hypertarget{class_session_a8753bb9dee966b7d39abc9b7237cd665}{\index{Session@{Session}!$\sim$\-Session@{$\sim$\-Session}}
+\index{$\sim$\-Session@{$\sim$\-Session}!Session@{Session}}
+\subsubsection[{$\sim$\-Session}]{\setlength{\rightskip}{0pt plus 5cm}Session\-::$\sim$\-Session (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a8753bb9dee966b7d39abc9b7237cd665}
+
+\begin{DoxyCode}
+63 \{
+64     \hyperlink{class_session_ad74cf272a2adfaa0a2abcaf31dde167d}{terminateNetworkClient}();
+65     \hyperlink{class_session_ab3c9282517142617d9daf5ea08768083}{terminateNetworkServer}();
+66     \textcolor{keyword}{delete} \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface};
+67     \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface} = 0;
+68     \textcolor{keyword}{delete} \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog};
+69     \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog} = 0;
+70 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_session_a8753bb9dee966b7d39abc9b7237cd665_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_session_aa0083e4f35f82def3c9f05af75449caf}{\index{Session@{Session}!accept\-Game\-Invitation@{accept\-Game\-Invitation}}
+\index{accept\-Game\-Invitation@{accept\-Game\-Invitation}!Session@{Session}}
+\subsubsection[{accept\-Game\-Invitation}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::accept\-Game\-Invitation (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_aa0083e4f35f82def3c9f05af75449caf}
+
+\begin{DoxyCode}
+489 \{
+490     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+491         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+492     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendJoinGame(
+493         gameId,
+494         \textcolor{stringliteral}{""},
+495         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+496     );
+497 \}
+\end{DoxyCode}
+\hypertarget{class_session_acc80127497f991a082269c2e6b6cddb9}{\index{Session@{Session}!add\-Own\-Avatar@{add\-Own\-Avatar}}
+\index{add\-Own\-Avatar@{add\-Own\-Avatar}!Session@{Session}}
+\subsubsection[{add\-Own\-Avatar}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::add\-Own\-Avatar (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{avatar\-File}
+\end{DoxyParamCaption}
+)}}\label{class_session_acc80127497f991a082269c2e6b6cddb9}
+
+\begin{DoxyCode}
+96 \{
+97     \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}->AddSingleAvatar(avatarFile);
+98 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_session_acc80127497f991a082269c2e6b6cddb9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_session_a1343f531ff9b53c77c873f5034a00a0f}{\index{Session@{Session}!admin\-Action\-Ban\-Player@{admin\-Action\-Ban\-Player}}
+\index{admin\-Action\-Ban\-Player@{admin\-Action\-Ban\-Player}!Session@{Session}}
+\subsubsection[{admin\-Action\-Ban\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::admin\-Action\-Ban\-Player (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_a1343f531ff9b53c77c873f5034a00a0f}
+
+\begin{DoxyCode}
+442 \{
+443     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+444         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+445     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendAdminBanPlayer(playerId);
+446 \}
+\end{DoxyCode}
+\hypertarget{class_session_acb24746ea4c50d24d26386e7afb4befa}{\index{Session@{Session}!admin\-Action\-Close\-Game@{admin\-Action\-Close\-Game}}
+\index{admin\-Action\-Close\-Game@{admin\-Action\-Close\-Game}!Session@{Session}}
+\subsubsection[{admin\-Action\-Close\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::admin\-Action\-Close\-Game (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_acb24746ea4c50d24d26386e7afb4befa}
+
+\begin{DoxyCode}
+435 \{
+436     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+437         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+438     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendAdminRemoveGame(gameId);
+439 \}
+\end{DoxyCode}
+\hypertarget{class_session_ae3a49af65eee53bfdb44896ab564458e}{\index{Session@{Session}!client\-Create\-Game@{client\-Create\-Game}}
+\index{client\-Create\-Game@{client\-Create\-Game}!Session@{Session}}
+\subsubsection[{client\-Create\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::client\-Create\-Game (
+\begin{DoxyParamCaption}
+\item[{const {\bf Game\-Data} \&}]{game\-Data, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)}}\label{class_session_ae3a49af65eee53bfdb44896ab564458e}
+
+\begin{DoxyCode}
+281 \{
+282     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+283         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+284     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendCreateGame(
+285         gameData,
+286         name,
+287         password,
+288         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+289     );
+290 \}
+\end{DoxyCode}
+\hypertarget{class_session_a4499bc9b022b6af7856ab23ab80d7f99}{\index{Session@{Session}!client\-Join\-Game@{client\-Join\-Game}}
+\index{client\-Join\-Game@{client\-Join\-Game}!Session@{Session}}
+\subsubsection[{client\-Join\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::client\-Join\-Game (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id, }
+\item[{const std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)}}\label{class_session_a4499bc9b022b6af7856ab23ab80d7f99}
+
+\begin{DoxyCode}
+293 \{
+294     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+295         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+296     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendJoinGame(
+297         gameId,
+298         password,
+299         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+300     );
+301 \}
+\end{DoxyCode}
+\hypertarget{class_session_a8084d3c69f25fb50c1b42efe07ccbeb7}{\index{Session@{Session}!client\-Rejoin\-Game@{client\-Rejoin\-Game}}
+\index{client\-Rejoin\-Game@{client\-Rejoin\-Game}!Session@{Session}}
+\subsubsection[{client\-Rejoin\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::client\-Rejoin\-Game (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_a8084d3c69f25fb50c1b42efe07ccbeb7}
+
+\begin{DoxyCode}
+304 \{
+305     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+306         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+307     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendRejoinGame(
+308         gameId,
+309         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+310     );
+311 \}
+\end{DoxyCode}
+\hypertarget{class_session_aae0e047300fee326aaf11fb060df135e}{\index{Session@{Session}!get\-Avatar\-File@{get\-Avatar\-File}}
+\index{get\-Avatar\-File@{get\-Avatar\-File}!Session@{Session}}
+\subsubsection[{get\-Avatar\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Session\-::get\-Avatar\-File (
+\begin{DoxyParamCaption}
+\item[{const M\-D5\-Buf \&}]{avatar\-M\-D5, }
+\item[{std\-::string \&}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_session_aae0e047300fee326aaf11fb060df135e}
+
+\begin{DoxyCode}
+604 \{
+605     \textcolor{keywordtype}{bool} retVal = \textcolor{keyword}{false};
+606     \textcolor{keywordflow}{if} (\hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}.get()) \{
+607         \textcolor{keywordtype}{string} tmpFileName;
+608         retVal = \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}->GetAvatarFileName(avatarMD5, tmpFileName);
+609         \textcolor{keywordflow}{if} (retVal)
+610             fileName = \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringToUtf8(tmpFileName);
+611     \}
+612     \textcolor{keywordflow}{return} retVal;
+613 \}\end{DoxyCode}
+\hypertarget{class_session_a96a5366d8d4455494ca27ed412cb37a5}{\index{Session@{Session}!get\-Avatar\-Manager@{get\-Avatar\-Manager}}
+\index{get\-Avatar\-Manager@{get\-Avatar\-Manager}!Session@{Session}}
+\subsubsection[{get\-Avatar\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ Avatar\-Manager $>$ Session\-::get\-Avatar\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a96a5366d8d4455494ca27ed412cb37a5}
+
+\begin{DoxyCode}
+175 \{
+176     \textcolor{keywordflow}{return} \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager};
+177 \}
+\end{DoxyCode}
+\hypertarget{class_session_aab5ba527a87413cdeab6a5ea00f4c30d}{\index{Session@{Session}!get\-Client\-Current\-Game\-Id@{get\-Client\-Current\-Game\-Id}}
+\index{get\-Client\-Current\-Game\-Id@{get\-Client\-Current\-Game\-Id}!Session@{Session}}
+\subsubsection[{get\-Client\-Current\-Game\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Session\-::get\-Client\-Current\-Game\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_session_aab5ba527a87413cdeab6a5ea00f4c30d}
+
+\begin{DoxyCode}
+588 \{
+589     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{id} = 0;
+590     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+591         \textcolor{keywordtype}{id} = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetGameId();
+592     \textcolor{keywordflow}{return} id;
+593 \}
+\end{DoxyCode}
+\hypertarget{class_session_a8f16216769638acec9ce003aca038e67}{\index{Session@{Session}!get\-Client\-Game\-Info@{get\-Client\-Game\-Info}}
+\index{get\-Client\-Game\-Info@{get\-Client\-Game\-Info}!Session@{Session}}
+\subsubsection[{get\-Client\-Game\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Info} Session\-::get\-Client\-Game\-Info (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a8f16216769638acec9ce003aca038e67}
+
+\begin{DoxyCode}
+556 \{
+557     \hyperlink{struct_game_info}{GameInfo} info;
+558     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+559         info = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetGameInfo(playerId);
+560     \textcolor{keywordflow}{return} info;
+561 \}
+\end{DoxyCode}
+\hypertarget{class_session_af0c26f5815db03ddcb83491a080383e3}{\index{Session@{Session}!get\-Client\-Player\-Info@{get\-Client\-Player\-Info}}
+\index{get\-Client\-Player\-Info@{get\-Client\-Player\-Info}!Session@{Session}}
+\subsubsection[{get\-Client\-Player\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Info} Session\-::get\-Client\-Player\-Info (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+) const}}\label{class_session_af0c26f5815db03ddcb83491a080383e3}
+
+\begin{DoxyCode}
+564 \{
+565     \hyperlink{struct_player_info}{PlayerInfo} info;
+566     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+567         info = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetPlayerInfo(playerId);
+568     \textcolor{keywordflow}{return} info;
+569 \}
+\end{DoxyCode}
+\hypertarget{class_session_a103970a0117442b4db09adaef04847d7}{\index{Session@{Session}!get\-Client\-Server\-Info@{get\-Client\-Server\-Info}}
+\index{get\-Client\-Server\-Info@{get\-Client\-Server\-Info}!Session@{Session}}
+\subsubsection[{get\-Client\-Server\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\-Info} Session\-::get\-Client\-Server\-Info (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{server\-Id}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a103970a0117442b4db09adaef04847d7}
+
+\begin{DoxyCode}
+548 \{
+549     \hyperlink{struct_server_info}{ServerInfo} info;
+550     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+551         info = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetServerInfo(serverId);
+552     \textcolor{keywordflow}{return} info;
+553 \}
+\end{DoxyCode}
+\hypertarget{class_session_aa69deeb42f29e39020a85a7396992925}{\index{Session@{Session}!get\-Client\-Stats@{get\-Client\-Stats}}
+\index{get\-Client\-Stats@{get\-Client\-Stats}!Session@{Session}}
+\subsubsection[{get\-Client\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\-Stats} Session\-::get\-Client\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_session_aa69deeb42f29e39020a85a7396992925}
+
+\begin{DoxyCode}
+580 \{
+581     \hyperlink{struct_server_stats}{ServerStats} stats;
+582     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+583         stats = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetStatData();
+584     \textcolor{keywordflow}{return} stats;
+585 \}
+\end{DoxyCode}
+\hypertarget{class_session_a82aff275cb035b0440f5139d54338b99}{\index{Session@{Session}!get\-Client\-Unique\-Player\-Id@{get\-Client\-Unique\-Player\-Id}}
+\index{get\-Client\-Unique\-Player\-Id@{get\-Client\-Unique\-Player\-Id}!Session@{Session}}
+\subsubsection[{get\-Client\-Unique\-Player\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Session\-::get\-Client\-Unique\-Player\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a82aff275cb035b0440f5139d54338b99}
+
+\begin{DoxyCode}
+596 \{
+597     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{id} = 0;
+598     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+599         \textcolor{keywordtype}{id} = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetGuiPlayerId();
+600     \textcolor{keywordflow}{return} id;
+601 \}
+\end{DoxyCode}
+\hypertarget{class_session_a4105c943da66294d2296e31bc34d5ff9}{\index{Session@{Session}!get\-Current\-Game@{get\-Current\-Game}}
+\index{get\-Current\-Game@{get\-Current\-Game}!Session@{Session}}
+\subsubsection[{get\-Current\-Game}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$ Game $>$ Session\-::get\-Current\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a4105c943da66294d2296e31bc34d5ff9}
+
+\begin{DoxyCode}
+160 \{
+161     \textcolor{keywordflow}{return} \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame};
+162 \}
+\end{DoxyCode}
+\hypertarget{class_session_a4cd156a99a379a966424cfefd93cd31b}{\index{Session@{Session}!get\-Game\-Id\-Of\-Player@{get\-Game\-Id\-Of\-Player}}
+\index{get\-Game\-Id\-Of\-Player@{get\-Game\-Id\-Of\-Player}!Session@{Session}}
+\subsubsection[{get\-Game\-Id\-Of\-Player}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Session\-::get\-Game\-Id\-Of\-Player (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a4cd156a99a379a966424cfefd93cd31b}
+
+\begin{DoxyCode}
+572 \{
+573     \textcolor{keywordtype}{unsigned} gameId = 0;
+574     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+575         gameId = \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->GetGameIdOfPlayer(playerId);
+576     \textcolor{keywordflow}{return} gameId;
+577 \}
+\end{DoxyCode}
+\hypertarget{class_session_a5e07b844e121855419719abcbd8aa61a}{\index{Session@{Session}!get\-Game\-Type@{get\-Game\-Type}}
+\index{get\-Game\-Type@{get\-Game\-Type}!Session@{Session}}
+\subsubsection[{get\-Game\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Session\-::\-Game\-Type} Session\-::get\-Game\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a5e07b844e121855419719abcbd8aa61a}
+
+\begin{DoxyCode}
+170 \{
+171     \textcolor{keywordflow}{return} \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType};
+172 \}
+\end{DoxyCode}
+\hypertarget{class_session_ab1f394edd6080e4303bd292b0f842ce1}{\index{Session@{Session}!get\-Gui@{get\-Gui}}
+\index{get\-Gui@{get\-Gui}!Session@{Session}}
+\subsubsection[{get\-Gui}]{\setlength{\rightskip}{0pt plus 5cm}Gui\-Interface $\ast$ Session\-::get\-Gui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_ab1f394edd6080e4303bd292b0f842ce1}
+
+\begin{DoxyCode}
+165 \{
+166     \textcolor{keywordflow}{return} \hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui};
+167 \}
+\end{DoxyCode}
+\hypertarget{class_session_a8b3eeaaa1732a6a403bf799b8feab70d}{\index{Session@{Session}!get\-My\-Log@{get\-My\-Log}}
+\index{get\-My\-Log@{get\-My\-Log}!Session@{Session}}
+\subsubsection[{get\-My\-Log}]{\setlength{\rightskip}{0pt plus 5cm}Log$\ast$ Session\-::get\-My\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_session_a8b3eeaaa1732a6a403bf799b8feab70d}
+
+\begin{DoxyCode}
+76                     \{
+77         \textcolor{keywordflow}{return} \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog};
+78     \}
+\end{DoxyCode}
+\hypertarget{class_session_a94dcf560238662a4e2626a654df008f3}{\index{Session@{Session}!init@{init}}
+\index{init@{init}!Session@{Session}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}bool Session\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a94dcf560238662a4e2626a654df008f3}
+
+\begin{DoxyCode}
+73 \{
+74     \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}.reset(\textcolor{keyword}{new} AvatarManager(
+75                               \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUsePutAvatars"}) == 1,
+76                               \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPutAvatarsAddress"}),
+77                               \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPutAvatarsUser"}),
+78                               \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPutAvatarsPassword"})
+79                           ));
+80     \textcolor{keywordtype}{bool} retVal = \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}->Init(
+81                       \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(
+      \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"AppDataDir"})),
+82                       \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(
+      \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"CacheDir"})));
+83     \hyperlink{class_session_acc80127497f991a082269c2e6b6cddb9}{addOwnAvatar}(\hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(
+      \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyAvatar"})));
+84 \textcolor{preprocessor}{#ifndef POKERTH\_OFFICIAL\_SERVER}
+85 \textcolor{preprocessor}{}    \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}->RemoveOldAvatarCacheEntries();
+86 \textcolor{preprocessor}{#endif}
+87 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} retVal;
+88 \}
+\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_session_a94dcf560238662a4e2626a654df008f3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_session_acb341298736898e0c913aa2e17c819e8}{\index{Session@{Session}!init@{init}}
+\index{init@{init}!Session@{Session}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::init (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ Avatar\-Manager $>$}]{manager}
+\end{DoxyParamCaption}
+)}}\label{class_session_acb341298736898e0c913aa2e17c819e8}
+
+\begin{DoxyCode}
+91 \{
+92     \hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager} = manager;
+93 \}
+\end{DoxyCode}
+\hypertarget{class_session_a2dad06d98159702d5723e895d93cda01}{\index{Session@{Session}!invite\-Player\-To\-Current\-Game@{invite\-Player\-To\-Current\-Game}}
+\index{invite\-Player\-To\-Current\-Game@{invite\-Player\-To\-Current\-Game}!Session@{Session}}
+\subsubsection[{invite\-Player\-To\-Current\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::invite\-Player\-To\-Current\-Game (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_a2dad06d98159702d5723e895d93cda01}
+
+\begin{DoxyCode}
+481 \{
+482     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+483         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+484     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendInvitePlayerToCurrentGame(playerId);
+485 \}
+\end{DoxyCode}
+\hypertarget{class_session_a7e4c9b0b3bf8f745c22c4f17c365d9ec}{\index{Session@{Session}!is\-Network\-Client\-Running@{is\-Network\-Client\-Running}}
+\index{is\-Network\-Client\-Running@{is\-Network\-Client\-Running}!Session@{Session}}
+\subsubsection[{is\-Network\-Client\-Running}]{\setlength{\rightskip}{0pt plus 5cm}bool Session\-::is\-Network\-Client\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a7e4c9b0b3bf8f745c22c4f17c365d9ec}
+
+\begin{DoxyCode}
+536 \{
+537     \textcolor{comment}{// This, and every place which calls this, is a HACK.}
+538     \textcolor{keywordflow}{return} \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}.get() != NULL;
+539 \}
+\end{DoxyCode}
+\hypertarget{class_session_a7ac2f5a1bf47626a9b37c739701f84bf}{\index{Session@{Session}!is\-Network\-Server\-Running@{is\-Network\-Server\-Running}}
+\index{is\-Network\-Server\-Running@{is\-Network\-Server\-Running}!Session@{Session}}
+\subsubsection[{is\-Network\-Server\-Running}]{\setlength{\rightskip}{0pt plus 5cm}bool Session\-::is\-Network\-Server\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_session_a7ac2f5a1bf47626a9b37c739701f84bf}
+
+\begin{DoxyCode}
+542 \{
+543     \textcolor{comment}{// This, and every place which calls this, is a HACK.}
+544     \textcolor{keywordflow}{return} \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}.get() != NULL;
+545 \}
+\end{DoxyCode}
+\hypertarget{class_session_a383cac1e0db6fcbce4d3fa94b3efe9d4}{\index{Session@{Session}!kick\-Player@{kick\-Player}}
+\index{kick\-Player@{kick\-Player}!Session@{Session}}
+\subsubsection[{kick\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::kick\-Player (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_a383cac1e0db6fcbce4d3fa94b3efe9d4}
+
+\begin{DoxyCode}
+421 \{
+422     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+423         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+424     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendKickPlayer(playerId);
+425 \}
+\end{DoxyCode}
+\hypertarget{class_session_a1a682edf6225afaa72df5f3d17663a35}{\index{Session@{Session}!kick\-Player@{kick\-Player}}
+\index{kick\-Player@{kick\-Player}!Session@{Session}}
+\subsubsection[{kick\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::kick\-Player (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{player\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_session_a1a682edf6225afaa72df5f3d17663a35}
+\hypertarget{class_session_a2277e79b82a29b4ec96aa78e1cb67e7c}{\index{Session@{Session}!poll\-Network\-Server\-Terminated@{poll\-Network\-Server\-Terminated}}
+\index{poll\-Network\-Server\-Terminated@{poll\-Network\-Server\-Terminated}!Session@{Session}}
+\subsubsection[{poll\-Network\-Server\-Terminated}]{\setlength{\rightskip}{0pt plus 5cm}bool Session\-::poll\-Network\-Server\-Terminated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a2277e79b82a29b4ec96aa78e1cb67e7c}
+
+\begin{DoxyCode}
+366 \{
+367     \textcolor{keywordtype}{bool} retVal = \textcolor{keyword}{false};
+368     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer})
+369         retVal = \textcolor{keyword}{true}; \textcolor{comment}{// already terminated}
+370     \textcolor{keywordflow}{else} \{
+371         \textcolor{keywordflow}{if} (\hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}->JoinAll(\textcolor{keyword}{false}))
+372             retVal = \textcolor{keyword}{true};
+373     \}
+374     \textcolor{keywordflow}{return} retVal;
+375 \}
+\end{DoxyCode}
+\hypertarget{class_session_a56768c317805f6fb7f0acded7a703db3}{\index{Session@{Session}!reject\-Game\-Invitation@{reject\-Game\-Invitation}}
+\index{reject\-Game\-Invitation@{reject\-Game\-Invitation}!Session@{Session}}
+\subsubsection[{reject\-Game\-Invitation}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::reject\-Game\-Invitation (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id, }
+\item[{{\bf Deny\-Game\-Invitation\-Reason}}]{reason}
+\end{DoxyParamCaption}
+)}}\label{class_session_a56768c317805f6fb7f0acded7a703db3}
+
+\begin{DoxyCode}
+501 \{
+502     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+503         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+504     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendRejectGameInvitation(gameId, reason);
+505 \}
+\end{DoxyCode}
+\hypertarget{class_session_af1a1915a925b1bc73e5984524d365787}{\index{Session@{Session}!report\-Bad\-Avatar@{report\-Bad\-Avatar}}
+\index{report\-Bad\-Avatar@{report\-Bad\-Avatar}!Session@{Session}}
+\subsubsection[{report\-Bad\-Avatar}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::report\-Bad\-Avatar (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{reported\-Player\-Id, }
+\item[{const std\-::string \&}]{avatar\-Hash}
+\end{DoxyParamCaption}
+)}}\label{class_session_af1a1915a925b1bc73e5984524d365787}
+
+\begin{DoxyCode}
+508 \{
+509     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+510         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+511     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendReportAvatar(reportedPlayerId, avatarHash);
+512 \}
+\end{DoxyCode}
+\hypertarget{class_session_ab8c30dee4b7dd9d56045caa308bb14d6}{\index{Session@{Session}!report\-Bad\-Game\-Name@{report\-Bad\-Game\-Name}}
+\index{report\-Bad\-Game\-Name@{report\-Bad\-Game\-Name}!Session@{Session}}
+\subsubsection[{report\-Bad\-Game\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::report\-Bad\-Game\-Name (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{game\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_ab8c30dee4b7dd9d56045caa308bb14d6}
+
+\begin{DoxyCode}
+515 \{
+516     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+517         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+518     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendReportGameName(gameId);
+519 \}
+\end{DoxyCode}
+\hypertarget{class_session_aa772e588d7f1aa1a78ff9633a6cf0e8b}{\index{Session@{Session}!reset\-Network\-Timeout@{reset\-Network\-Timeout}}
+\index{reset\-Network\-Timeout@{reset\-Network\-Timeout}!Session@{Session}}
+\subsubsection[{reset\-Network\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::reset\-Network\-Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_aa772e588d7f1aa1a78ff9633a6cf0e8b}
+
+\begin{DoxyCode}
+428 \{
+429     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+430         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+431     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendResetTimeout();
+432 \}
+\end{DoxyCode}
+\hypertarget{class_session_ae23ad66200d0c7ab81f5baddc40ad7ee}{\index{Session@{Session}!select\-Server@{select\-Server}}
+\index{select\-Server@{select\-Server}!Session@{Session}}
+\subsubsection[{select\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::select\-Server (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{server\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_ae23ad66200d0c7ab81f5baddc40ad7ee}
+
+\begin{DoxyCode}
+465 \{
+466     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+467         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+468     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SelectServer(serverId);
+469 \}
+\end{DoxyCode}
+\hypertarget{class_session_aac851088914580be19d0f9c84698cdb6}{\index{Session@{Session}!send\-Client\-Player\-Action@{send\-Client\-Player\-Action}}
+\index{send\-Client\-Player\-Action@{send\-Client\-Player\-Action}!Session@{Session}}
+\subsubsection[{send\-Client\-Player\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Client\-Player\-Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_aac851088914580be19d0f9c84698cdb6}
+
+\begin{DoxyCode}
+392 \{
+393     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+394         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+395     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendPlayerAction();
+396 \}
+\end{DoxyCode}
+\hypertarget{class_session_a9e297d28e45b056a09c62ef389308052}{\index{Session@{Session}!send\-Game\-Chat\-Message@{send\-Game\-Chat\-Message}}
+\index{send\-Game\-Chat\-Message@{send\-Game\-Chat\-Message}!Session@{Session}}
+\subsubsection[{send\-Game\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Game\-Chat\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{class_session_a9e297d28e45b056a09c62ef389308052}
+
+\begin{DoxyCode}
+399 \{
+400     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+401         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+402     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendGameChatMessage(message);
+403 \}
+\end{DoxyCode}
+\hypertarget{class_session_afe114af0a76eb150e0aad183eed5b8f1}{\index{Session@{Session}!send\-Leave\-Current\-Game@{send\-Leave\-Current\-Game}}
+\index{send\-Leave\-Current\-Game@{send\-Leave\-Current\-Game}!Session@{Session}}
+\subsubsection[{send\-Leave\-Current\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Leave\-Current\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_afe114af0a76eb150e0aad183eed5b8f1}
+
+\begin{DoxyCode}
+378 \{
+379     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+380         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+381     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendLeaveCurrentGame();
+382 \}
+\end{DoxyCode}
+\hypertarget{class_session_ae309f290cfefc4c2c145209b7a5a48ff}{\index{Session@{Session}!send\-Lobby\-Chat\-Message@{send\-Lobby\-Chat\-Message}}
+\index{send\-Lobby\-Chat\-Message@{send\-Lobby\-Chat\-Message}!Session@{Session}}
+\subsubsection[{send\-Lobby\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Lobby\-Chat\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{class_session_ae309f290cfefc4c2c145209b7a5a48ff}
+
+\begin{DoxyCode}
+406 \{
+407     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+408         \textcolor{keywordflow}{return};
+409     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendLobbyChatMessage(message);
+410 \}
+\end{DoxyCode}
+\hypertarget{class_session_a756684d3fb7bc878f39250f5ddd3cc55}{\index{Session@{Session}!send\-Private\-Chat\-Message@{send\-Private\-Chat\-Message}}
+\index{send\-Private\-Chat\-Message@{send\-Private\-Chat\-Message}!Session@{Session}}
+\subsubsection[{send\-Private\-Chat\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Private\-Chat\-Message (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{target\-Player\-Id, }
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{class_session_a756684d3fb7bc878f39250f5ddd3cc55}
+
+\begin{DoxyCode}
+413 \{
+414     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+415         \textcolor{keywordflow}{return};
+416     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendPrivateChatMessage(targetPlayerId, message);
+417 \}
+\end{DoxyCode}
+\hypertarget{class_session_a0b43294e739dab7e8a70c1ed2e852e3d}{\index{Session@{Session}!send\-Start\-Event@{send\-Start\-Event}}
+\index{send\-Start\-Event@{send\-Start\-Event}!Session@{Session}}
+\subsubsection[{send\-Start\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::send\-Start\-Event (
+\begin{DoxyParamCaption}
+\item[{bool}]{fill\-Up\-With\-Cpu\-Players}
+\end{DoxyParamCaption}
+)}}\label{class_session_a0b43294e739dab7e8a70c1ed2e852e3d}
+
+\begin{DoxyCode}
+385 \{
+386     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+387         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+388     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendStartEvent(fillUpWithCpuPlayers);
+389 \}
+\end{DoxyCode}
+\hypertarget{class_session_a111d37566070922bebb97f1c52e811f5}{\index{Session@{Session}!set\-Login@{set\-Login}}
+\index{set\-Login@{set\-Login}!Session@{Session}}
+\subsubsection[{set\-Login}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::set\-Login (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{user\-Name, }
+\item[{const std\-::string \&}]{password, }
+\item[{bool}]{is\-Guest}
+\end{DoxyParamCaption}
+)}}\label{class_session_a111d37566070922bebb97f1c52e811f5}
+
+\begin{DoxyCode}
+473 \{
+474     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+475         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+476     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SetLogin(userName, password, isGuest);
+477 \}
+\end{DoxyCode}
+\hypertarget{class_session_a4e99119356023629431163b20e307020}{\index{Session@{Session}!show\-My\-Cards@{show\-My\-Cards}}
+\index{show\-My\-Cards@{show\-My\-Cards}!Session@{Session}}
+\subsubsection[{show\-My\-Cards}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::show\-My\-Cards (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a4e99119356023629431163b20e307020}
+
+\begin{DoxyCode}
+529 \{
+530     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+531         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+532     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendShowMyCards();
+533 \}
+\end{DoxyCode}
+\hypertarget{class_session_ae7f595ddf3e73d0d923e9ccd3b77cb56}{\index{Session@{Session}!start\-Client\-Game@{start\-Client\-Game}}
+\index{start\-Client\-Game@{start\-Client\-Game}!Session@{Session}}
+\subsubsection[{start\-Client\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Client\-Game (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ Game $>$}]{game}
+\end{DoxyParamCaption}
+)}}\label{class_session_ae7f595ddf3e73d0d923e9ccd3b77cb56}
+
+\begin{DoxyCode}
+153 \{
+154     \hyperlink{class_session_a89974964b38a285de9ec954b99b0ee3f}{currentGameNum}++;
+155 
+156     \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame} = game;
+157 \}
+\end{DoxyCode}
+\hypertarget{class_session_a2e89781eb6911f3d7a40b475bc83c8c8}{\index{Session@{Session}!start\-Internet\-Client@{start\-Internet\-Client}}
+\index{start\-Internet\-Client@{start\-Internet\-Client}!Session@{Session}}
+\subsubsection[{start\-Internet\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Internet\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_a2e89781eb6911f3d7a40b475bc83c8c8}
+
+\begin{DoxyCode}
+180 \{
+181     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient} || !\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}) \{
+182         assert(\textcolor{keyword}{false});
+183         \textcolor{keywordflow}{return};
+184     \}
+185     \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType} = \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1adb35dec5c0038852cb94ffbd5c5739f2}{GAME\_TYPE\_INTERNET};
+186 
+187     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}.reset(\textcolor{keyword}{new} ClientThread(*\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}, *\hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}, 
+      \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog}));
+188     \textcolor{keywordtype}{bool} useAvatarServer = \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"UseAvatarServer"}) != 0;
+189 
+190     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Init(
+191         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"InternetServerAddress"}),
+192         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"InternetServerListAddress"}),
+193 \textcolor{comment}{//      "pokerth.net/serverlist\_testing.xml.z",}
+194         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPassword"}),
+195         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"InternetServerConfigMode"}) == 0,
+196 \textcolor{comment}{//      true,}
+197         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"InternetServerPort"}),
+198         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"InternetServerUseIpv6"}) == 1,
+199         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"InternetServerUseSctp"}) == 1,
+200         useAvatarServer ? \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"AvatarServerAddress"}) : \textcolor{stringliteral}{""},
+201         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyName"}),
+202         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyAvatar"}),
+203         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"CacheDir"})
+      ));
+204     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Run();
+205 \}
+\end{DoxyCode}
+\hypertarget{class_session_af2e661d4bcda30cfda7c90547ce2260a}{\index{Session@{Session}!start\-Local\-Game@{start\-Local\-Game}}
+\index{start\-Local\-Game@{start\-Local\-Game}!Session@{Session}}
+\subsubsection[{start\-Local\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Local\-Game (
+\begin{DoxyParamCaption}
+\item[{const {\bf Game\-Data} \&}]{game\-Data, }
+\item[{const {\bf Start\-Data} \&}]{start\-Data}
+\end{DoxyParamCaption}
+)}}\label{class_session_af2e661d4bcda30cfda7c90547ce2260a}
+
+\begin{DoxyCode}
+101 \{
+102 
+103     \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType} = \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a347a5eef5f0bd9a982bec2ff54a201e7}{GAME\_TYPE\_LOCAL};
+104 
+105     \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame}.reset();
+106 
+107     \hyperlink{class_session_a89974964b38a285de9ec954b99b0ee3f}{currentGameNum}++;
+108 
+109     \hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}->initGui(gameData.\hyperlink{struct_game_data_a19b38d37fbd225504166856f187f38f3}{guiSpeed});
+110 
+111     \hyperlink{playerdata_8h_a8232751bca13b3cf3056ce08251f7067}{PlayerDataList} playerDataList;
+112     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < startData.\hyperlink{struct_start_data_a962ea391fe81cc9d28ac7ec7ea511afc}{numberOfPlayers}; i++) \{
+113 
+114         \textcolor{comment}{//Namen und Avatarpfad abfragen}
+115         ostringstream myName;
+116         \textcolor{keywordflow}{if} (i==0) \{
+117             myName << \textcolor{stringliteral}{"MyName"};
+118         \} \textcolor{keywordflow}{else} \{
+119             myName << \textcolor{stringliteral}{"Opponent"} << i << \textcolor{stringliteral}{"Name"};
+120         \}
+121         ostringstream myAvatar;
+122         \textcolor{keywordflow}{if} (i==0) \{
+123             myAvatar << \textcolor{stringliteral}{"MyAvatar"};
+124         \} \textcolor{keywordflow}{else} \{
+125             myAvatar << \textcolor{stringliteral}{"Opponent"} << i << \textcolor{stringliteral}{"Avatar"};
+126         \}
+127 
+128         \textcolor{comment}{//PlayerData erzeugen}
+129         \textcolor{comment}{// UniqueId = PlayerNumber for local games.}
+130         boost::shared\_ptr<PlayerData> playerData(\textcolor{keyword}{new} \hyperlink{class_player_data}{PlayerData}(
+131                     i,
+132                     i,
+133                     i == 0 ? \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}{PLAYER\_TYPE\_HUMAN} : 
+      \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6}{PLAYER\_TYPE\_COMPUTER},
+134                     \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab}{PLAYER\_RIGHTS\_NORMAL},
+135                     i == 0));
+136         playerData->SetName(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(myName.str()));
+137         playerData->SetAvatarFile(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(myAvatar.str()));
+138 
+139         playerDataList.push\_back(playerData);
+140     \}
+141     \textcolor{comment}{// EngineFactory erstellen}
+142     boost::shared\_ptr<EngineFactory> factory(\textcolor{keyword}{new} LocalEngineFactory(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig})); \textcolor{comment}{// LocalEngine
+       erstellen}
+143 
+144     \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame}.reset(\textcolor{keyword}{new} Game(\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}, factory, playerDataList, gameData, startData, 
+      \hyperlink{class_session_a89974964b38a285de9ec954b99b0ee3f}{currentGameNum}, \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog}));
+145 
+147     \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame}->initHand();
+148     \hyperlink{class_session_a5c15d5f1be74a30fa167a0af5822113c}{currentGame}->startHand();
+149     \textcolor{comment}{// SPIEL-SCHLEIFE}
+150 \}
+\end{DoxyCode}
+\hypertarget{class_session_aab2276257cc5c64e11a05784daf414e5}{\index{Session@{Session}!start\-Network\-Client@{start\-Network\-Client}}
+\index{start\-Network\-Client@{start\-Network\-Client}!Session@{Session}}
+\subsubsection[{start\-Network\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Network\-Client (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{server\-Address, }
+\item[{unsigned}]{server\-Port, }
+\item[{bool}]{ipv6, }
+\item[{bool}]{sctp}
+\end{DoxyParamCaption}
+)}}\label{class_session_aab2276257cc5c64e11a05784daf414e5}
+
+\begin{DoxyCode}
+208 \{
+209     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient} || !\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}) \{
+210         assert(\textcolor{keyword}{false});
+211         \textcolor{keywordflow}{return};
+212     \}
+213     \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType} = \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}{GAME\_TYPE\_NETWORK};
+214 
+215     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}.reset(\textcolor{keyword}{new} ClientThread(*\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}, *\hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}, 
+      \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog}));
+216     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Init(
+217         serverAddress,
+218         \textcolor{stringliteral}{""},
+219         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPassword"}),
+220         \textcolor{keyword}{false},
+221         serverPort,
+222         ipv6,
+223         sctp,
+224         \textcolor{stringliteral}{""}, \textcolor{comment}{// no avatar server}
+225         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyName"}),
+226         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyAvatar"}),
+227         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"CacheDir"})
+      ));
+228     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Run();
+229     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendJoinFirstGame(
+230         \textcolor{stringliteral}{""},
+231         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+232     );
+233 \}
+\end{DoxyCode}
+\hypertarget{class_session_a738cd5d6baccc583228e5bc57d57d80f}{\index{Session@{Session}!start\-Network\-Client\-For\-Local\-Server@{start\-Network\-Client\-For\-Local\-Server}}
+\index{start\-Network\-Client\-For\-Local\-Server@{start\-Network\-Client\-For\-Local\-Server}!Session@{Session}}
+\subsubsection[{start\-Network\-Client\-For\-Local\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Network\-Client\-For\-Local\-Server (
+\begin{DoxyParamCaption}
+\item[{const {\bf Game\-Data} \&}]{game\-Data}
+\end{DoxyParamCaption}
+)}}\label{class_session_a738cd5d6baccc583228e5bc57d57d80f}
+
+\begin{DoxyCode}
+236 \{
+237     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient} || !\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}) \{
+238         assert(\textcolor{keyword}{false});
+239         \textcolor{keywordflow}{return};
+240     \}
+241     \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType} = \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a878b602bad23ad76103fb270b21c3a80}{GAME\_TYPE\_NETWORK};
+242 
+243     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}.reset(\textcolor{keyword}{new} ClientThread(*\hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}, *\hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager}, 
+      \hyperlink{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{myLog}));
+244     \textcolor{keywordtype}{bool} useIpv6 = \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUseIpv6"}) == 1;
+245     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *loopbackAddr = useIpv6 ? \textcolor{stringliteral}{"::1"} : \textcolor{stringliteral}{"127.0.0.1"};
+246     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Init(
+247         loopbackAddr,
+248         \textcolor{stringliteral}{""},
+249         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"ServerPassword"}),
+250         \textcolor{keyword}{false},
+251         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerPort"}),
+252         useIpv6,
+253         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUseSctp"}) == 1,
+254         \textcolor{stringliteral}{""}, \textcolor{comment}{// no avatar server}
+255         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyName"}),
+256         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"MyAvatar"}),
+257         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"CacheDir"})
+      ));
+258     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Run();
+259     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendCreateGame(
+260         gameData,
+261         \hyperlink{session_8cpp_ae40f8ea78cc800300b894fc55d38c146}{NET\_DEFAULT\_GAME},
+262         \textcolor{stringliteral}{""},
+263         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"NetAutoLeaveGameAfterFinish"}) == 1
+264     );
+265 \}
+\end{DoxyCode}
+\hypertarget{class_session_abf1156cfe81e2786adf7bb369836ca0b}{\index{Session@{Session}!start\-Network\-Server@{start\-Network\-Server}}
+\index{start\-Network\-Server@{start\-Network\-Server}!Session@{Session}}
+\subsubsection[{start\-Network\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Network\-Server (
+\begin{DoxyParamCaption}
+\item[{bool}]{dedicated, }
+\item[{bool}]{lan\-\_\-local = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_session_abf1156cfe81e2786adf7bb369836ca0b}
+
+\begin{DoxyCode}
+314 \{
+315     \textcolor{keywordflow}{if} (\hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}) \{
+316         assert(\textcolor{keyword}{false});
+317         \textcolor{keywordflow}{return};
+318     \}
+319 
+320     \hyperlink{game__defs_8h_a0c3cbd252a209f92f14db7a3d59a3956}{ServerMode} mode;
+321     \textcolor{keywordflow}{if} (dedicated) \{
+322 \textcolor{preprocessor}{#ifdef POKERTH\_OFFICIAL\_SERVER}
+323 \textcolor{preprocessor}{}        mode = \hyperlink{game__defs_8h_a0c3cbd252a209f92f14db7a3d59a3956ad30e94a28f96a66c0d063ecd5ec237bb}{SERVER\_MODE\_INTERNET\_AUTH};
+324 \textcolor{preprocessor}{#else}
+325 \textcolor{preprocessor}{}        mode = \hyperlink{game__defs_8h_a0c3cbd252a209f92f14db7a3d59a3956a7dffad0c975963f9853e2aba9bc4b156}{SERVER\_MODE\_INTERNET\_NOAUTH};
+326 \textcolor{preprocessor}{#endif}
+327 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+328         \textcolor{keywordflow}{if}(lan\_local) mode = \hyperlink{game__defs_8h_a0c3cbd252a209f92f14db7a3d59a3956a2da97b4ed0833f737a1b67567b8b7f76}{SERVER\_MODE\_LAN\_LOCAL};
+329         \textcolor{keywordflow}{else} mode = \hyperlink{game__defs_8h_a0c3cbd252a209f92f14db7a3d59a3956a3f545f4f97970f80049cbbcafb0a565f}{SERVER\_MODE\_LAN};
+330     \}
+331 
+332     \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer} = ServerManagerFactory::CreateServerManager(*\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}, *
+      \hyperlink{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{myGui}, mode, *\hyperlink{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{myAvatarManager});
+333 
+334     \textcolor{keywordtype}{int} protocol = \hyperlink{game__defs_8h_a16586aece3f2351978656f88132b23fcadd18d6cbb60ab77047bbb55a93cd82b8}{TRANSPORT\_PROTOCOL\_TCP};
+335     \textcolor{keywordflow}{if} (dedicated && \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUseWebSocket"}) == 1) \{
+336         protocol |= \hyperlink{game__defs_8h_a16586aece3f2351978656f88132b23fca6c97945151581eabf3e61a835f68f53d}{TRANSPORT\_PROTOCOL\_WEBSOCKET};
+337     \}
+338     \textcolor{keywordflow}{if} (\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUseSctp"}) == 1) \{
+339         protocol |= \hyperlink{game__defs_8h_a16586aece3f2351978656f88132b23fca2f9ad9f5989b295874a0072e784fc833}{TRANSPORT\_PROTOCOL\_SCTP};
+340     \}
+341     \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}->Init(
+342         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerPort"}),
+343         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerWebSocketPort"}),
+344         \hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigInt(\textcolor{stringliteral}{"ServerUseIpv6"}) == 1,
+345         protocol,
+346         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"LogDir"})),
+347         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"
+      ServerWebSocketResource"})),
+348         \hyperlink{class_session_a1827a0341223eafa3859f249e73ebd38}{myQtToolsInterface}->stringFromUtf8(\hyperlink{class_session_a5bfbe43c623b688e7def57e02704033f}{myConfig}->readConfigString(\textcolor{stringliteral}{"
+      ServerWebSocketOrigin"}))
+349     );
+350 
+351     \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}->RunAll();
+352 \}
+\end{DoxyCode}
+\hypertarget{class_session_aa834f9615a493ae739509e56abab5059}{\index{Session@{Session}!start\-Vote\-Kick\-Player@{start\-Vote\-Kick\-Player}}
+\index{start\-Vote\-Kick\-Player@{start\-Vote\-Kick\-Player}!Session@{Session}}
+\subsubsection[{start\-Vote\-Kick\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::start\-Vote\-Kick\-Player (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{player\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_session_aa834f9615a493ae739509e56abab5059}
+
+\begin{DoxyCode}
+458 \{
+459     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+460         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+461     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendAskKickPlayer(playerId);
+462 \}
+\end{DoxyCode}
+\hypertarget{class_session_ad74cf272a2adfaa0a2abcaf31dde167d}{\index{Session@{Session}!terminate\-Network\-Client@{terminate\-Network\-Client}}
+\index{terminate\-Network\-Client@{terminate\-Network\-Client}!Session@{Session}}
+\subsubsection[{terminate\-Network\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::terminate\-Network\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_ad74cf272a2adfaa0a2abcaf31dde167d}
+
+\begin{DoxyCode}
+268 \{
+269     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+270         \textcolor{keywordflow}{return}; \textcolor{comment}{// already terminated}
+271     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SignalTermination();
+272     \textcolor{comment}{// Give the threads some time to terminate.}
+273     \textcolor{keywordflow}{if} (\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->Join(\hyperlink{session_8cpp_ac4cfb210528149df9891fb4c5529a366}{NET\_CLIENT\_TERMINATE\_TIMEOUT\_MSEC}))
+274         \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}.reset();
+275 
+276     \textcolor{comment}{// If termination fails, leave a memory leak to prevent a crash.}
+277     \hyperlink{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{myGameType} = \hyperlink{class_session_a6989c72d21ad19fd7abbd1c8d95d78c1a9714cf47eacb5ff229c807e48ea68319}{GAME\_TYPE\_NONE};
+278 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_session_ad74cf272a2adfaa0a2abcaf31dde167d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_session_ab3c9282517142617d9daf5ea08768083}{\index{Session@{Session}!terminate\-Network\-Server@{terminate\-Network\-Server}}
+\index{terminate\-Network\-Server@{terminate\-Network\-Server}!Session@{Session}}
+\subsubsection[{terminate\-Network\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::terminate\-Network\-Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_session_ab3c9282517142617d9daf5ea08768083}
+
+\begin{DoxyCode}
+355 \{
+356     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer})
+357         \textcolor{keywordflow}{return}; \textcolor{comment}{// already terminated}
+358     \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}->SignalTerminationAll();
+359     \textcolor{comment}{// Give the thread some time to terminate.}
+360     \textcolor{keywordflow}{if} (\hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}->JoinAll(\textcolor{keyword}{true}))
+361         \hyperlink{class_session_a0f513f8d52d5026a3c449738da984c29}{myNetServer}.reset();
+362     \textcolor{comment}{// If termination fails, leave a memory leak to prevent a crash.}
+363 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_session_ab3c9282517142617d9daf5ea08768083_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_session_a346c8fa2d61d205f825c2af8a12d2071}{\index{Session@{Session}!vote\-Kick@{vote\-Kick}}
+\index{vote\-Kick@{vote\-Kick}!Session@{Session}}
+\subsubsection[{vote\-Kick}]{\setlength{\rightskip}{0pt plus 5cm}void Session\-::vote\-Kick (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\-Kick}
+\end{DoxyParamCaption}
+)}}\label{class_session_a346c8fa2d61d205f825c2af8a12d2071}
+
+\begin{DoxyCode}
+522 \{
+523     \textcolor{keywordflow}{if} (!\hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient})
+524         \textcolor{keywordflow}{return}; \textcolor{comment}{// only act if client is running.}
+525     \hyperlink{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{myNetClient}->SendVoteKick(doKick);
+526 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_session_a5c15d5f1be74a30fa167a0af5822113c}{\index{Session@{Session}!current\-Game@{current\-Game}}
+\index{current\-Game@{current\-Game}!Session@{Session}}
+\subsubsection[{current\-Game}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$Game$>$ Session\-::current\-Game\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a5c15d5f1be74a30fa167a0af5822113c}
+\hypertarget{class_session_a89974964b38a285de9ec954b99b0ee3f}{\index{Session@{Session}!current\-Game\-Num@{current\-Game\-Num}}
+\index{current\-Game\-Num@{current\-Game\-Num}!Session@{Session}}
+\subsubsection[{current\-Game\-Num}]{\setlength{\rightskip}{0pt plus 5cm}int Session\-::current\-Game\-Num\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a89974964b38a285de9ec954b99b0ee3f}
+\hypertarget{class_session_a53231528d2b4c4babd97c7d1194a5f7e}{\index{Session@{Session}!my\-Avatar\-Manager@{my\-Avatar\-Manager}}
+\index{my\-Avatar\-Manager@{my\-Avatar\-Manager}!Session@{Session}}
+\subsubsection[{my\-Avatar\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$Avatar\-Manager$>$ Session\-::my\-Avatar\-Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a53231528d2b4c4babd97c7d1194a5f7e}
+\hypertarget{class_session_a5bfbe43c623b688e7def57e02704033f}{\index{Session@{Session}!my\-Config@{my\-Config}}
+\index{my\-Config@{my\-Config}!Session@{Session}}
+\subsubsection[{my\-Config}]{\setlength{\rightskip}{0pt plus 5cm}Config\-File$\ast$ Session\-::my\-Config\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a5bfbe43c623b688e7def57e02704033f}
+\hypertarget{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}{\index{Session@{Session}!my\-Game\-Type@{my\-Game\-Type}}
+\index{my\-Game\-Type@{my\-Game\-Type}!Session@{Session}}
+\subsubsection[{my\-Game\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Type} Session\-::my\-Game\-Type\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_acf11b7b3982bc3e4c5bbf635d5e98496}
+\hypertarget{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}{\index{Session@{Session}!my\-Gui@{my\-Gui}}
+\index{my\-Gui@{my\-Gui}!Session@{Session}}
+\subsubsection[{my\-Gui}]{\setlength{\rightskip}{0pt plus 5cm}Gui\-Interface$\ast$ Session\-::my\-Gui\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a2725f4b56b109b2e7d75ed780d24fa6d}
+\hypertarget{class_session_a95063949539c8584d569d777284784ba}{\index{Session@{Session}!my\-Irc\-Nick@{my\-Irc\-Nick}}
+\index{my\-Irc\-Nick@{my\-Irc\-Nick}!Session@{Session}}
+\subsubsection[{my\-Irc\-Nick}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Session\-::my\-Irc\-Nick\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a95063949539c8584d569d777284784ba}
+\hypertarget{class_session_a1d2dd8533f3c551a5c18211f22d380f8}{\index{Session@{Session}!my\-Log@{my\-Log}}
+\index{my\-Log@{my\-Log}!Session@{Session}}
+\subsubsection[{my\-Log}]{\setlength{\rightskip}{0pt plus 5cm}Log$\ast$ Session\-::my\-Log\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a1d2dd8533f3c551a5c18211f22d380f8}
+\hypertarget{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}{\index{Session@{Session}!my\-Net\-Client@{my\-Net\-Client}}
+\index{my\-Net\-Client@{my\-Net\-Client}!Session@{Session}}
+\subsubsection[{my\-Net\-Client}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$Client\-Thread$>$ Session\-::my\-Net\-Client\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a767e3250d6a14be4c2b86d1e2dfa7b3c}
+\hypertarget{class_session_a0f513f8d52d5026a3c449738da984c29}{\index{Session@{Session}!my\-Net\-Server@{my\-Net\-Server}}
+\index{my\-Net\-Server@{my\-Net\-Server}!Session@{Session}}
+\subsubsection[{my\-Net\-Server}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<$Server\-Manager$>$ Session\-::my\-Net\-Server\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a0f513f8d52d5026a3c449738da984c29}
+\hypertarget{class_session_a1827a0341223eafa3859f249e73ebd38}{\index{Session@{Session}!my\-Qt\-Tools\-Interface@{my\-Qt\-Tools\-Interface}}
+\index{my\-Qt\-Tools\-Interface@{my\-Qt\-Tools\-Interface}!Session@{Session}}
+\subsubsection[{my\-Qt\-Tools\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}Qt\-Tools\-Interface$\ast$ Session\-::my\-Qt\-Tools\-Interface\hspace{0.3cm}{\ttfamily [private]}}}\label{class_session_a1827a0341223eafa3859f249e73ebd38}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{session_8h}{session.\-h}\item 
+\hyperlink{session_8cpp}{session.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{gamedata_8h}{\section{gamedata.\-h 파일 참조}
+\label{gamedata_8h}\index{gamedata.\-h@{gamedata.\-h}}
+}
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$third\-\_\-party/boost/timers.\-hpp$>$}\\*
+gamedata.\-h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{gamedata_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gamedata_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_game_data}{Game\-Data}
+\item 
+struct \hyperlink{struct_game_info}{Game\-Info}
+\item 
+struct \hyperlink{struct_start_data}{Start\-Data}
+\item 
+struct \hyperlink{struct_vote_kick_data}{Vote\-Kick\-Data}
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::list$<$ unsigned $>$ \hyperlink{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{Player\-Id\-List}
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\-Mode} \{ \hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D} = 1, 
+\hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D}, 
+\hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D}
+ \}
+\item 
+enum \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57}{Game\-Type} \{ \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L} = 1, 
+\hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y}, 
+\hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y}, 
+\hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G}
+ \}
+\item 
+enum \hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6}{Raise\-Interval\-Mode} \{ \hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4}{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R} = 1, 
+\hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488}{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}
+ \}
+\item 
+enum \hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02}{Raise\-Mode} \{ \hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56}{D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S} = 1, 
+\hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3}{M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R}
+ \}
+\item 
+enum \hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6}{After\-Manual\-Blinds\-Mode} \{ \hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb}{A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S} = 1, 
+\hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e}{A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T}, 
+\hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a}{A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{타입정의 문서화}
+\hypertarget{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{\index{gamedata.\-h@{gamedata.\-h}!Player\-Id\-List@{Player\-Id\-List}}
+\index{Player\-Id\-List@{Player\-Id\-List}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{Player\-Id\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::list$<$unsigned$>$ {\bf Player\-Id\-List}}}\label{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}
+
+
+\subsection{열거형 타입 문서화}
+\hypertarget{gamedata_8h_a250ebe9cdf4567798600e292202a66e6}{\index{gamedata.\-h@{gamedata.\-h}!After\-Manual\-Blinds\-Mode@{After\-Manual\-Blinds\-Mode}}
+\index{After\-Manual\-Blinds\-Mode@{After\-Manual\-Blinds\-Mode}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{After\-Manual\-Blinds\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf After\-Manual\-Blinds\-Mode}}}\label{gamedata_8h_a250ebe9cdf4567798600e292202a66e6}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S@{A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S@{A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}}\item[{\em 
+\hypertarget{gamedata_8h_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb}{A\-F\-T\-E\-R\-M\-B\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}\label{gamedata_8h_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb}
+}]\index{A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T@{A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T@{A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T}}\item[{\em 
+\hypertarget{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e}{A\-F\-T\-E\-R\-M\-B\-\_\-\-R\-A\-I\-S\-E\-\_\-\-A\-B\-O\-U\-T}\label{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e}
+}]\index{A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D@{A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D@{A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D}}\item[{\em 
+\hypertarget{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a}{A\-F\-T\-E\-R\-M\-B\-\_\-\-S\-T\-A\-Y\-\_\-\-A\-T\-\_\-\-L\-A\-S\-T\-\_\-\-B\-L\-I\-N\-D}\label{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+67                            \{
+68     \hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb}{AFTERMB\_DOUBLE\_BLINDS} = 1,
+69     \hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e}{AFTERMB\_RAISE\_ABOUT},
+70     \hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a}{AFTERMB\_STAY\_AT\_LAST\_BLIND}
+71 \};
+\end{DoxyCode}
+\hypertarget{gamedata_8h_aaf5ef5a17b53e9997c837b07015589de}{\index{gamedata.\-h@{gamedata.\-h}!Game\-Mode@{Game\-Mode}}
+\index{Game\-Mode@{Game\-Mode}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{Game\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Game\-Mode}}}\label{gamedata_8h_aaf5ef5a17b53e9997c837b07015589de}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D}}\item[{\em 
+\hypertarget{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-R\-E\-A\-T\-E\-D}\label{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328}
+}]\index{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D}}\item[{\em 
+\hypertarget{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-S\-T\-A\-R\-T\-E\-D}\label{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3}
+}]\index{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D@{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D}}\item[{\em 
+\hypertarget{gamedata_8h_aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853}{G\-A\-M\-E\-\_\-\-M\-O\-D\-E\-\_\-\-C\-L\-O\-S\-E\-D}\label{gamedata_8h_aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+44               \{
+45     \hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328}{GAME\_MODE\_CREATED} = 1,
+46     \hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea8ea8a9a34b30d428601c025a651b4af3}{GAME\_MODE\_STARTED},
+47     \hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589deaaeff0922a1bc9172b521c72d49835853}{GAME\_MODE\_CLOSED}
+48 \};
+\end{DoxyCode}
+\hypertarget{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57}{\index{gamedata.\-h@{gamedata.\-h}!Game\-Type@{Game\-Type}}
+\index{Game\-Type@{Game\-Type}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{Game\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Game\-Type}}}\label{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L}}\item[{\em 
+\hypertarget{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-R\-M\-A\-L}\label{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y}}\item[{\em 
+\hypertarget{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-E\-D\-\_\-\-O\-N\-L\-Y}\label{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y}}\item[{\em 
+\hypertarget{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-V\-I\-T\-E\-\_\-\-O\-N\-L\-Y}\label{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7}
+}]\index{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G@{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G}}\item[{\em 
+\hypertarget{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc}{G\-A\-M\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-R\-A\-N\-K\-I\-N\-G}\label{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+50               \{
+51     \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79}{GAME\_TYPE\_NORMAL} = 1,
+52     \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a37614f35b98e12eb867d5de7d2438924}{GAME\_TYPE\_REGISTERED\_ONLY},
+53     \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a8a108a1f08016faab6460576126e84b7}{GAME\_TYPE\_INVITE\_ONLY},
+54     \hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a24177b1bac68653c0a4246b9e112a3dc}{GAME\_TYPE\_RANKING}
+55 \};
+\end{DoxyCode}
+\hypertarget{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6}{\index{gamedata.\-h@{gamedata.\-h}!Raise\-Interval\-Mode@{Raise\-Interval\-Mode}}
+\index{Raise\-Interval\-Mode@{Raise\-Interval\-Mode}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{Raise\-Interval\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Raise\-Interval\-Mode}}}\label{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R@{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R@{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R}}\item[{\em 
+\hypertarget{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4}{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-H\-A\-N\-D\-N\-U\-M\-B\-E\-R}\label{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4}
+}]\index{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S@{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S@{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}}\item[{\em 
+\hypertarget{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488}{R\-A\-I\-S\-E\-\_\-\-O\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}\label{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+57                        \{
+58     \hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4}{RAISE\_ON\_HANDNUMBER} = 1,
+59     \hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a80ffd808e1ec5dd59052eab4c8ced488}{RAISE\_ON\_MINUTES}
+60 \};
+\end{DoxyCode}
+\hypertarget{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02}{\index{gamedata.\-h@{gamedata.\-h}!Raise\-Mode@{Raise\-Mode}}
+\index{Raise\-Mode@{Raise\-Mode}!gamedata.h@{gamedata.\-h}}
+\subsubsection[{Raise\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Raise\-Mode}}}\label{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S@{D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S@{D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}}\item[{\em 
+\hypertarget{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56}{D\-O\-U\-B\-L\-E\-\_\-\-B\-L\-I\-N\-D\-S}\label{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56}
+}]\index{M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R@{M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R}!gamedata.\-h@{gamedata.\-h}}\index{gamedata.\-h@{gamedata.\-h}!M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R@{M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R}}\item[{\em 
+\hypertarget{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3}{M\-A\-N\-U\-A\-L\-\_\-\-B\-L\-I\-N\-D\-S\-\_\-\-O\-R\-D\-E\-R}\label{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+62                \{
+63     \hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56}{DOUBLE\_BLINDS} = 1,
+64     \hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02a6f7f1770289444177b4f5c36d2028fb3}{MANUAL\_BLINDS\_ORDER}
+65 \};
+\end{DoxyCode}

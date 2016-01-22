@@ -1,0 +1,90 @@
+\hypertarget{struct_vote_kick_data}{\section{Vote\-Kick\-Data 구조체 참조}
+\label{struct_vote_kick_data}\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}}
+}
+
+
+{\ttfamily \#include $<$gamedata.\-h$>$}
+
+
+
+Vote\-Kick\-Data에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{struct_vote_kick_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_vote_kick_data_a4c0969c2c429557a27eaeff81f6ff58a}{Vote\-Kick\-Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{struct_vote_kick_data_a8deeb29aef91634e9082ca4f79780aa9}{petition\-Id}
+\item 
+unsigned \hyperlink{struct_vote_kick_data_a6086ee81bbafdd51a66dfcbc33e74ea2}{kick\-Player\-Id}
+\item 
+int \hyperlink{struct_vote_kick_data_aa0004f4d5672181658012cd3a92d4a8f}{num\-Votes\-To\-Kick}
+\item 
+int \hyperlink{struct_vote_kick_data_ab5832617a09a60929e6eff903f15d981}{num\-Votes\-In\-Favour\-Of\-Kicking}
+\item 
+int \hyperlink{struct_vote_kick_data_aec0801b812692d84c9abce891e8fefcd}{num\-Votes\-Against\-Kicking}
+\item 
+int \hyperlink{struct_vote_kick_data_a79e16bf0cf655c6de32eb21beecaf3bf}{time\-Limit\-Sec}
+\item 
+boost\-::timers\-::portable\-::microsec\-\_\-timer \hyperlink{struct_vote_kick_data_a0a4074bb3ceb4760b27403e1fd67c45d}{vote\-Timer}
+\item 
+\hyperlink{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{Player\-Id\-List} \hyperlink{struct_vote_kick_data_a68bb6a654755d931a50e4bc8ec27a67b}{voted\-Player\-Ids}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_vote_kick_data_a4c0969c2c429557a27eaeff81f6ff58a}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!Vote\-Kick\-Data@{Vote\-Kick\-Data}}
+\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{Vote\-Kick\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Vote\-Kick\-Data\-::\-Vote\-Kick\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_vote_kick_data_a4c0969c2c429557a27eaeff81f6ff58a}
+
+\begin{DoxyCode}
+118         : \hyperlink{struct_vote_kick_data_a8deeb29aef91634e9082ca4f79780aa9}{petitionId}(0), \hyperlink{struct_vote_kick_data_a6086ee81bbafdd51a66dfcbc33e74ea2}{kickPlayerId}(0), \hyperlink{struct_vote_kick_data_aa0004f4d5672181658012cd3a92d4a8f}{numVotesToKick}(0),
+119           \hyperlink{struct_vote_kick_data_ab5832617a09a60929e6eff903f15d981}{numVotesInFavourOfKicking}(0), 
+      \hyperlink{struct_vote_kick_data_aec0801b812692d84c9abce891e8fefcd}{numVotesAgainstKicking}(0), \hyperlink{struct_vote_kick_data_a79e16bf0cf655c6de32eb21beecaf3bf}{timeLimitSec}(0),
+120           \hyperlink{struct_vote_kick_data_a0a4074bb3ceb4760b27403e1fd67c45d}{voteTimer}(boost::posix\_time::time\_duration(0, 0, 0), 
+      boost::timers::portable::microsec\_timer::auto\_start) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_vote_kick_data_a6086ee81bbafdd51a66dfcbc33e74ea2}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!kick\-Player\-Id@{kick\-Player\-Id}}
+\index{kick\-Player\-Id@{kick\-Player\-Id}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{kick\-Player\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Vote\-Kick\-Data\-::kick\-Player\-Id}}\label{struct_vote_kick_data_a6086ee81bbafdd51a66dfcbc33e74ea2}
+\hypertarget{struct_vote_kick_data_aec0801b812692d84c9abce891e8fefcd}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!num\-Votes\-Against\-Kicking@{num\-Votes\-Against\-Kicking}}
+\index{num\-Votes\-Against\-Kicking@{num\-Votes\-Against\-Kicking}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{num\-Votes\-Against\-Kicking}]{\setlength{\rightskip}{0pt plus 5cm}int Vote\-Kick\-Data\-::num\-Votes\-Against\-Kicking}}\label{struct_vote_kick_data_aec0801b812692d84c9abce891e8fefcd}
+\hypertarget{struct_vote_kick_data_ab5832617a09a60929e6eff903f15d981}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!num\-Votes\-In\-Favour\-Of\-Kicking@{num\-Votes\-In\-Favour\-Of\-Kicking}}
+\index{num\-Votes\-In\-Favour\-Of\-Kicking@{num\-Votes\-In\-Favour\-Of\-Kicking}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{num\-Votes\-In\-Favour\-Of\-Kicking}]{\setlength{\rightskip}{0pt plus 5cm}int Vote\-Kick\-Data\-::num\-Votes\-In\-Favour\-Of\-Kicking}}\label{struct_vote_kick_data_ab5832617a09a60929e6eff903f15d981}
+\hypertarget{struct_vote_kick_data_aa0004f4d5672181658012cd3a92d4a8f}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!num\-Votes\-To\-Kick@{num\-Votes\-To\-Kick}}
+\index{num\-Votes\-To\-Kick@{num\-Votes\-To\-Kick}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{num\-Votes\-To\-Kick}]{\setlength{\rightskip}{0pt plus 5cm}int Vote\-Kick\-Data\-::num\-Votes\-To\-Kick}}\label{struct_vote_kick_data_aa0004f4d5672181658012cd3a92d4a8f}
+\hypertarget{struct_vote_kick_data_a8deeb29aef91634e9082ca4f79780aa9}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!petition\-Id@{petition\-Id}}
+\index{petition\-Id@{petition\-Id}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{petition\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Vote\-Kick\-Data\-::petition\-Id}}\label{struct_vote_kick_data_a8deeb29aef91634e9082ca4f79780aa9}
+\hypertarget{struct_vote_kick_data_a79e16bf0cf655c6de32eb21beecaf3bf}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!time\-Limit\-Sec@{time\-Limit\-Sec}}
+\index{time\-Limit\-Sec@{time\-Limit\-Sec}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{time\-Limit\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}int Vote\-Kick\-Data\-::time\-Limit\-Sec}}\label{struct_vote_kick_data_a79e16bf0cf655c6de32eb21beecaf3bf}
+\hypertarget{struct_vote_kick_data_a68bb6a654755d931a50e4bc8ec27a67b}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!voted\-Player\-Ids@{voted\-Player\-Ids}}
+\index{voted\-Player\-Ids@{voted\-Player\-Ids}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{voted\-Player\-Ids}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Id\-List} Vote\-Kick\-Data\-::voted\-Player\-Ids}}\label{struct_vote_kick_data_a68bb6a654755d931a50e4bc8ec27a67b}
+\hypertarget{struct_vote_kick_data_a0a4074bb3ceb4760b27403e1fd67c45d}{\index{Vote\-Kick\-Data@{Vote\-Kick\-Data}!vote\-Timer@{vote\-Timer}}
+\index{vote\-Timer@{vote\-Timer}!VoteKickData@{Vote\-Kick\-Data}}
+\subsubsection[{vote\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::timers\-::portable\-::microsec\-\_\-timer Vote\-Kick\-Data\-::vote\-Timer}}\label{struct_vote_kick_data_a0a4074bb3ceb4760b27403e1fd67c45d}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gamedata_8h}{gamedata.\-h}\end{DoxyCompactItemize}

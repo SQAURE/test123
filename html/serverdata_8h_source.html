@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>my project1: serverdata.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">my project1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">serverdata.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="serverdata_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * PokerTH - The open source texas holdem engine                             *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (C) 2006-2012 Felix Hammer, Florian Thauer, Lothar May          *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify      *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * it under the terms of the GNU Affero General Public License as            *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * published by the Free Software Foundation, either version 3 of the        *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License, or (at your option) any later version.                           *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,           *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of            *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * GNU Affero General Public License for more details.                       *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * You should have received a copy of the GNU Affero General Public License  *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.     *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * Additional permission under GNU AGPL version 3 section 7                  *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *                                                                           *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * If you modify this program, or any covered work, by linking or            *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * combining it with the OpenSSL project&#39;s OpenSSL library (or a             *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * modified version of that library), containing parts covered by the        *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> * terms of the OpenSSL or SSLeay licenses, the authors of PokerTH           *</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * (Felix Hammer, Florian Thauer, Lothar May) grant you additional           *</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * permission to convey the resulting work.                                  *</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * Corresponding Source for a non-source form of such a combination          *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * shall include the source code for the parts of OpenSSL used as well       *</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * as that of the covered work.                                              *</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/* Server data. */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef _SERVERDATA_H_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SERVERDATA_H_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_server_info.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_server_info.html">ServerInfo</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_server_info.html#a7627924fa461528a5c0a13b105499410">   39</a></span>&#160;    <a class="code" href="struct_server_info.html#a7627924fa461528a5c0a13b105499410">ServerInfo</a>() : <a class="code" href="struct_server_info.html#a016372aebe04fe8ddf9d17b8977c0805">id</a>(0), <a class="code" href="struct_server_info.html#ad566c6729bf2eae019af64a50eb64f6b">supportsSctp</a>(false), <a class="code" href="struct_server_info.html#a8af087c39c4cfaf845feba73ad1bd9af">port</a>(0) {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_server_info.html#a016372aebe04fe8ddf9d17b8977c0805">   40</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_info.html#a016372aebe04fe8ddf9d17b8977c0805">id</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_server_info.html#ac1b6c30ed482012324aee9a240007158">   41</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#ac1b6c30ed482012324aee9a240007158">name</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_server_info.html#a019cc206a894a80b8254bf3798173a25">   42</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#a019cc206a894a80b8254bf3798173a25">sponsor</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_server_info.html#a7c58f400c3f76c6c61d7455276943125">   43</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#a7c58f400c3f76c6c61d7455276943125">country</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_server_info.html#af0fafe5df3594c377aa38b4f32adcd0f">   44</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#af0fafe5df3594c377aa38b4f32adcd0f">ipv4addr</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_server_info.html#ae37d24d79649b567857dd9765b7dba6d">   45</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#ae37d24d79649b567857dd9765b7dba6d">ipv6addr</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_server_info.html#ad566c6729bf2eae019af64a50eb64f6b">   46</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_server_info.html#ad566c6729bf2eae019af64a50eb64f6b">supportsSctp</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_server_info.html#a8af087c39c4cfaf845feba73ad1bd9af">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_server_info.html#a8af087c39c4cfaf845feba73ad1bd9af">port</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_server_info.html#ab880c1acf33d44c50edb68df6226782d">   48</a></span>&#160;    std::string <a class="code" href="struct_server_info.html#ab880c1acf33d44c50edb68df6226782d">avatarServerAddr</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_server_stats.html">   51</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_server_stats.html">ServerStats</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_server_stats.html#a1ed311eaeb034e47dd26f531114b9ad1">   52</a></span>&#160;    <a class="code" href="struct_server_stats.html#a1ed311eaeb034e47dd26f531114b9ad1">ServerStats</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        : <a class="code" href="struct_server_stats.html#ae5c627e4a9c50bf2ff6c037ec0bc81d0">numberOfPlayersOnServer</a>(0), <a class="code" href="struct_server_stats.html#a6718463c122b2cf94a315fd796084838">numberOfGamesOpen</a>(0), <a class="code" href="struct_server_stats.html#a18a286038d220b5de804f50e30c66f22">totalPlayersEverLoggedIn</a>(0),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          <a class="code" href="struct_server_stats.html#a66a158077e23174434110fb8fc26b9ff">totalGamesEverCreated</a>(0), <a class="code" href="struct_server_stats.html#a25778c7b4a7ac21c22bcc67dda3ff54d">maxGamesOpen</a>(0), <a class="code" href="struct_server_stats.html#ab6da76ba04d76821233d4ed4bbf4a2ae">maxPlayersLoggedIn</a>(0) {}</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_server_stats.html#ae5c627e4a9c50bf2ff6c037ec0bc81d0">   55</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#ae5c627e4a9c50bf2ff6c037ec0bc81d0">numberOfPlayersOnServer</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="struct_server_stats.html#a6718463c122b2cf94a315fd796084838">   56</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#a6718463c122b2cf94a315fd796084838">numberOfGamesOpen</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="struct_server_stats.html#a18a286038d220b5de804f50e30c66f22">   57</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#a18a286038d220b5de804f50e30c66f22">totalPlayersEverLoggedIn</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="struct_server_stats.html#a66a158077e23174434110fb8fc26b9ff">   58</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#a66a158077e23174434110fb8fc26b9ff">totalGamesEverCreated</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="struct_server_stats.html#a25778c7b4a7ac21c22bcc67dda3ff54d">   59</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#a25778c7b4a7ac21c22bcc67dda3ff54d">maxGamesOpen</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="struct_server_stats.html#ab6da76ba04d76821233d4ed4bbf4a2ae">   60</a></span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="struct_server_stats.html#ab6da76ba04d76821233d4ed4bbf4a2ae">maxPlayersLoggedIn</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_server_info_html_a016372aebe04fe8ddf9d17b8977c0805"><div class="ttname"><a href="struct_server_info.html#a016372aebe04fe8ddf9d17b8977c0805">ServerInfo::id</a></div><div class="ttdeci">unsigned id</div><div class="ttdef"><b>Definition:</b> serverdata.h:40</div></div>
+<div class="ttc" id="struct_server_stats_html_a25778c7b4a7ac21c22bcc67dda3ff54d"><div class="ttname"><a href="struct_server_stats.html#a25778c7b4a7ac21c22bcc67dda3ff54d">ServerStats::maxGamesOpen</a></div><div class="ttdeci">unsigned maxGamesOpen</div><div class="ttdef"><b>Definition:</b> serverdata.h:59</div></div>
+<div class="ttc" id="struct_server_info_html_ac1b6c30ed482012324aee9a240007158"><div class="ttname"><a href="struct_server_info.html#ac1b6c30ed482012324aee9a240007158">ServerInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> serverdata.h:41</div></div>
+<div class="ttc" id="struct_server_info_html_ad566c6729bf2eae019af64a50eb64f6b"><div class="ttname"><a href="struct_server_info.html#ad566c6729bf2eae019af64a50eb64f6b">ServerInfo::supportsSctp</a></div><div class="ttdeci">bool supportsSctp</div><div class="ttdef"><b>Definition:</b> serverdata.h:46</div></div>
+<div class="ttc" id="struct_server_stats_html_ab6da76ba04d76821233d4ed4bbf4a2ae"><div class="ttname"><a href="struct_server_stats.html#ab6da76ba04d76821233d4ed4bbf4a2ae">ServerStats::maxPlayersLoggedIn</a></div><div class="ttdeci">unsigned maxPlayersLoggedIn</div><div class="ttdef"><b>Definition:</b> serverdata.h:60</div></div>
+<div class="ttc" id="struct_server_info_html_a019cc206a894a80b8254bf3798173a25"><div class="ttname"><a href="struct_server_info.html#a019cc206a894a80b8254bf3798173a25">ServerInfo::sponsor</a></div><div class="ttdeci">std::string sponsor</div><div class="ttdef"><b>Definition:</b> serverdata.h:42</div></div>
+<div class="ttc" id="struct_server_stats_html_a6718463c122b2cf94a315fd796084838"><div class="ttname"><a href="struct_server_stats.html#a6718463c122b2cf94a315fd796084838">ServerStats::numberOfGamesOpen</a></div><div class="ttdeci">unsigned numberOfGamesOpen</div><div class="ttdef"><b>Definition:</b> serverdata.h:56</div></div>
+<div class="ttc" id="struct_server_info_html_ab880c1acf33d44c50edb68df6226782d"><div class="ttname"><a href="struct_server_info.html#ab880c1acf33d44c50edb68df6226782d">ServerInfo::avatarServerAddr</a></div><div class="ttdeci">std::string avatarServerAddr</div><div class="ttdef"><b>Definition:</b> serverdata.h:48</div></div>
+<div class="ttc" id="struct_server_stats_html_a1ed311eaeb034e47dd26f531114b9ad1"><div class="ttname"><a href="struct_server_stats.html#a1ed311eaeb034e47dd26f531114b9ad1">ServerStats::ServerStats</a></div><div class="ttdeci">ServerStats()</div><div class="ttdef"><b>Definition:</b> serverdata.h:52</div></div>
+<div class="ttc" id="struct_server_stats_html_ae5c627e4a9c50bf2ff6c037ec0bc81d0"><div class="ttname"><a href="struct_server_stats.html#ae5c627e4a9c50bf2ff6c037ec0bc81d0">ServerStats::numberOfPlayersOnServer</a></div><div class="ttdeci">unsigned numberOfPlayersOnServer</div><div class="ttdef"><b>Definition:</b> serverdata.h:55</div></div>
+<div class="ttc" id="struct_server_info_html"><div class="ttname"><a href="struct_server_info.html">ServerInfo</a></div><div class="ttdef"><b>Definition:</b> serverdata.h:38</div></div>
+<div class="ttc" id="struct_server_info_html_a8af087c39c4cfaf845feba73ad1bd9af"><div class="ttname"><a href="struct_server_info.html#a8af087c39c4cfaf845feba73ad1bd9af">ServerInfo::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition:</b> serverdata.h:47</div></div>
+<div class="ttc" id="struct_server_info_html_a7c58f400c3f76c6c61d7455276943125"><div class="ttname"><a href="struct_server_info.html#a7c58f400c3f76c6c61d7455276943125">ServerInfo::country</a></div><div class="ttdeci">std::string country</div><div class="ttdef"><b>Definition:</b> serverdata.h:43</div></div>
+<div class="ttc" id="struct_server_info_html_a7627924fa461528a5c0a13b105499410"><div class="ttname"><a href="struct_server_info.html#a7627924fa461528a5c0a13b105499410">ServerInfo::ServerInfo</a></div><div class="ttdeci">ServerInfo()</div><div class="ttdef"><b>Definition:</b> serverdata.h:39</div></div>
+<div class="ttc" id="struct_server_stats_html_a18a286038d220b5de804f50e30c66f22"><div class="ttname"><a href="struct_server_stats.html#a18a286038d220b5de804f50e30c66f22">ServerStats::totalPlayersEverLoggedIn</a></div><div class="ttdeci">unsigned totalPlayersEverLoggedIn</div><div class="ttdef"><b>Definition:</b> serverdata.h:57</div></div>
+<div class="ttc" id="struct_server_info_html_ae37d24d79649b567857dd9765b7dba6d"><div class="ttname"><a href="struct_server_info.html#ae37d24d79649b567857dd9765b7dba6d">ServerInfo::ipv6addr</a></div><div class="ttdeci">std::string ipv6addr</div><div class="ttdef"><b>Definition:</b> serverdata.h:45</div></div>
+<div class="ttc" id="struct_server_info_html_af0fafe5df3594c377aa38b4f32adcd0f"><div class="ttname"><a href="struct_server_info.html#af0fafe5df3594c377aa38b4f32adcd0f">ServerInfo::ipv4addr</a></div><div class="ttdeci">std::string ipv4addr</div><div class="ttdef"><b>Definition:</b> serverdata.h:44</div></div>
+<div class="ttc" id="struct_server_stats_html_a66a158077e23174434110fb8fc26b9ff"><div class="ttname"><a href="struct_server_stats.html#a66a158077e23174434110fb8fc26b9ff">ServerStats::totalGamesEverCreated</a></div><div class="ttdeci">unsigned totalGamesEverCreated</div><div class="ttdef"><b>Definition:</b> serverdata.h:58</div></div>
+<div class="ttc" id="struct_server_stats_html"><div class="ttname"><a href="struct_server_stats.html">ServerStats</a></div><div class="ttdef"><b>Definition:</b> serverdata.h:51</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+생성시간 : 목 1월 21 2016 17:39:32, 프로젝트명 : my project1, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

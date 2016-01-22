@@ -1,0 +1,3 @@
+<map id="GameInfo" name="GameInfo">
+<area shape="rect" id="node2" href="$struct_game_data.html" title="{GameData\n|+ gameType\l+ allowSpectators\l+ maxNumberOfPlayers\l+ startMoney\l+ firstSmallBlind\l+ raiseIntervalMode\l+ raiseSmallBlindEveryHands\lValue\l+ raiseSmallBlindEveryMinutes\lValue\l+ raiseMode\l+ manualBlindsList\l+ afterManualBlindsMode\l+ afterMBAlwaysRaiseValue\l+ guiSpeed\l+ delayBetweenHandsSec\l+ playerActionTimeoutSec\l|+ GameData()\l}" alt="" coords="5,5,208,317"/>
+</map>

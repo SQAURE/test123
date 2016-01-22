@@ -1,0 +1,273 @@
+\hypertarget{pokerth_8cpp}{\section{pokerth.\-cpp 파일 참조}
+\label{pokerth_8cpp}\index{pokerth.\-cpp@{pokerth.\-cpp}}
+}
+{\ttfamily \#include $<$boost/asio.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$qapplication.\-h$>$}\\*
+{\ttfamily \#include $<$Qt\-Gui$>$}\\*
+{\ttfamily \#include $<$Qt\-Core$>$}\\*
+{\ttfamily \#include $<$curl/curl.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}session.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}startwindowimpl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}configfile.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}startsplash.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}game\-\_\-defs.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$net/socket\-\_\-startup.\-h$>$}\\*
+{\ttfamily \#include $<$third\-\_\-party/qtsingleapplication/qtsingleapplication.\-h$>$}\\*
+pokerth.\-cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pokerth_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pokerth_8cpp_a1bdcac39cce77af91b60ca6044fae397}{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}()
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pokerth_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{pokerth_8cpp_a1bdcac39cce77af91b60ca6044fae397}{\index{pokerth.\-cpp@{pokerth.\-cpp}!E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K@{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}}
+\index{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K@{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}!pokerth.cpp@{pokerth.\-cpp}}
+\subsubsection[{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pokerth_8cpp_a1bdcac39cce77af91b60ca6044fae397}
+
+
+\subsection{함수 문서화}
+\hypertarget{pokerth_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{pokerth.\-cpp@{pokerth.\-cpp}!main@{main}}
+\index{main@{main}!pokerth.cpp@{pokerth.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{pokerth_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+116 \{
+117 
+118     \textcolor{comment}{//ENABLE\_LEAK\_CHECK();}
+119 
+120     \textcolor{comment}{//\_CrtSetBreakAlloc(49937);}
+121     socket\_startup();
+122     curl\_global\_init(CURL\_GLOBAL\_NOTHING);
+123 
+124 \textcolor{preprocessor}{#ifdef \_\_APPLE\_\_}
+125 \textcolor{preprocessor}{}    \textcolor{comment}{// The following needs to be done before the application is created, otherwise loading platforms plugin
+       fails.}
+126     QDir dir(argv[0]);
+127     dir.cdUp();
+128     dir.cdUp();
+129     dir.cd(\textcolor{stringliteral}{"plugins"});
+130     QApplication::setLibraryPaths(QStringList(dir.absolutePath()));
+131 \textcolor{preprocessor}{#endif}
+132 \textcolor{preprocessor}{}
+134 \textcolor{preprocessor}{#ifdef ANDROID}
+135 \textcolor{preprocessor}{}    QApplication a(argc, argv);
+136     a.setApplicationName(\textcolor{stringliteral}{"PokerTH"});
+137 \textcolor{preprocessor}{#else}
+138 \textcolor{preprocessor}{}    SharedTools::QtSingleApplication a( \textcolor{stringliteral}{"PokerTH"}, argc, argv );
+139     \textcolor{keywordflow}{if} (a.sendMessage(\textcolor{stringliteral}{"Wake up!"})) \{
+140         \textcolor{keywordflow}{return} 0;
+141     \}
+142 \textcolor{preprocessor}{#endif}
+143 \textcolor{preprocessor}{}
+144     \textcolor{comment}{//create defaultconfig}
+145     ConfigFile *myConfig = \textcolor{keyword}{new} ConfigFile(argv[0], \textcolor{keyword}{false});
+146     Log *myLog = \textcolor{keyword}{new} Log(myConfig);
+147 
+148     \textcolor{comment}{// set PlastiqueStyle even for mac-version to prevent artefacts on styled widgets}
+149 \textcolor{preprocessor}{#if QT\_VERSION < 0x050000}
+150 \textcolor{preprocessor}{}    a.setStyle(\textcolor{keyword}{new} QPlastiqueStyle);
+151 \textcolor{preprocessor}{#endif}
+152 \textcolor{preprocessor}{}
+153     QString myAppDataPath = QString::fromUtf8(myConfig->readConfigString(\textcolor{stringliteral}{"AppDataDir"}).c\_str());
+154     \textcolor{comment}{//set QApplication default font}
+155 
+156     QFontDatabase::addApplicationFont (myAppDataPath +\textcolor{stringliteral}{"fonts/n019003l.pfb"});
+157     QFontDatabase::addApplicationFont (myAppDataPath +\textcolor{stringliteral}{"fonts/DejaVuSans-Bold.ttf"});
+158 
+159 \textcolor{preprocessor}{#ifdef \_WIN32}
+160 \textcolor{preprocessor}{}    QString font1String(\textcolor{stringliteral}{"QApplication, QWidget, QDialog \{ font-size: 12px; \}"});
+161 \textcolor{preprocessor}{#elif \_\_APPLE\_\_}
+162 \textcolor{preprocessor}{}    \textcolor{comment}{//            QString font1String("font-family: \(\backslash\)"Lucida Grande\(\backslash\)";");}
+163     QString font1String(\textcolor{stringliteral}{"QApplication, QWidget, QDialog \{ font-size: 11px; \}"});
+164 \textcolor{preprocessor}{#elif ANDROID}
+165 \textcolor{preprocessor}{}    QString font1String(\textcolor{stringliteral}{"QApplication, QWidget, QDialog \{ font-family: \(\backslash\)"Nimbus Sans L\(\backslash\)"; font-size: 26px;
+       \}"});
+166     QPalette p = a.palette();
+167     p.setColor(\hyperlink{game__defs_8h_a03bfec859eac87be20f8952c1eb89de0}{QPalette::Button}, QColor::fromRgb(80,80,80));
+168     p.setColor(QPalette::Base, QColor::fromRgb(80,80,80));
+169     p.setColor(QPalette::Window, QColor::fromRgb(50,50,50));
+170     p.setColor(QPalette::ButtonText, QColor::fromRgb(255,255,255));
+171     p.setColor(QPalette::Disabled, QPalette::ButtonText, QColor::fromRgb(130,130,130));
+172     p.setColor(QPalette::WindowText, QColor::fromRgb(255,255,255));
+173     p.setColor(QPalette::Disabled, QPalette::WindowText, QColor::fromRgb(100,100,100));
+174     p.setColor(QPalette::Text, QColor::fromRgb(255,255,255));
+175     p.setColor(QPalette::Disabled, QPalette::Text, QColor::fromRgb(100,100,100));
+176     p.setColor(QPalette::Link, QColor::fromRgb(192,192,255));
+177     p.setColor(QPalette::LinkVisited, QColor::fromRgb(192,192,255));
+178     a.setPalette(p);
+179 \textcolor{preprocessor}{#elif MAEMO}
+180 \textcolor{preprocessor}{}    QString font1String(\textcolor{stringliteral}{"QApplication, QWidget, QDialog \{ font-family: \(\backslash\)"Nimbus Sans L\(\backslash\)"; font-size: 22px;
+       \}"});
+181     QPalette p = a.palette();
+182     p.setColor(\hyperlink{game__defs_8h_a03bfec859eac87be20f8952c1eb89de0}{QPalette::Button}, QColor::fromRgb(80,80,80));
+183     p.setColor(QPalette::Base, QColor::fromRgb(80,80,80));
+184     p.setColor(QPalette::Window, QColor::fromRgb(50,50,50));
+185     p.setColor(QPalette::ButtonText, QColor::fromRgb(255,255,255));
+186     p.setColor(QPalette::Disabled, QPalette::ButtonText, QColor::fromRgb(100,100,100));
+187     p.setColor(QPalette::WindowText, QColor::fromRgb(255,255,255));
+188     p.setColor(QPalette::Disabled, QPalette::WindowText, QColor::fromRgb(100,100,100));
+189     p.setColor(QPalette::Text, QColor::fromRgb(255,255,255));
+190     p.setColor(QPalette::Disabled, QPalette::Text, QColor::fromRgb(100,100,100));
+191     p.setColor(QPalette::Link, QColor::fromRgb(192,192,255));
+192     p.setColor(QPalette::LinkVisited, QColor::fromRgb(192,192,255));
+193     a.setPalette(p);
+194 \textcolor{preprocessor}{#else}
+195 \textcolor{preprocessor}{}    QString font1String(\textcolor{stringliteral}{"QApplication, QWidget, QDialog \{ font-family: \(\backslash\)"Nimbus Sans L\(\backslash\)"; font-size: 12px;
+       \}"});
+196 \textcolor{preprocessor}{#endif}
+197 \textcolor{preprocessor}{}    a.setStyleSheet(font1String + \textcolor{stringliteral}{" QDialogButtonBox, QMessageBox \{ dialogbuttonbox-buttons-have-icons: 1;
+       dialog-ok-icon: url(:/gfx/dialog\_ok\_apply.png); dialog-cancel-icon: url(:/gfx/dialog\_close.png);
+       dialog-close-icon: url(:/gfx/dialog\_close.png); dialog-yes-icon: url(:/gfx/dialog\_ok\_apply.png); dialog-no-icon:
+       url(:/gfx/dialog\_close.png) \}"});
+198 
+199 \textcolor{preprocessor}{#ifdef ANDROID}
+200 \textcolor{preprocessor}{}    \textcolor{comment}{//check if custom background pictures for the resolution are there. Otherwise create them!}
+201     QString UserDataDir = QString::fromUtf8(myConfig->readConfigString(\textcolor{stringliteral}{"UserDataDir"}).c\_str());
+202     QDesktopWidget dw;
+203     \textcolor{keywordtype}{int} screenWidth = dw.screenGeometry().width();
+204     \textcolor{keywordtype}{int} screenHeight = dw.screenGeometry().height();
+205     QString customStartWindowBgFileString(UserDataDir+\textcolor{stringliteral}{"/startwindowbg10\_"}+QString::number(screenWidth)+\textcolor{stringliteral}{"x"}+
+      QString::number(screenHeight)+\textcolor{stringliteral}{".png"});
+206     QString customWelcomePokerTHFileString(UserDataDir+\textcolor{stringliteral}{"/welcomepokerth10\_"}+QString::number(screenWidth)+\textcolor{stringliteral}{"x
+      "}+QString::number(screenHeight)+\textcolor{stringliteral}{".png"});
+207     QFile customStartWindowBgFile(customStartWindowBgFileString);
+208     QFile customWelcomePokerTHFile(customWelcomePokerTHFileString);
+209 
+210     QSplashScreen preSplashFirstRun;
+211     \textcolor{keywordflow}{if}(!customStartWindowBgFile.exists()) \{
+212 
+213         \textcolor{comment}{//load preSplashPix to show that PokerTH is already running during first time pics calculation}
+214         QPixmap prePixBase(\textcolor{stringliteral}{":/gfx/logoChip3D.png"});
+215         QPixmap prePix(300, 200);
+216         prePix.fill(Qt::transparent); \textcolor{comment}{// force alpha channel}
+217         \{
+218             QPainter painter(&prePix);
+219             painter.drawPixmap(0, 0, prePixBase);
+220             painter.setPen(Qt::white);
+221             painter.drawText(10, 160, \textcolor{stringliteral}{"loading ..."});
+222         \}
+223         preSplashFirstRun.setPixmap(prePix);
+224         preSplashFirstRun.show();
+225 
+226         QPixmap pix(\textcolor{stringliteral}{":/android/android-data/gfx/gui/misc/startwindowbg10\_mobile.png"});
+227         pix = pix.scaled(screenWidth, screenHeight, Qt::KeepAspectRatioByExpanding, 
+      Qt::SmoothTransformation);
+228         pix.save(customStartWindowBgFileString);
+229     \}
+230 
+231     \textcolor{keywordflow}{if}(!customWelcomePokerTHFile.exists()) \{
+232         QPixmap base(customStartWindowBgFileString);
+233         \textcolor{comment}{//scale overlay "have a lot of fun" at first}
+234         QPixmap overlay(\textcolor{stringliteral}{":/android/android-data/gfx/gui/misc/welcomepokerth10\_mobile.png"});
+235         overlay = overlay.scaled(screenWidth, screenHeight, Qt::KeepAspectRatioByExpanding, 
+      Qt::SmoothTransformation);
+236         QPixmap result(base.width(), base.height());
+237         result.fill(Qt::transparent); \textcolor{comment}{// force alpha channel}
+238         \{
+239             QPainter painter(&result);
+240             painter.drawPixmap(0, 0, base);
+241             painter.drawPixmap(0, 0, overlay);
+242         \}
+243         result.save(customWelcomePokerTHFileString);
+244         preSplashFirstRun.hide();
+245     \}
+246 
+247     QPixmap pixmap;
+248     \textcolor{keywordflow}{if}(customWelcomePokerTHFile.exists()) \{
+249         pixmap.load(QFileInfo(customWelcomePokerTHFile).absoluteFilePath());
+250     \} \textcolor{keywordflow}{else} \{
+251         \textcolor{comment}{//if custom welcome pic could not be saved locally we need to scale it on the fly}
+252         pixmap.load(\textcolor{stringliteral}{":/android/android-data/gfx/gui/misc/welcomepokerth10\_mobile.png"});
+253         pixmap = pixmap.scaled(screenWidth, screenHeight, Qt::KeepAspectRatioByExpanding, 
+      Qt::SmoothTransformation);
+254     \}
+255 
+256 \textcolor{preprocessor}{#else}
+257 \textcolor{preprocessor}{}    QPixmap pixmap(myAppDataPath + \textcolor{stringliteral}{"gfx/gui/misc/welcomepokerth10\_desktop.png"});
+258 \textcolor{preprocessor}{#endif}
+259 \textcolor{preprocessor}{}    StartSplash splash(pixmap);
+260     \textcolor{keywordflow}{if}(!myConfig->readConfigInt(\textcolor{stringliteral}{"DisableSplashScreenOnStartup"})) \{
+261         splash.show();
+262         splash.showMessage(QString(\textcolor{stringliteral}{"Version %1"}).arg(\hyperlink{game__defs_8h_ac16e1f5cf0ee8fbb4b1a0cd790e5f262}{POKERTH\_BETA\_RELEASE\_STRING}
+      ), 0x0042, QColor(255,255,255));
+263     \}
+264 
+265     \textcolor{comment}{//Set translations}
+266     QTranslator qtTranslator;
+267     qtTranslator.load(QString(myAppDataPath +\textcolor{stringliteral}{"translations/qt\_"}) + QString::fromStdString(myConfig->
+      readConfigString(\textcolor{stringliteral}{"Language"})));
+268     a.installTranslator(&qtTranslator);
+269     QTranslator translator;
+270     translator.load(QString(myAppDataPath +\textcolor{stringliteral}{"translations/pokerth\_"}) + QString::fromStdString(myConfig->
+      readConfigString(\textcolor{stringliteral}{"Language"})));
+271     a.installTranslator(&translator);
+272 
+273     qRegisterMetaType<unsigned>(\textcolor{stringliteral}{"unsigned"});
+274     qRegisterMetaType<boost::shared\_ptr<Game> >(\textcolor{stringliteral}{"boost::shared\_ptr<Game>"});
+275     qRegisterMetaType<ServerStats>(\textcolor{stringliteral}{"ServerStats"});
+276     qRegisterMetaType<DenyGameInvitationReason>(\textcolor{stringliteral}{"DenyGameInvitationReason"});
+278 
+279     startWindowImpl mainWin(myConfig,myLog);
+280 \textcolor{preprocessor}{#ifdef ANDROID}
+281 \textcolor{preprocessor}{}\textcolor{comment}{//  //Do not start if API is smaller than x}
+282 \textcolor{comment}{//  int api = -2;}
+283 \textcolor{comment}{// #ifndef ANDROID\_TEST}
+284 \textcolor{comment}{//  JavaVM *currVM = (JavaVM
+       *)QApplication::platformNativeInterface()->nativeResourceForIntegration("JavaVM");}
+285 \textcolor{comment}{//  JNIEnv* env;}
+286 \textcolor{comment}{//  if (currVM->AttachCurrentThread(&env, NULL)<0) \{}
+287 \textcolor{comment}{//      qCritical()<<"AttachCurrentThread failed";}
+288 \textcolor{comment}{//  \} else \{}
+289 \textcolor{comment}{//      jclass jclassApplicationClass = env->FindClass("android/os/Build$VERSION");}
+290 \textcolor{comment}{//      if (jclassApplicationClass) \{}
+291 \textcolor{comment}{//          api = env->GetStaticIntField(jclassApplicationClass,
+       env->GetStaticFieldID(jclassApplicationClass,"SDK\_INT", "I"));}
+292 \textcolor{comment}{//      \}}
+293 \textcolor{comment}{//      currVM->DetachCurrentThread();}
+294 \textcolor{comment}{//  \}}
+295 \textcolor{comment}{// #endif}
+296 \textcolor{comment}{// Test api and maybe do not start for further android releases}
+297 \textcolor{comment}{//  if(api < 14) \{}
+298 \textcolor{comment}{//      QMessageBox box(QMessageBox::Critical, "PokerTH Error", "Sorry, PokerTH needs Android version 4.0
+       or above to start", QMessageBox::Ok);}
+299 \textcolor{comment}{//      box.show();}
+300 \textcolor{comment}{//  \}}
+301 \textcolor{comment}{//  else \{}
+302 \textcolor{comment}{//      mainWin.show();}
+303 \textcolor{comment}{//  \}}
+304     mainWin.show();
+305 \textcolor{preprocessor}{#else}
+306 \textcolor{preprocessor}{}    a.setActivationWindow(&mainWin, \textcolor{keyword}{true});
+307 \textcolor{preprocessor}{#endif}
+308 \textcolor{preprocessor}{}    \textcolor{keywordtype}{int} retVal = a.exec();
+309     curl\_global\_cleanup();
+310     socket\_cleanup();
+311     \textcolor{keywordflow}{return} retVal;
+312 \}
+\end{DoxyCode}

@@ -1,0 +1,91 @@
+\hypertarget{struct_server_info}{\section{Server\-Info 구조체 참조}
+\label{struct_server_info}\index{Server\-Info@{Server\-Info}}
+}
+
+
+{\ttfamily \#include $<$serverdata.\-h$>$}
+
+
+
+Server\-Info에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{struct_server_info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_server_info_a7627924fa461528a5c0a13b105499410}{Server\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{struct_server_info_a016372aebe04fe8ddf9d17b8977c0805}{id}
+\item 
+std\-::string \hyperlink{struct_server_info_ac1b6c30ed482012324aee9a240007158}{name}
+\item 
+std\-::string \hyperlink{struct_server_info_a019cc206a894a80b8254bf3798173a25}{sponsor}
+\item 
+std\-::string \hyperlink{struct_server_info_a7c58f400c3f76c6c61d7455276943125}{country}
+\item 
+std\-::string \hyperlink{struct_server_info_af0fafe5df3594c377aa38b4f32adcd0f}{ipv4addr}
+\item 
+std\-::string \hyperlink{struct_server_info_ae37d24d79649b567857dd9765b7dba6d}{ipv6addr}
+\item 
+bool \hyperlink{struct_server_info_ad566c6729bf2eae019af64a50eb64f6b}{supports\-Sctp}
+\item 
+int \hyperlink{struct_server_info_a8af087c39c4cfaf845feba73ad1bd9af}{port}
+\item 
+std\-::string \hyperlink{struct_server_info_ab880c1acf33d44c50edb68df6226782d}{avatar\-Server\-Addr}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_server_info_a7627924fa461528a5c0a13b105499410}{\index{Server\-Info@{Server\-Info}!Server\-Info@{Server\-Info}}
+\index{Server\-Info@{Server\-Info}!ServerInfo@{Server\-Info}}
+\subsubsection[{Server\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Server\-Info\-::\-Server\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_server_info_a7627924fa461528a5c0a13b105499410}
+
+\begin{DoxyCode}
+39 : \hyperlink{struct_server_info_a016372aebe04fe8ddf9d17b8977c0805}{id}(0), \hyperlink{struct_server_info_ad566c6729bf2eae019af64a50eb64f6b}{supportsSctp}(\textcolor{keyword}{false}), \hyperlink{struct_server_info_a8af087c39c4cfaf845feba73ad1bd9af}{port}(0) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_server_info_ab880c1acf33d44c50edb68df6226782d}{\index{Server\-Info@{Server\-Info}!avatar\-Server\-Addr@{avatar\-Server\-Addr}}
+\index{avatar\-Server\-Addr@{avatar\-Server\-Addr}!ServerInfo@{Server\-Info}}
+\subsubsection[{avatar\-Server\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::avatar\-Server\-Addr}}\label{struct_server_info_ab880c1acf33d44c50edb68df6226782d}
+\hypertarget{struct_server_info_a7c58f400c3f76c6c61d7455276943125}{\index{Server\-Info@{Server\-Info}!country@{country}}
+\index{country@{country}!ServerInfo@{Server\-Info}}
+\subsubsection[{country}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::country}}\label{struct_server_info_a7c58f400c3f76c6c61d7455276943125}
+\hypertarget{struct_server_info_a016372aebe04fe8ddf9d17b8977c0805}{\index{Server\-Info@{Server\-Info}!id@{id}}
+\index{id@{id}!ServerInfo@{Server\-Info}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Server\-Info\-::id}}\label{struct_server_info_a016372aebe04fe8ddf9d17b8977c0805}
+\hypertarget{struct_server_info_af0fafe5df3594c377aa38b4f32adcd0f}{\index{Server\-Info@{Server\-Info}!ipv4addr@{ipv4addr}}
+\index{ipv4addr@{ipv4addr}!ServerInfo@{Server\-Info}}
+\subsubsection[{ipv4addr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::ipv4addr}}\label{struct_server_info_af0fafe5df3594c377aa38b4f32adcd0f}
+\hypertarget{struct_server_info_ae37d24d79649b567857dd9765b7dba6d}{\index{Server\-Info@{Server\-Info}!ipv6addr@{ipv6addr}}
+\index{ipv6addr@{ipv6addr}!ServerInfo@{Server\-Info}}
+\subsubsection[{ipv6addr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::ipv6addr}}\label{struct_server_info_ae37d24d79649b567857dd9765b7dba6d}
+\hypertarget{struct_server_info_ac1b6c30ed482012324aee9a240007158}{\index{Server\-Info@{Server\-Info}!name@{name}}
+\index{name@{name}!ServerInfo@{Server\-Info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::name}}\label{struct_server_info_ac1b6c30ed482012324aee9a240007158}
+\hypertarget{struct_server_info_a8af087c39c4cfaf845feba73ad1bd9af}{\index{Server\-Info@{Server\-Info}!port@{port}}
+\index{port@{port}!ServerInfo@{Server\-Info}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}int Server\-Info\-::port}}\label{struct_server_info_a8af087c39c4cfaf845feba73ad1bd9af}
+\hypertarget{struct_server_info_a019cc206a894a80b8254bf3798173a25}{\index{Server\-Info@{Server\-Info}!sponsor@{sponsor}}
+\index{sponsor@{sponsor}!ServerInfo@{Server\-Info}}
+\subsubsection[{sponsor}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Server\-Info\-::sponsor}}\label{struct_server_info_a019cc206a894a80b8254bf3798173a25}
+\hypertarget{struct_server_info_ad566c6729bf2eae019af64a50eb64f6b}{\index{Server\-Info@{Server\-Info}!supports\-Sctp@{supports\-Sctp}}
+\index{supports\-Sctp@{supports\-Sctp}!ServerInfo@{Server\-Info}}
+\subsubsection[{supports\-Sctp}]{\setlength{\rightskip}{0pt plus 5cm}bool Server\-Info\-::supports\-Sctp}}\label{struct_server_info_ad566c6729bf2eae019af64a50eb64f6b}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{serverdata_8h}{serverdata.\-h}\end{DoxyCompactItemize}

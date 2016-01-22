@@ -1,0 +1,132 @@
+\hypertarget{struct_game_data}{\section{Game\-Data 구조체 참조}
+\label{struct_game_data}\index{Game\-Data@{Game\-Data}}
+}
+
+
+{\ttfamily \#include $<$gamedata.\-h$>$}
+
+
+
+Game\-Data에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{struct_game_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_game_data_a67ab18c5a35df618e99983275c7552ab}{Game\-Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57}{Game\-Type} \hyperlink{struct_game_data_a44ded208d33fed8dbf1edd827faa847b}{game\-Type}
+\item 
+bool \hyperlink{struct_game_data_aa254390c51645ce5b18fd55e27e04f79}{allow\-Spectators}
+\item 
+int \hyperlink{struct_game_data_aba8c8d38c50dab71ad1530bbc2003b46}{max\-Number\-Of\-Players}
+\item 
+int \hyperlink{struct_game_data_a1b697f477ae03d3bd3323c4c099d6d58}{start\-Money}
+\item 
+int \hyperlink{struct_game_data_a0c9e8a63d5c02de30463c0b6beacebe3}{first\-Small\-Blind}
+\item 
+\hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6}{Raise\-Interval\-Mode} \hyperlink{struct_game_data_a298a24818a2bf81d8c7565812ff2eb26}{raise\-Interval\-Mode}
+\item 
+int \hyperlink{struct_game_data_a943a5365d2a5ac840bb3479c6fe1c23b}{raise\-Small\-Blind\-Every\-Hands\-Value}
+\item 
+int \hyperlink{struct_game_data_a6601463dbb7b1db927525b24d79e63b8}{raise\-Small\-Blind\-Every\-Minutes\-Value}
+\item 
+\hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02}{Raise\-Mode} \hyperlink{struct_game_data_a592278fc8c3d824ddbdc3f8a401320bc}{raise\-Mode}
+\item 
+std\-::list$<$ int $>$ \hyperlink{struct_game_data_aff746a781ec8317d890f860ad450ab8e}{manual\-Blinds\-List}
+\item 
+\hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6}{After\-Manual\-Blinds\-Mode} \hyperlink{struct_game_data_a7e8255dd232821d0419b31893b3acbb4}{after\-Manual\-Blinds\-Mode}
+\item 
+int \hyperlink{struct_game_data_a68e6f78103983935a5f6b20abb595355}{after\-M\-B\-Always\-Raise\-Value}
+\item 
+int \hyperlink{struct_game_data_a19b38d37fbd225504166856f187f38f3}{gui\-Speed}
+\item 
+int \hyperlink{struct_game_data_aa37d21f5ccbeca258400c07d7fbbf6da}{delay\-Between\-Hands\-Sec}
+\item 
+int \hyperlink{struct_game_data_a7379c03ecb75bda8cf95d215b41ae83b}{player\-Action\-Timeout\-Sec}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_game_data_a67ab18c5a35df618e99983275c7552ab}{\index{Game\-Data@{Game\-Data}!Game\-Data@{Game\-Data}}
+\index{Game\-Data@{Game\-Data}!GameData@{Game\-Data}}
+\subsubsection[{Game\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Data\-::\-Game\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_game_data_a67ab18c5a35df618e99983275c7552ab}
+
+\begin{DoxyCode}
+75                : \hyperlink{struct_game_data_a44ded208d33fed8dbf1edd827faa847b}{gameType}(\hyperlink{gamedata_8h_a86864855734edb7b2cb1efdc7a03fd57a9b38699b42326665c8f890f41974dc79}{GAME\_TYPE\_NORMAL}), 
+      \hyperlink{struct_game_data_aa254390c51645ce5b18fd55e27e04f79}{allowSpectators}(\textcolor{keyword}{true}),
+76         \hyperlink{struct_game_data_aba8c8d38c50dab71ad1530bbc2003b46}{maxNumberOfPlayers}(0), \hyperlink{struct_game_data_a1b697f477ae03d3bd3323c4c099d6d58}{startMoney}(0), 
+      \hyperlink{struct_game_data_a0c9e8a63d5c02de30463c0b6beacebe3}{firstSmallBlind}(0),
+77         \hyperlink{struct_game_data_a298a24818a2bf81d8c7565812ff2eb26}{raiseIntervalMode}(\hyperlink{gamedata_8h_a39f8de2f47cb4adf9038f5c6d6a8b8e6a27cf82917dfcb27e20ee920f1158aff4}{RAISE\_ON\_HANDNUMBER}), 
+      \hyperlink{struct_game_data_a943a5365d2a5ac840bb3479c6fe1c23b}{raiseSmallBlindEveryHandsValue}(8),
+78         \hyperlink{struct_game_data_a6601463dbb7b1db927525b24d79e63b8}{raiseSmallBlindEveryMinutesValue}(1), 
+      \hyperlink{struct_game_data_a592278fc8c3d824ddbdc3f8a401320bc}{raiseMode}(\hyperlink{gamedata_8h_a5532f34d7415bdfab60d67400cd5fc02aec798914fb0781d6838679ab06926a56}{DOUBLE\_BLINDS}),
+79         \hyperlink{struct_game_data_a7e8255dd232821d0419b31893b3acbb4}{afterManualBlindsMode}(\hyperlink{gamedata_8h_a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb}{AFTERMB\_DOUBLE\_BLINDS}), 
+      \hyperlink{struct_game_data_a68e6f78103983935a5f6b20abb595355}{afterMBAlwaysRaiseValue}(0),
+80         \hyperlink{struct_game_data_a19b38d37fbd225504166856f187f38f3}{guiSpeed}(4), \hyperlink{struct_game_data_aa37d21f5ccbeca258400c07d7fbbf6da}{delayBetweenHandsSec}(6), 
+      \hyperlink{struct_game_data_a7379c03ecb75bda8cf95d215b41ae83b}{playerActionTimeoutSec}(20) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_game_data_a7e8255dd232821d0419b31893b3acbb4}{\index{Game\-Data@{Game\-Data}!after\-Manual\-Blinds\-Mode@{after\-Manual\-Blinds\-Mode}}
+\index{after\-Manual\-Blinds\-Mode@{after\-Manual\-Blinds\-Mode}!GameData@{Game\-Data}}
+\subsubsection[{after\-Manual\-Blinds\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf After\-Manual\-Blinds\-Mode} Game\-Data\-::after\-Manual\-Blinds\-Mode}}\label{struct_game_data_a7e8255dd232821d0419b31893b3acbb4}
+\hypertarget{struct_game_data_a68e6f78103983935a5f6b20abb595355}{\index{Game\-Data@{Game\-Data}!after\-M\-B\-Always\-Raise\-Value@{after\-M\-B\-Always\-Raise\-Value}}
+\index{after\-M\-B\-Always\-Raise\-Value@{after\-M\-B\-Always\-Raise\-Value}!GameData@{Game\-Data}}
+\subsubsection[{after\-M\-B\-Always\-Raise\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::after\-M\-B\-Always\-Raise\-Value}}\label{struct_game_data_a68e6f78103983935a5f6b20abb595355}
+\hypertarget{struct_game_data_aa254390c51645ce5b18fd55e27e04f79}{\index{Game\-Data@{Game\-Data}!allow\-Spectators@{allow\-Spectators}}
+\index{allow\-Spectators@{allow\-Spectators}!GameData@{Game\-Data}}
+\subsubsection[{allow\-Spectators}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-Data\-::allow\-Spectators}}\label{struct_game_data_aa254390c51645ce5b18fd55e27e04f79}
+\hypertarget{struct_game_data_aa37d21f5ccbeca258400c07d7fbbf6da}{\index{Game\-Data@{Game\-Data}!delay\-Between\-Hands\-Sec@{delay\-Between\-Hands\-Sec}}
+\index{delay\-Between\-Hands\-Sec@{delay\-Between\-Hands\-Sec}!GameData@{Game\-Data}}
+\subsubsection[{delay\-Between\-Hands\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::delay\-Between\-Hands\-Sec}}\label{struct_game_data_aa37d21f5ccbeca258400c07d7fbbf6da}
+\hypertarget{struct_game_data_a0c9e8a63d5c02de30463c0b6beacebe3}{\index{Game\-Data@{Game\-Data}!first\-Small\-Blind@{first\-Small\-Blind}}
+\index{first\-Small\-Blind@{first\-Small\-Blind}!GameData@{Game\-Data}}
+\subsubsection[{first\-Small\-Blind}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::first\-Small\-Blind}}\label{struct_game_data_a0c9e8a63d5c02de30463c0b6beacebe3}
+\hypertarget{struct_game_data_a44ded208d33fed8dbf1edd827faa847b}{\index{Game\-Data@{Game\-Data}!game\-Type@{game\-Type}}
+\index{game\-Type@{game\-Type}!GameData@{Game\-Data}}
+\subsubsection[{game\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Type} Game\-Data\-::game\-Type}}\label{struct_game_data_a44ded208d33fed8dbf1edd827faa847b}
+\hypertarget{struct_game_data_a19b38d37fbd225504166856f187f38f3}{\index{Game\-Data@{Game\-Data}!gui\-Speed@{gui\-Speed}}
+\index{gui\-Speed@{gui\-Speed}!GameData@{Game\-Data}}
+\subsubsection[{gui\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::gui\-Speed}}\label{struct_game_data_a19b38d37fbd225504166856f187f38f3}
+\hypertarget{struct_game_data_aff746a781ec8317d890f860ad450ab8e}{\index{Game\-Data@{Game\-Data}!manual\-Blinds\-List@{manual\-Blinds\-List}}
+\index{manual\-Blinds\-List@{manual\-Blinds\-List}!GameData@{Game\-Data}}
+\subsubsection[{manual\-Blinds\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$int$>$ Game\-Data\-::manual\-Blinds\-List}}\label{struct_game_data_aff746a781ec8317d890f860ad450ab8e}
+\hypertarget{struct_game_data_aba8c8d38c50dab71ad1530bbc2003b46}{\index{Game\-Data@{Game\-Data}!max\-Number\-Of\-Players@{max\-Number\-Of\-Players}}
+\index{max\-Number\-Of\-Players@{max\-Number\-Of\-Players}!GameData@{Game\-Data}}
+\subsubsection[{max\-Number\-Of\-Players}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::max\-Number\-Of\-Players}}\label{struct_game_data_aba8c8d38c50dab71ad1530bbc2003b46}
+\hypertarget{struct_game_data_a7379c03ecb75bda8cf95d215b41ae83b}{\index{Game\-Data@{Game\-Data}!player\-Action\-Timeout\-Sec@{player\-Action\-Timeout\-Sec}}
+\index{player\-Action\-Timeout\-Sec@{player\-Action\-Timeout\-Sec}!GameData@{Game\-Data}}
+\subsubsection[{player\-Action\-Timeout\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::player\-Action\-Timeout\-Sec}}\label{struct_game_data_a7379c03ecb75bda8cf95d215b41ae83b}
+\hypertarget{struct_game_data_a298a24818a2bf81d8c7565812ff2eb26}{\index{Game\-Data@{Game\-Data}!raise\-Interval\-Mode@{raise\-Interval\-Mode}}
+\index{raise\-Interval\-Mode@{raise\-Interval\-Mode}!GameData@{Game\-Data}}
+\subsubsection[{raise\-Interval\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raise\-Interval\-Mode} Game\-Data\-::raise\-Interval\-Mode}}\label{struct_game_data_a298a24818a2bf81d8c7565812ff2eb26}
+\hypertarget{struct_game_data_a592278fc8c3d824ddbdc3f8a401320bc}{\index{Game\-Data@{Game\-Data}!raise\-Mode@{raise\-Mode}}
+\index{raise\-Mode@{raise\-Mode}!GameData@{Game\-Data}}
+\subsubsection[{raise\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raise\-Mode} Game\-Data\-::raise\-Mode}}\label{struct_game_data_a592278fc8c3d824ddbdc3f8a401320bc}
+\hypertarget{struct_game_data_a943a5365d2a5ac840bb3479c6fe1c23b}{\index{Game\-Data@{Game\-Data}!raise\-Small\-Blind\-Every\-Hands\-Value@{raise\-Small\-Blind\-Every\-Hands\-Value}}
+\index{raise\-Small\-Blind\-Every\-Hands\-Value@{raise\-Small\-Blind\-Every\-Hands\-Value}!GameData@{Game\-Data}}
+\subsubsection[{raise\-Small\-Blind\-Every\-Hands\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::raise\-Small\-Blind\-Every\-Hands\-Value}}\label{struct_game_data_a943a5365d2a5ac840bb3479c6fe1c23b}
+\hypertarget{struct_game_data_a6601463dbb7b1db927525b24d79e63b8}{\index{Game\-Data@{Game\-Data}!raise\-Small\-Blind\-Every\-Minutes\-Value@{raise\-Small\-Blind\-Every\-Minutes\-Value}}
+\index{raise\-Small\-Blind\-Every\-Minutes\-Value@{raise\-Small\-Blind\-Every\-Minutes\-Value}!GameData@{Game\-Data}}
+\subsubsection[{raise\-Small\-Blind\-Every\-Minutes\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::raise\-Small\-Blind\-Every\-Minutes\-Value}}\label{struct_game_data_a6601463dbb7b1db927525b24d79e63b8}
+\hypertarget{struct_game_data_a1b697f477ae03d3bd3323c4c099d6d58}{\index{Game\-Data@{Game\-Data}!start\-Money@{start\-Money}}
+\index{start\-Money@{start\-Money}!GameData@{Game\-Data}}
+\subsubsection[{start\-Money}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Data\-::start\-Money}}\label{struct_game_data_a1b697f477ae03d3bd3323c4c099d6d58}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gamedata_8h}{gamedata.\-h}\end{DoxyCompactItemize}

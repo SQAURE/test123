@@ -1,0 +1,87 @@
+\hypertarget{struct_player_info}{\section{Player\-Info 구조체 참조}
+\label{struct_player_info}\index{Player\-Info@{Player\-Info}}
+}
+
+
+{\ttfamily \#include $<$playerdata.\-h$>$}
+
+
+
+Player\-Info에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{struct_player_info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_player_info_a05e9b9529ed8e4638b2bd2fb76b3abeb}{Player\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{struct_player_info_a3d3262624b58928b67d59b6049995510}{player\-Name}
+\item 
+\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} \hyperlink{struct_player_info_ad5f6464116a3777bd7e3316ac58862d0}{ptype}
+\item 
+bool \hyperlink{struct_player_info_a486ef88d7337edab71e381c212f062f2}{is\-Guest}
+\item 
+bool \hyperlink{struct_player_info_a0455fa7d311c4e3cc9cb29f491fdc640}{is\-Admin}
+\item 
+std\-::string \hyperlink{struct_player_info_acecb2609d2339d02b3a9976f3128b1cb}{country\-Code}
+\item 
+bool \hyperlink{struct_player_info_aa6c0789c0583911d456c80ee3f0b9eef}{has\-Avatar}
+\item 
+M\-D5\-Buf \hyperlink{struct_player_info_a7c57fe28d4955552bbdcd27a50d98574}{avatar}
+\item 
+\hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39}{Avatar\-File\-Type} \hyperlink{struct_player_info_a57c48e192309aeabb51d758898b588d9}{avatar\-Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_player_info_a05e9b9529ed8e4638b2bd2fb76b3abeb}{\index{Player\-Info@{Player\-Info}!Player\-Info@{Player\-Info}}
+\index{Player\-Info@{Player\-Info}!PlayerInfo@{Player\-Info}}
+\subsubsection[{Player\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Player\-Info\-::\-Player\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_player_info_a05e9b9529ed8e4638b2bd2fb76b3abeb}
+
+\begin{DoxyCode}
+73 : \hyperlink{struct_player_info_ad5f6464116a3777bd7e3316ac58862d0}{ptype}(\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}{PLAYER\_TYPE\_HUMAN}), \hyperlink{struct_player_info_a486ef88d7337edab71e381c212f062f2}{isGuest}(\textcolor{keyword}{false}), \hyperlink{struct_player_info_a0455fa7d311c4e3cc9cb29f491fdc640}{isAdmin}(\textcolor{keyword}{false}), 
+      \hyperlink{struct_player_info_aa6c0789c0583911d456c80ee3f0b9eef}{hasAvatar}(\textcolor{keyword}{false}), \hyperlink{struct_player_info_a57c48e192309aeabb51d758898b588d9}{avatarType}(\hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1}{AVATAR\_FILE\_TYPE\_UNKNOWN}) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_player_info_a7c57fe28d4955552bbdcd27a50d98574}{\index{Player\-Info@{Player\-Info}!avatar@{avatar}}
+\index{avatar@{avatar}!PlayerInfo@{Player\-Info}}
+\subsubsection[{avatar}]{\setlength{\rightskip}{0pt plus 5cm}M\-D5\-Buf Player\-Info\-::avatar}}\label{struct_player_info_a7c57fe28d4955552bbdcd27a50d98574}
+\hypertarget{struct_player_info_a57c48e192309aeabb51d758898b588d9}{\index{Player\-Info@{Player\-Info}!avatar\-Type@{avatar\-Type}}
+\index{avatar\-Type@{avatar\-Type}!PlayerInfo@{Player\-Info}}
+\subsubsection[{avatar\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Avatar\-File\-Type} Player\-Info\-::avatar\-Type}}\label{struct_player_info_a57c48e192309aeabb51d758898b588d9}
+\hypertarget{struct_player_info_acecb2609d2339d02b3a9976f3128b1cb}{\index{Player\-Info@{Player\-Info}!country\-Code@{country\-Code}}
+\index{country\-Code@{country\-Code}!PlayerInfo@{Player\-Info}}
+\subsubsection[{country\-Code}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Info\-::country\-Code}}\label{struct_player_info_acecb2609d2339d02b3a9976f3128b1cb}
+\hypertarget{struct_player_info_aa6c0789c0583911d456c80ee3f0b9eef}{\index{Player\-Info@{Player\-Info}!has\-Avatar@{has\-Avatar}}
+\index{has\-Avatar@{has\-Avatar}!PlayerInfo@{Player\-Info}}
+\subsubsection[{has\-Avatar}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Info\-::has\-Avatar}}\label{struct_player_info_aa6c0789c0583911d456c80ee3f0b9eef}
+\hypertarget{struct_player_info_a0455fa7d311c4e3cc9cb29f491fdc640}{\index{Player\-Info@{Player\-Info}!is\-Admin@{is\-Admin}}
+\index{is\-Admin@{is\-Admin}!PlayerInfo@{Player\-Info}}
+\subsubsection[{is\-Admin}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Info\-::is\-Admin}}\label{struct_player_info_a0455fa7d311c4e3cc9cb29f491fdc640}
+\hypertarget{struct_player_info_a486ef88d7337edab71e381c212f062f2}{\index{Player\-Info@{Player\-Info}!is\-Guest@{is\-Guest}}
+\index{is\-Guest@{is\-Guest}!PlayerInfo@{Player\-Info}}
+\subsubsection[{is\-Guest}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\-Info\-::is\-Guest}}\label{struct_player_info_a486ef88d7337edab71e381c212f062f2}
+\hypertarget{struct_player_info_a3d3262624b58928b67d59b6049995510}{\index{Player\-Info@{Player\-Info}!player\-Name@{player\-Name}}
+\index{player\-Name@{player\-Name}!PlayerInfo@{Player\-Info}}
+\subsubsection[{player\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Player\-Info\-::player\-Name}}\label{struct_player_info_a3d3262624b58928b67d59b6049995510}
+\hypertarget{struct_player_info_ad5f6464116a3777bd7e3316ac58862d0}{\index{Player\-Info@{Player\-Info}!ptype@{ptype}}
+\index{ptype@{ptype}!PlayerInfo@{Player\-Info}}
+\subsubsection[{ptype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Type} Player\-Info\-::ptype}}\label{struct_player_info_ad5f6464116a3777bd7e3316ac58862d0}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{playerdata_8h}{playerdata.\-h}\end{DoxyCompactItemize}

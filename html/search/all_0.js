@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['acceptgameinvitation',['acceptGameInvitation',['../class_session.html#aa0083e4f35f82def3c9f05af75449caf',1,'Session']]],
+  ['action_5fcode_5finvalid_5fstate',['ACTION_CODE_INVALID_STATE',['../game__defs_8h.html#a7d35cfb14557a5e8a80d236e992e68a3ab12098a083db1c3664caf73095e3458d',1,'game_defs.h']]],
+  ['action_5fcode_5fnot_5fallowed',['ACTION_CODE_NOT_ALLOWED',['../game__defs_8h.html#a7d35cfb14557a5e8a80d236e992e68a3ac5850747171257963f34d7290906c709',1,'game_defs.h']]],
+  ['action_5fcode_5fnot_5fyour_5fturn',['ACTION_CODE_NOT_YOUR_TURN',['../game__defs_8h.html#a7d35cfb14557a5e8a80d236e992e68a3a8ede6eefeca26e8ed80f98dd607c4a02',1,'game_defs.h']]],
+  ['action_5fcode_5fvalid',['ACTION_CODE_VALID',['../game__defs_8h.html#a7d35cfb14557a5e8a80d236e992e68a3aa9e0e7e62b916d5d7513c3569025a96d',1,'game_defs.h']]],
+  ['addownavatar',['addOwnAvatar',['../class_session.html#acc80127497f991a082269c2e6b6cddb9',1,'Session']]],
+  ['adminactionbanplayer',['adminActionBanPlayer',['../class_session.html#a1343f531ff9b53c77c873f5034a00a0f',1,'Session']]],
+  ['adminactionclosegame',['adminActionCloseGame',['../class_session.html#acb24746ea4c50d24d26386e7afb4befa',1,'Session']]],
+  ['adminplayerid',['adminPlayerId',['../struct_game_info.html#a5ecc1639834e9a6f8055f38c1f18c2d9',1,'GameInfo']]],
+  ['aftermanualblindsmode',['afterManualBlindsMode',['../struct_game_data.html#a7e8255dd232821d0419b31893b3acbb4',1,'GameData::afterManualBlindsMode()'],['../gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6',1,'AfterManualBlindsMode():&#160;gamedata.h']]],
+  ['aftermb_5fdouble_5fblinds',['AFTERMB_DOUBLE_BLINDS',['../gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6ac0e8cd440d7884b189fdb2e1a46aeebb',1,'gamedata.h']]],
+  ['aftermb_5fraise_5fabout',['AFTERMB_RAISE_ABOUT',['../gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a28f19b2628a9c8720f5c23b3a68e809e',1,'gamedata.h']]],
+  ['aftermb_5fstay_5fat_5flast_5fblind',['AFTERMB_STAY_AT_LAST_BLIND',['../gamedata_8h.html#a250ebe9cdf4567798600e292202a66e6a067261595087e84ba2c8bb772238c31a',1,'gamedata.h']]],
+  ['aftermbalwaysraisevalue',['afterMBAlwaysRaiseValue',['../struct_game_data.html#a68e6f78103983935a5f6b20abb595355',1,'GameData']]],
+  ['allowspectators',['allowSpectators',['../struct_game_data.html#aa254390c51645ce5b18fd55e27e04f79',1,'GameData']]],
+  ['authsession',['authSession',['../struct_net_session.html#a633af90850d032509cfa243abb6898a8',1,'NetSession']]],
+  ['avatar',['avatar',['../struct_player_info.html#a7c57fe28d4955552bbdcd27a50d98574',1,'PlayerInfo']]],
+  ['avatar_5ffile_5ftype_5fgif',['AVATAR_FILE_TYPE_GIF',['../playerdata_8h.html#a838468e0dd027767b891761d30d2bf39a9e74053704295efe86723ba5f522448f',1,'playerdata.h']]],
+  ['avatar_5ffile_5ftype_5fjpg',['AVATAR_FILE_TYPE_JPG',['../playerdata_8h.html#a838468e0dd027767b891761d30d2bf39a27c2a1d992cddf30f80ccd24f73bfda6',1,'playerdata.h']]],
+  ['avatar_5ffile_5ftype_5fpng',['AVATAR_FILE_TYPE_PNG',['../playerdata_8h.html#a838468e0dd027767b891761d30d2bf39ae549f363f4e70692202d4cec6c67622a',1,'playerdata.h']]],
+  ['avatar_5ffile_5ftype_5funknown',['AVATAR_FILE_TYPE_UNKNOWN',['../playerdata_8h.html#a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1',1,'playerdata.h']]],
+  ['avatarfile',['AvatarFile',['../struct_avatar_file.html',1,'AvatarFile'],['../struct_avatar_file.html#a737930aa86033509d0fd6f677512294f',1,'AvatarFile::AvatarFile()']]],
+  ['avatarfiletype',['AvatarFileType',['../playerdata_8h.html#a838468e0dd027767b891761d30d2bf39',1,'playerdata.h']]],
+  ['avatarserveraddr',['avatarServerAddr',['../struct_server_info.html#ab880c1acf33d44c50edb68df6226782d',1,'ServerInfo']]],
+  ['avatartype',['avatarType',['../struct_player_info.html#a57c48e192309aeabb51d758898b588d9',1,'PlayerInfo']]]
+];

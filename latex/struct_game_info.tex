@@ -1,0 +1,87 @@
+\hypertarget{struct_game_info}{\section{Game\-Info 구조체 참조}
+\label{struct_game_info}\index{Game\-Info@{Game\-Info}}
+}
+
+
+{\ttfamily \#include $<$gamedata.\-h$>$}
+
+
+
+Game\-Info에 대한 협력 다이어그램\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{struct_game_info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_game_info_ae7ded63bd69b007847bd66debaeebc23}{Game\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{struct_game_info_a2636537f5709e2f0a492e21f46d63902}{name}
+\item 
+\hyperlink{struct_game_data}{Game\-Data} \hyperlink{struct_game_info_adda7dce486bafa025f007cc38fb5ff4c}{data}
+\item 
+\hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\-Mode} \hyperlink{struct_game_info_a22140503539e3356bf8b19b041ccf934}{mode}
+\item 
+unsigned \hyperlink{struct_game_info_a5ecc1639834e9a6f8055f38c1f18c2d9}{admin\-Player\-Id}
+\item 
+\hyperlink{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{Player\-Id\-List} \hyperlink{struct_game_info_abae703a83db0cab47682304c2f5175bf}{players}
+\item 
+\hyperlink{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{Player\-Id\-List} \hyperlink{struct_game_info_a512e7504e87265d990be1fc6d6a3b07e}{spectators}
+\item 
+\hyperlink{gamedata_8h_a02ee63ca030dfa9d119c9f2df584e383}{Player\-Id\-List} \hyperlink{struct_game_info_a24be82c5206c45ff9f08fa9896783332}{spectators\-During\-Game}
+\item 
+bool \hyperlink{struct_game_info_a0d282d0891f202cffd9f2b4d55721123}{is\-Password\-Protected}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{struct_game_info_ae7ded63bd69b007847bd66debaeebc23}{\index{Game\-Info@{Game\-Info}!Game\-Info@{Game\-Info}}
+\index{Game\-Info@{Game\-Info}!GameInfo@{Game\-Info}}
+\subsubsection[{Game\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Info\-::\-Game\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_game_info_ae7ded63bd69b007847bd66debaeebc23}
+
+\begin{DoxyCode}
+99 : \hyperlink{struct_game_info_a22140503539e3356bf8b19b041ccf934}{mode}(\hyperlink{gamedata_8h_aaf5ef5a17b53e9997c837b07015589dea5189be813705a7ad4b236a347c394328}{GAME\_MODE\_CREATED}), \hyperlink{struct_game_info_a5ecc1639834e9a6f8055f38c1f18c2d9}{adminPlayerId}(0), 
+      \hyperlink{struct_game_info_a0d282d0891f202cffd9f2b4d55721123}{isPasswordProtected}(\textcolor{keyword}{false}) \{\}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{struct_game_info_a5ecc1639834e9a6f8055f38c1f18c2d9}{\index{Game\-Info@{Game\-Info}!admin\-Player\-Id@{admin\-Player\-Id}}
+\index{admin\-Player\-Id@{admin\-Player\-Id}!GameInfo@{Game\-Info}}
+\subsubsection[{admin\-Player\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Game\-Info\-::admin\-Player\-Id}}\label{struct_game_info_a5ecc1639834e9a6f8055f38c1f18c2d9}
+\hypertarget{struct_game_info_adda7dce486bafa025f007cc38fb5ff4c}{\index{Game\-Info@{Game\-Info}!data@{data}}
+\index{data@{data}!GameInfo@{Game\-Info}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Data} Game\-Info\-::data}}\label{struct_game_info_adda7dce486bafa025f007cc38fb5ff4c}
+\hypertarget{struct_game_info_a0d282d0891f202cffd9f2b4d55721123}{\index{Game\-Info@{Game\-Info}!is\-Password\-Protected@{is\-Password\-Protected}}
+\index{is\-Password\-Protected@{is\-Password\-Protected}!GameInfo@{Game\-Info}}
+\subsubsection[{is\-Password\-Protected}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-Info\-::is\-Password\-Protected}}\label{struct_game_info_a0d282d0891f202cffd9f2b4d55721123}
+\hypertarget{struct_game_info_a22140503539e3356bf8b19b041ccf934}{\index{Game\-Info@{Game\-Info}!mode@{mode}}
+\index{mode@{mode}!GameInfo@{Game\-Info}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Mode} Game\-Info\-::mode}}\label{struct_game_info_a22140503539e3356bf8b19b041ccf934}
+\hypertarget{struct_game_info_a2636537f5709e2f0a492e21f46d63902}{\index{Game\-Info@{Game\-Info}!name@{name}}
+\index{name@{name}!GameInfo@{Game\-Info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Game\-Info\-::name}}\label{struct_game_info_a2636537f5709e2f0a492e21f46d63902}
+\hypertarget{struct_game_info_abae703a83db0cab47682304c2f5175bf}{\index{Game\-Info@{Game\-Info}!players@{players}}
+\index{players@{players}!GameInfo@{Game\-Info}}
+\subsubsection[{players}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Id\-List} Game\-Info\-::players}}\label{struct_game_info_abae703a83db0cab47682304c2f5175bf}
+\hypertarget{struct_game_info_a512e7504e87265d990be1fc6d6a3b07e}{\index{Game\-Info@{Game\-Info}!spectators@{spectators}}
+\index{spectators@{spectators}!GameInfo@{Game\-Info}}
+\subsubsection[{spectators}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Id\-List} Game\-Info\-::spectators}}\label{struct_game_info_a512e7504e87265d990be1fc6d6a3b07e}
+\hypertarget{struct_game_info_a24be82c5206c45ff9f08fa9896783332}{\index{Game\-Info@{Game\-Info}!spectators\-During\-Game@{spectators\-During\-Game}}
+\index{spectators\-During\-Game@{spectators\-During\-Game}!GameInfo@{Game\-Info}}
+\subsubsection[{spectators\-During\-Game}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player\-Id\-List} Game\-Info\-::spectators\-During\-Game}}\label{struct_game_info_a24be82c5206c45ff9f08fa9896783332}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gamedata_8h}{gamedata.\-h}\end{DoxyCompactItemize}

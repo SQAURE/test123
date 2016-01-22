@@ -1,0 +1,234 @@
+\hypertarget{pokerth__server_8cpp}{\section{pokerth\-\_\-server.\-cpp 파일 참조}
+\label{pokerth__server_8cpp}\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}}
+}
+{\ttfamily \#include $<$net/netpacket.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}session.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}configfile.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$qttoolsinterface.\-h$>$}\\*
+{\ttfamily \#include $<$gui/generic/serverguiwrapper.\-h$>$}\\*
+{\ttfamily \#include $<$net/socket\-\_\-startup.\-h$>$}\\*
+{\ttfamily \#include $<$core/loghelper.\-h$>$}\\*
+{\ttfamily \#include $<$core/thread.\-h$>$}\\*
+{\ttfamily \#include $<$boost/program\-\_\-options.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/filesystem.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$csignal$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+pokerth\-\_\-server.\-cpp에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pokerth__server_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pokerth__server_8cpp_a1bdcac39cce77af91b60ca6044fae397}{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}()
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090}{Terminate\-Handler} (int)
+\item 
+int \hyperlink{pokerth__server_8cpp_aa10914f5d815f5943722ae8be203eeff}{daemon} (int, int)
+\item 
+int \hyperlink{pokerth__server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+volatile int \hyperlink{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}{g\-\_\-pokerth\-Terminate} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{pokerth__server_8cpp_a1bdcac39cce77af91b60ca6044fae397}{\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}!E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K@{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}}
+\index{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K@{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}!pokerth_server.cpp@{pokerth\-\_\-server.\-cpp}}
+\subsubsection[{E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-A\-B\-L\-E\-\_\-\-L\-E\-A\-K\-\_\-\-C\-H\-E\-C\-K(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pokerth__server_8cpp_a1bdcac39cce77af91b60ca6044fae397}
+
+
+\subsection{함수 문서화}
+\hypertarget{pokerth__server_8cpp_aa10914f5d815f5943722ae8be203eeff}{\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}!daemon@{daemon}}
+\index{daemon@{daemon}!pokerth_server.cpp@{pokerth\-\_\-server.\-cpp}}
+\subsubsection[{daemon}]{\setlength{\rightskip}{0pt plus 5cm}int daemon (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{pokerth__server_8cpp_aa10914f5d815f5943722ae8be203eeff}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{pokerth__server_8cpp_aa10914f5d815f5943722ae8be203eeff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pokerth__server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}!main@{main}}
+\index{main@{main}!pokerth_server.cpp@{pokerth\-\_\-server.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{pokerth__server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\begin{DoxyCode}
+89 \{
+90     \hyperlink{pokerth__server_8cpp_a1bdcac39cce77af91b60ca6044fae397}{ENABLE\_LEAK\_CHECK}();
+91 
+92     \textcolor{comment}{//\_CrtSetBreakAlloc(10260);}
+93 
+94     \textcolor{keywordtype}{bool} readonlyConfig = \textcolor{keyword}{false};
+95     \textcolor{keywordtype}{string} pidFile;
+96     \textcolor{keywordtype}{int} logLevel = 1;
+97     \{
+98         \textcolor{comment}{// Check command line options.}
+99         po::options\_description desc(\textcolor{stringliteral}{"Allowed options"});
+100         desc.add\_options()
+101         (\textcolor{stringliteral}{"help,h"}, \textcolor{stringliteral}{"produce help message"})
+102         (\textcolor{stringliteral}{"version,v"}, \textcolor{stringliteral}{"print version string"})
+103         (\textcolor{stringliteral}{"log-level,l"}, po::value<int>(), \textcolor{stringliteral}{"set log level (0=minimal, 1=default, 2=verbose)"})
+104         (\textcolor{stringliteral}{"pid-file,p"}, po::value<string>(), \textcolor{stringliteral}{"create pid-file in different location"})
+105         (\textcolor{stringliteral}{"readonly-config"}, \textcolor{stringliteral}{"treat config file as read-only"})
+106         ;
+107 
+108         po::variables\_map vm;
+109         po::store(po::parse\_command\_line(argc, argv, desc), vm);
+110         po::notify(vm);
+111 
+112         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"help"})) \{
+113             cout << desc << endl;
+114             \textcolor{keywordflow}{return} 1;
+115         \}
+116         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"version"})) \{
+117             cout << \textcolor{stringliteral}{"PokerTH server version   "} << \hyperlink{game__defs_8h_ac16e1f5cf0ee8fbb4b1a0cd790e5f262}{POKERTH\_BETA\_RELEASE\_STRING} <
+      < endl
+118                  << \textcolor{stringliteral}{"Network protocol version "} << NET\_VERSION\_MAJOR << \textcolor{stringliteral}{"."} << NET\_VERSION\_MINOR << endl;
+119             \textcolor{keywordflow}{return} 1;
+120         \}
+121         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"log-level"})) \{
+122             logLevel = vm[\textcolor{stringliteral}{"log-level"}].as<\textcolor{keywordtype}{int}>();
+123             \textcolor{keywordflow}{if} (logLevel < 0 || logLevel > 2) \{
+124                 cout << \textcolor{stringliteral}{"Invalid log-level: \(\backslash\)""} << logLevel << \textcolor{stringliteral}{"\(\backslash\)", allowed range 0-2."} << endl;
+125                 \textcolor{keywordflow}{return} 1;
+126             \}
+127         \}
+128         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"pid-file"}))
+129             pidFile = vm[\textcolor{stringliteral}{"pid-file"}].as<string>();
+130         \textcolor{keywordflow}{if} (vm.count(\textcolor{stringliteral}{"readonly-config"}))
+131             readonlyConfig = \textcolor{keyword}{true};
+132     \}
+133 
+134     boost::shared\_ptr<QtToolsInterface> myQtToolsInterface(CreateQtToolsWrapper());
+135     \textcolor{comment}{//create defaultconfig}
+136     boost::shared\_ptr<ConfigFile> myConfig(\textcolor{keyword}{new} ConfigFile(argv[0], readonlyConfig));
+137     loghelper\_init(myQtToolsInterface->stringFromUtf8(myConfig->readConfigString(\textcolor{stringliteral}{"LogDir"})), logLevel);
+138 
+139     \textcolor{comment}{// TODO: Hack}
+140 \textcolor{preprocessor}{#ifndef \_WIN32}
+141 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef QT\_NO\_DEBUG}
+142 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{pokerth__server_8cpp_aa10914f5d815f5943722ae8be203eeff}{daemon}(0, 0) != 0) \{
+143         cout << \textcolor{stringliteral}{"Failed to start daemon."} << endl;
+144         \textcolor{keywordflow}{return} 1;
+145     \}
+146 \textcolor{preprocessor}{#endif}
+147 \textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+148 \textcolor{preprocessor}{}
+149     signal(SIGTERM, \hyperlink{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090}{TerminateHandler});
+150     signal(SIGINT, \hyperlink{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090}{TerminateHandler});
+151 
+152     socket\_startup();
+153 
+154     LOG\_MSG(\textcolor{stringliteral}{"Starting PokerTH dedicated server. Availability: IPv6 "}
+155             << socket\_has\_ipv6() << \textcolor{stringliteral}{", SCTP "} << socket\_has\_sctp() << \textcolor{stringliteral}{", Dual Stack "} << 
+      socket\_has\_dual\_stack() << \textcolor{stringliteral}{"."});
+156 
+157     \textcolor{comment}{// Store pid in file.}
+158     \textcolor{keywordflow}{if} (pidFile.empty()) \{
+159         path tmpPidPath(myConfig->readConfigString(\textcolor{stringliteral}{"LogDir"}));
+160         tmpPidPath /= \textcolor{stringliteral}{"pokerth.pid"};
+161         pidFile = tmpPidPath.directory\_string();
+162     \}
+163     \{
+164         std::ofstream pidStream(pidFile.c\_str(), ios\_base::out | ios\_base::trunc);
+165         \textcolor{keywordflow}{if} (!pidStream.fail())
+166             pidStream << getpid();
+167         \textcolor{keywordflow}{else}
+168             LOG\_ERROR(\textcolor{stringliteral}{"Could not create process id file \(\backslash\)""} << pidFile << \textcolor{stringliteral}{"\(\backslash\)"!"});
+169     \}
+170 
+171     \textcolor{comment}{// Create pseudo Gui Wrapper for the server.}
+172     boost::shared\_ptr<GuiInterface> myServerGuiInterface(\textcolor{keyword}{new} ServerGuiWrapper(myConfig.get(), NULL, NULL, 
+      NULL));
+173     boost::shared\_ptr<Session> session(\textcolor{keyword}{new} \hyperlink{class_session}{Session}(myServerGuiInterface.get(), myConfig.get(), NULL)
+      );
+174     \textcolor{keywordflow}{if} (!session->init())
+175         LOG\_ERROR(\textcolor{stringliteral}{"Missing files - please check your directory settings!"});
+176     myServerGuiInterface->setSession(session);
+177 
+178     myServerGuiInterface->getSession()->startNetworkServer(\textcolor{keyword}{true});
+179     \textcolor{keywordflow}{while} (!\hyperlink{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}{g\_pokerthTerminate}) \{
+180         Thread::Msleep(100);
+181         \textcolor{keywordflow}{if} (myServerGuiInterface->getSession()->pollNetworkServerTerminated())
+182             \hyperlink{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}{g\_pokerthTerminate} = \textcolor{keyword}{true};
+183     \}
+184     myServerGuiInterface->getSession()->terminateNetworkServer();
+185     session.reset();
+186     myServerGuiInterface.reset();
+187     myConfig.reset();
+188 
+189     LOG\_MSG(\textcolor{stringliteral}{"Terminating PokerTH dedicated server."} << endl);
+190     socket\_cleanup();
+191     \textcolor{keywordflow}{return} 0;
+192 \}\end{DoxyCode}
+
+
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{pokerth__server_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090}{\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}!Terminate\-Handler@{Terminate\-Handler}}
+\index{Terminate\-Handler@{Terminate\-Handler}!pokerth_server.cpp@{pokerth\-\_\-server.\-cpp}}
+\subsubsection[{Terminate\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void Terminate\-Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090}
+
+\begin{DoxyCode}
+73 \{
+74     \hyperlink{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}{g\_pokerthTerminate} = 1;
+75 \}
+\end{DoxyCode}
+
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{pokerth__server_8cpp_af14ec4e71a31fd4a83d28aa24b132090_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{변수 문서화}
+\hypertarget{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}{\index{pokerth\-\_\-server.\-cpp@{pokerth\-\_\-server.\-cpp}!g\-\_\-pokerth\-Terminate@{g\-\_\-pokerth\-Terminate}}
+\index{g\-\_\-pokerth\-Terminate@{g\-\_\-pokerth\-Terminate}!pokerth_server.cpp@{pokerth\-\_\-server.\-cpp}}
+\subsubsection[{g\-\_\-pokerth\-Terminate}]{\setlength{\rightskip}{0pt plus 5cm}volatile int g\-\_\-pokerth\-Terminate = 0}}\label{pokerth__server_8cpp_ac2975e1f9e3143587d34d93d980d26db}

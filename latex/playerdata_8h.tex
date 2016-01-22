@@ -1,0 +1,146 @@
+\hypertarget{playerdata_8h}{\section{playerdata.\-h 파일 참조}
+\label{playerdata_8h}\index{playerdata.\-h@{playerdata.\-h}}
+}
+{\ttfamily \#include $<$boost/shared\-\_\-ptr.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread.\-hpp$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$core/crypthelper.\-h$>$}\\*
+{\ttfamily \#include $<$db/serverdbcallback.\-h$>$}\\*
+playerdata.\-h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{playerdata_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{playerdata_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_avatar_file}{Avatar\-File}
+\item 
+struct \hyperlink{struct_player_info}{Player\-Info}
+\item 
+class \hyperlink{class_player_data}{Player\-Data}
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::list$<$ std\-::pair\\*
+$<$ unsigned, unsigned $>$ $>$ \hyperlink{playerdata_8h_a5423ca985c99b02536f56d0384628905}{Remove\-Player\-List}
+\item 
+typedef std\-::list\\*
+$<$ boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_player_data}{Player\-Data} $>$ $>$ \hyperlink{playerdata_8h_a8232751bca13b3cf3056ce08251f7067}{Player\-Data\-List}
+\item 
+typedef std\-::map$<$ unsigned, \\*
+boost\-::shared\-\_\-ptr$<$ \hyperlink{class_player_data}{Player\-Data} $>$ $>$ \hyperlink{playerdata_8h_a9e3683fd7e0a765d8420195eec7abcf2}{Player\-Data\-Map}
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\-Type} \{ \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6}{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R}, 
+\hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N}
+ \}
+\item 
+enum \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{Player\-Rights} \{ \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a32d17691c0f17eb117f004b3fdd90685}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T} = 1, 
+\hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L}, 
+\hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6aad750e9e1dec0aa30d5ad3bcaa4bb9ad}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N}
+ \}
+\item 
+enum \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39}{Avatar\-File\-Type} \{ \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N} = 0, 
+\hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39ae549f363f4e70692202d4cec6c67622a}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G}, 
+\hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39a27c2a1d992cddf30f80ccd24f73bfda6}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G}, 
+\hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39a9e74053704295efe86723ba5f522448f}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{타입정의 문서화}
+\hypertarget{playerdata_8h_a8232751bca13b3cf3056ce08251f7067}{\index{playerdata.\-h@{playerdata.\-h}!Player\-Data\-List@{Player\-Data\-List}}
+\index{Player\-Data\-List@{Player\-Data\-List}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Player\-Data\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::list$<$boost\-::shared\-\_\-ptr$<${\bf Player\-Data}$>$ $>$ {\bf Player\-Data\-List}}}\label{playerdata_8h_a8232751bca13b3cf3056ce08251f7067}
+\hypertarget{playerdata_8h_a9e3683fd7e0a765d8420195eec7abcf2}{\index{playerdata.\-h@{playerdata.\-h}!Player\-Data\-Map@{Player\-Data\-Map}}
+\index{Player\-Data\-Map@{Player\-Data\-Map}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Player\-Data\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$unsigned, boost\-::shared\-\_\-ptr$<${\bf Player\-Data}$>$ $>$ {\bf Player\-Data\-Map}}}\label{playerdata_8h_a9e3683fd7e0a765d8420195eec7abcf2}
+\hypertarget{playerdata_8h_a5423ca985c99b02536f56d0384628905}{\index{playerdata.\-h@{playerdata.\-h}!Remove\-Player\-List@{Remove\-Player\-List}}
+\index{Remove\-Player\-List@{Remove\-Player\-List}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Remove\-Player\-List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::list$<$std\-::pair$<$unsigned, unsigned$>$ $>$ {\bf Remove\-Player\-List}}}\label{playerdata_8h_a5423ca985c99b02536f56d0384628905}
+
+
+\subsection{열거형 타입 문서화}
+\hypertarget{playerdata_8h_a838468e0dd027767b891761d30d2bf39}{\index{playerdata.\-h@{playerdata.\-h}!Avatar\-File\-Type@{Avatar\-File\-Type}}
+\index{Avatar\-File\-Type@{Avatar\-File\-Type}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Avatar\-File\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Avatar\-File\-Type}}}\label{playerdata_8h_a838468e0dd027767b891761d30d2bf39}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{playerdata_8h_a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}\label{playerdata_8h_a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1}
+}]\index{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G}}\item[{\em 
+\hypertarget{playerdata_8h_a838468e0dd027767b891761d30d2bf39ae549f363f4e70692202d4cec6c67622a}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-P\-N\-G}\label{playerdata_8h_a838468e0dd027767b891761d30d2bf39ae549f363f4e70692202d4cec6c67622a}
+}]\index{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G}}\item[{\em 
+\hypertarget{playerdata_8h_a838468e0dd027767b891761d30d2bf39a27c2a1d992cddf30f80ccd24f73bfda6}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-J\-P\-G}\label{playerdata_8h_a838468e0dd027767b891761d30d2bf39a27c2a1d992cddf30f80ccd24f73bfda6}
+}]\index{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F@{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F}}\item[{\em 
+\hypertarget{playerdata_8h_a838468e0dd027767b891761d30d2bf39a9e74053704295efe86723ba5f522448f}{A\-V\-A\-T\-A\-R\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-G\-I\-F}\label{playerdata_8h_a838468e0dd027767b891761d30d2bf39a9e74053704295efe86723ba5f522448f}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+58                     \{
+59     \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39af3195e1aaeb82da02f85ea7a293e91a1}{AVATAR\_FILE\_TYPE\_UNKNOWN} = 0,
+60     \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39ae549f363f4e70692202d4cec6c67622a}{AVATAR\_FILE\_TYPE\_PNG},
+61     \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39a27c2a1d992cddf30f80ccd24f73bfda6}{AVATAR\_FILE\_TYPE\_JPG},
+62     \hyperlink{playerdata_8h_a838468e0dd027767b891761d30d2bf39a9e74053704295efe86723ba5f522448f}{AVATAR\_FILE\_TYPE\_GIF}
+63 \};
+\end{DoxyCode}
+\hypertarget{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}{\index{playerdata.\-h@{playerdata.\-h}!Player\-Rights@{Player\-Rights}}
+\index{Player\-Rights@{Player\-Rights}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Player\-Rights}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Player\-Rights}}}\label{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T}}\item[{\em 
+\hypertarget{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a32d17691c0f17eb117f004b3fdd90685}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-G\-U\-E\-S\-T}\label{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a32d17691c0f17eb117f004b3fdd90685}
+}]\index{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L}}\item[{\em 
+\hypertarget{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L}\label{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab}
+}]\index{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N@{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N}}\item[{\em 
+\hypertarget{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6aad750e9e1dec0aa30d5ad3bcaa4bb9ad}{P\-L\-A\-Y\-E\-R\-\_\-\-R\-I\-G\-H\-T\-S\-\_\-\-A\-D\-M\-I\-N}\label{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6aad750e9e1dec0aa30d5ad3bcaa4bb9ad}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+52                   \{
+53     \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a32d17691c0f17eb117f004b3fdd90685}{PLAYER\_RIGHTS\_GUEST} = 1,
+54     \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6a716d25099e5fdf1bad19d51f79bbd7ab}{PLAYER\_RIGHTS\_NORMAL},
+55     \hyperlink{playerdata_8h_ac0c72aca5c5ceabb2abbcd2d2c02aba6aad750e9e1dec0aa30d5ad3bcaa4bb9ad}{PLAYER\_RIGHTS\_ADMIN}
+56 \};
+\end{DoxyCode}
+\hypertarget{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}{\index{playerdata.\-h@{playerdata.\-h}!Player\-Type@{Player\-Type}}
+\index{Player\-Type@{Player\-Type}!playerdata.h@{playerdata.\-h}}
+\subsubsection[{Player\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Player\-Type}}}\label{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccf}
+\begin{Desc}
+\item[열거형 멤버]\par
+\begin{description}
+\index{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R@{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R@{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R}}\item[{\em 
+\hypertarget{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6}{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-M\-P\-U\-T\-E\-R}\label{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6}
+}]\index{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N@{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N}!playerdata.\-h@{playerdata.\-h}}\index{playerdata.\-h@{playerdata.\-h}!P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N@{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N}}\item[{\em 
+\hypertarget{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}{P\-L\-A\-Y\-E\-R\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-U\-M\-A\-N}\label{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+47                 \{
+48     \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfaafb128e5bf75c3d00a6de25a025f61d6}{PLAYER\_TYPE\_COMPUTER},
+49     \hyperlink{playerdata_8h_abe590f3c9109f404f003d5d7e4f0fccfa6bf6033830c666c7491c430f7ff395a0}{PLAYER\_TYPE\_HUMAN}
+50 \};
+\end{DoxyCode}
